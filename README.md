@@ -19,9 +19,11 @@ PicassoXS is your professional photo editing app that transfer your own photo in
 
 
 ## *IDE*
-### ***Frontend***: Xcode
+### ***Frontend***: 
+- Xcode
 
-### ***Backend***: Visual Studio Code
+### ***Backend***: 
+- Visual Studio Code
 
 
 ## *Third Party Libraries*
