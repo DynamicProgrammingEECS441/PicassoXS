@@ -69,9 +69,3 @@ ECS (Elastic Container Service):
 - Manage Docker containers on a cluster
 - [ECS documentation](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html)
 
-## 5. Flask
-Lightweight Python web application frameworks.
-
-[Flask installation](https://flask.palletsprojects.com/en/1.1.x/installation/)
-
-[Flask documentation](https://flask.palletsprojects.com/en/1.1.x/)
