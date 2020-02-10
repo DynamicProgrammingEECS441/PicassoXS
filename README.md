@@ -2,12 +2,10 @@
 EECS 441 @ UMich Project 
 
 ## *Description*
----
 PicassoXS is your professional photo editing app that transfer your own photo into different painting
 
 
 ## *Team Members*
----
 ### Frontend
 - Zhijie Ren (uniqname: rzj)
 - Senhao Wang (uniqname: rogerogw)
@@ -21,14 +19,12 @@ PicassoXS is your professional photo editing app that transfer your own photo in
 
 
 ## *IDE*
----
 ### ***Frontend***: Xcode
 
 ### ***Backend***: Visual Studio Code
 
 
 ## *Third Party Libraries*
----
 ## 1. TensorFlow
 TensorFlow is an end-to-end open source platform for machine learning. We can use it for all model traning.
 
