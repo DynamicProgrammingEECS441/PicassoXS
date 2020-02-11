@@ -12,18 +12,20 @@ PicassoXS is your professional photo editing app that transfer your own photo in
 - Juye Xiao (uniqname: juyexiao)
 
 ### Backend
-- Xiao Song (uniqname: xiaosx)
 - Enhao Zhang (uniqname: ehzhang)
 - Rena Xu (uniqname: renaxu)
 - Jason Zhao (uniqname: jasonyz)
 
 
-## *IDE*
-### ***Frontend***: 
-- Xcode
+## *Development Environment*
+### ***IDE***: 
+- Frontend - Xcode
 
-### ***Backend***: 
-- Visual Studio Code
+- Backend - Visual Studio Code
+
+### ***Programming Languages:***
+- Frontend - Swift
+- Backend - Python
 
 
 ## *Third Party Libraries*
