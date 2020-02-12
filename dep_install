@@ -1,0 +1,42 @@
+#!/bin/bash
+
+# shell script to include dependencies need (listed in README.md)
+# needs to be in ubuntu before running this
+
+# stops on error, print commands
+set -Eeuo pipefail
+set -x
+
+# install python 3.7
+apt-get update
+apt-get install software-properties-common
+add-apt-repository ppa:deadsnakes/ppa
+apt-get update
+apt-get install python3.7
+
+# install pip in ubuntu
+apt-get update
+apt-get install python3-pip
+pip3 install --upgrade pip
+
+# install TensorFlow
+pip3 install --upgrade pip
+pip install tensorflow
+
+# install gRPC
+pip install grpcio
+
+# install numpy
+pip install numpy
+
+# install OpenCV
+pip install opencv-python
+
+# install SQLAlchemy
+pip install SQLAlchemy
+
+# install PyTorch
+pip install torch torchvision
+
+# install Tornado
+pip install tornado
