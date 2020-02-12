@@ -51,6 +51,8 @@ Release: 19.03.5
 
 Docker provides a way to run applications securely isolated in a container, packaged with all its dependencies and libraries. We can use Docker's *containers* to create virtual environments that isolate a TensorFlow installation from the rest of the system.
 
+***Note:*** Docker Desktop version is better, but can still install through command line
+
 Installation
 ```diff
 $ curl -fsSL https://get.docker.com -o get-docker.sh
@@ -183,7 +185,7 @@ The installation requirements for the third party dependencies can be found in t
 ***Library setup:***
 
 **Method 1:** 
-Install with pip
+Install with pip and requirements.txt
 
 1. Upgrade python to python3 and upgrade pip to pip 20.0.2
     - `$ chmod +x pip_setup`
