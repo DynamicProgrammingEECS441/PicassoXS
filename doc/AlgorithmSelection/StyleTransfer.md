@@ -36,7 +36,7 @@ For each paper, we explore from 0-5
 
 [MST](###MST : Multimodal Style Transfer via Graph Cuts [POTENTIAL])
 
-
+[Visual Attribute Transfer through Deep Image Analogy](###Visual Attribute Transfer through Deep Image Analogy [Potential])
 
 
 
