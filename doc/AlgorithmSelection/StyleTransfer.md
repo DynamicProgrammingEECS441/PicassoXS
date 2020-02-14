@@ -30,6 +30,14 @@ For each paper, we explore from 0-5
 
 
 
+## Potential 
+
+[A Style-Aware Content Loss for Real-time HD Style Transfer](###A Style-Aware Content Loss for Real-time HD Style Transfer [POTENTIAL])
+
+[MST](###MST : Multimodal Style Transfer via Graph Cuts [POTENTIAL])
+
+
+
 
 
 ## IOB-NST
@@ -80,11 +88,11 @@ Note:
 
 
 
-![](data/Histogram Losses 3.png)
+![](data/HLoss3.png)
 
-![Histogram Losses 2](data/Histogram Losses 2.png)
+![Histogram Losses 2](data/HLoss2.png)
 
-![Histogram Losses 1](data/Histogram Losses 1.png)
+![Histogram Losses 1](data/HLoss1.png)
 
 
 
@@ -129,7 +137,7 @@ Note:
 
 
 
-![](data/Controlling Perceptual Factors in Neural Style Transfer.png)
+![](data/ControllingPerceptual.png)
 
 
 
@@ -156,11 +164,13 @@ Note:
 
 
 
-![](data/Texture network.png)
+![](data/TextureNet1.png)
 
-![Texture Network2](data/Texture Network2.jpg)
+![Texture Network2](data/TextureNet2.jpg)
 
-![Texture Network3](data/Texture Network3.jpg)
+![Texture Network3](data/TextureNet3.jpg)
+
+
 
 
 
@@ -184,8 +194,6 @@ Note:
 
 ### Precomputed Real-Time Texture Synthesis with Markovian Generative Adversarial Networks
 
-
-
 | data avalibility             | algorithm speed     | visual quality     | Portrate / general | complexity of algorithm structrue | Choice Score                     | Paper URL                            | Year |
 | ---------------------------- | ------------------- | ------------------ | ------------------ | --------------------------------- | -------------------------------- | ------------------------------------ | ---- |
 | 5 : avalible  0 : unavilible | 5 : quick  0 : slow | 5 : good  0 : poor |                    | 5 : complex  0 : simple           | 5 : would choose  0 : not choose | https://arxiv.org/pdf/1604.04382.pdf | 2016 |
@@ -205,16 +213,16 @@ Note:
 
 
 
-### Preserving Color in Neural Artistic Style Transfer
 
 
+
+
+### Preserving Color in Neural Artistic Style Transfer [Potential]
 
 | data avalibility             | algorithm speed     | visual quality               | Portrate / general | complexity of algorithm structrue | Choice Score                     | Paper URL                            | Year |
 | ---------------------------- | ------------------- | ---------------------------- | ------------------ | --------------------------------- | -------------------------------- | ------------------------------------ | ---- |
 | 5 : avalible  0 : unavilible | 5 : quick  0 : slow | 5 : good  0 : poor           |                    | 5 : complex  0 : simple           | 5 : would choose  0 : not choose | https://arxiv.org/pdf/1606.05897.pdf | 2016 |
-| 1                            | 4                   | only few demo image avalible | NA                 | 3                                 | NA                               |                                      |      |
-
-
+| 1                            | 4                   | only few demo image avalible | portrate           | 3                                 | 3                                |                                      |      |
 
 
 
@@ -222,6 +230,17 @@ Note:
 
 1. **idea of preserve color is important** : preseve original photo color 
 2. general result don't have much change 
+3. Decent choice when only applied to portrate photo 
+
+
+
+(demo photo from app)
+
+![](data/PreserveColor.png)
+
+
+
+
 
 
 
@@ -232,7 +251,7 @@ Note:
 | data avalibility             | algorithm speed     | visual quality     | Portrate / general | complexity of algorithm structrue | Choice Score                     | Paper URL                            | Year |
 | ---------------------------- | ------------------- | ------------------ | ------------------ | --------------------------------- | -------------------------------- | ------------------------------------ | ---- |
 | 5 : avalible  0 : unavilible | 5 : quick  0 : slow | 5 : good  0 : poor |                    | 5 : complex  0 : simple           | 5 : would choose  0 : not choose | https://arxiv.org/pdf/1811.07260.pdf | 2018 |
-| 4                            |                     |                    | Portrate           | 4                                 | 4                                |                                      |      |
+| 4                            | 4                   |                    | Portrate           | 4                                 | 4                                |                                      |      |
 
 
 
@@ -240,7 +259,9 @@ Note:
 
 1. **feature pyramid fusion neural network**
 
-2. Consider global features and local features 
+2. algorithm may be over complicated to implement 
+
+3. **Consider global features and local features sepratebly**
 
    1. need the photo and painting to match 
 
@@ -254,7 +275,9 @@ Note:
 
 
 
-### Arbitrary Style Transfer in Real-time with Adaptive Instance Normalization
+
+
+### AdaIN Arbitrary Style Transfer in Real-time with Adaptive Instance Normalization
 
 | data avalibility             | algorithm speed     | visual quality     | Portrate / general | complexity of algorithm structrue | Choice Score                     | Paper URL                              | Year |
 | ---------------------------- | ------------------- | ------------------ | ------------------ | --------------------------------- | -------------------------------- | -------------------------------------- | ---- |
@@ -265,20 +288,21 @@ Note:
 
 Note:
 
-1. bad visual quality, style not reaully work 
+1. some visual quality are not that good 
+2. can choose to transform style not color 
+
+![](data/ArbitraryStyleTransfer.png)
 
 
 
-![](data/Arbitrary Style Transfer.png)
 
 
+### Visual Attribute Transfer through Deep Image Analogy [Potential]
 
-### Visual Attribute Transfer through Deep Image Analogy
-
-| data avalibility             | algorithm speed     | visual quality            | Portrate / general     | complexity of algorithm structrue | Choice Score                     | Paper URL                            | Year |
-| ---------------------------- | ------------------- | ------------------------- | ---------------------- | --------------------------------- | -------------------------------- | ------------------------------------ | ---- |
-| 5 : avalible  0 : unavilible | 5 : quick  0 : slow | 5 : good  0 : poor        |                        | 5 : complex  0 : simple           | 5 : would choose  0 : not choose | https://arxiv.org/pdf/1705.01088.pdf | 2017 |
-| 4                            | 2                   | 4 (when constrain is met) | Portrate / fixed scene | 5 (no much reference)             | 4                                |                                      |      |
+| data avalibility             | algorithm speed     | visual quality            | Portrate / general     | complexity of algorithm structrue                            | Choice Score                     | Paper URL                            | Year |
+| ---------------------------- | ------------------- | ------------------------- | ---------------------- | ------------------------------------------------------------ | -------------------------------- | ------------------------------------ | ---- |
+| 5 : avalible  0 : unavilible | 5 : quick  0 : slow | 5 : good  0 : poor        |                        | 5 : complex  0 : simple                                      | 5 : would choose  0 : not choose | https://arxiv.org/pdf/1705.01088.pdf | 2017 |
+| 4                            | 2                   | 4 (when constrain is met) | Portrate / fixed scene | 5 (no much reference， only torch, algorithm is complicated) | 3                                |                                      |      |
 
 
 
@@ -290,14 +314,21 @@ Note:
 2. Run time requires nearest neighbor search 
 3. coarse to fine 
 4. **Visual Attribute Transger for semantic similar image**
+5. **constrain on input output is too much**
+6. **tackle the style transfer through other approach**
+7. may also use for scene transfger 
 
 
 
-![](data/Deep Image Analogy3.png)
+![](data/DeepImageAnalogy3.png)
 
-![Deep Image Analogy1](data/Deep Image Analogy1.png)
+![Deep Image Analogy2](data/DeepImageAnalogy2.png)
 
-![Deep Image Analogy2](data/Deep Image Analogy2.png)
+![](data/DeepImageAnalogy4.png)
+
+![DeepImageAnalogy5](data/DeepImageAnalogy5.png)
+
+
 
 
 
@@ -316,39 +347,86 @@ Note:
 2. some style good, some style bad 
 3. Not really stylized 
 
+![](data/Patch2.png)
+
+![Patch1](data/Patch1.png)
 
 
-### Universal Style Transfer via Feature Transforms
+
+
+
+
+
+### WCT Universal Style Transfer via Feature Transforms
 
 | data avalibility             | algorithm speed     | visual quality     | Portrate / general | complexity of algorithm structrue | Choice Score                     | Paper URL                                                    | Year |
 | ---------------------------- | ------------------- | ------------------ | ------------------ | --------------------------------- | -------------------------------- | ------------------------------------------------------------ | ---- |
 | 5 : avalible  0 : unavilible | 5 : quick  0 : slow | 5 : good  0 : poor |                    | 5 : complex  0 : simple           | 5 : would choose  0 : not choose | http://papers.nips.cc/paper/6642-universal-style-transfer-via-feature-transforms.pdf | 2017 |
-|                              |                     |                    |                    |                                   |                                  |                                                              |      |
+| 4                            | 4                   | 3                  |                    | 3                                 | 2                                |                                                              |      |
 
 
 
 Note:
 
 1. commonly cited 
+2. Whitering and coloring transformations 
+3. "stylize" different part of the art work 
+4. generated result tend to be blurry
 
 
 
 
 
-### A Style-Aware Content Loss for Real-time HD Style Transfer
+
+
+### MST : Multimodal Style Transfer via Graph Cuts [POTENTIAL]
+
+| data avalibility             | algorithm speed     | visual quality     | Portrate / general | complexity of algorithm structrue | Choice Score                     | Paper URL                              | Year |
+| ---------------------------- | ------------------- | ------------------ | ------------------ | --------------------------------- | -------------------------------- | -------------------------------------- | ---- |
+| 5 : avalible  0 : unavilible | 5 : quick  0 : slow | 5 : good  0 : poor |                    | 5 : complex  0 : simple           | 5 : would choose  0 : not choose | https://arxiv.org/pdf/1904.04443v6.pdf | 2019 |
+| 4                            | 4                   | 4                  | general & Portrate | 3                                 | 4                                |                                        |      |
+
+
+
+Notice:
+
+1. Improvement on WCT
+2. **sider gloabl effect & local effect differently** 
+3. showed style more on abstract art & heavy brush stroke 
+4. **not a feed forward network** 
+5. Input style when the model is called, can be used as customized style model 
+
+![](data/MST1.png)
+
+![MST2](data/MST2.png)
+
+
+
+
+
+
+
+### A Style-Aware Content Loss for Real-time HD Style Transfer [POTENTIAL]
+
+> Dmytro Kotovenko
 
 | data avalibility             | algorithm speed     | visual quality     | Portrate / general | complexity of algorithm structrue | Choice Score                     | Paper URL                            | Year |
 | ---------------------------- | ------------------- | ------------------ | ------------------ | --------------------------------- | -------------------------------- | ------------------------------------ | ---- |
 | 5 : avalible  0 : unavilible | 5 : quick  0 : slow | 5 : good  0 : poor |                    | 5 : complex  0 : simple           | 5 : would choose  0 : not choose | https://arxiv.org/pdf/1807.10201.pdf | 2018 |
-|                              |                     |                    |                    |                                   | 4                                |                                      |      |
+| 4                            | 4                   | 4                  | General            | 3                                 | 4                                |                                      |      |
 
 
 
 Note:
 
-1. high resolution 
+1. **high resolution**
 2. real time 
-3. merge many style and form artist 
+3. **merge many style and form "artist"** 
+4. no much blurry effect & blob effect 
+
+![](data/RealTimeHD.png)
+
+![RealTimeHD2](data/RealTimeHD2.jpg)
 
 
 
@@ -356,14 +434,43 @@ Note:
 
 
 
-### Content and Style Disentanglement for Artistic Style Transfer 
+### **A Content Transformation Block for Image Style Transfer**
+
+> Dmytro Kotovenko
+
+
+
+| data avalibility             | algorithm speed     | visual quality     | Portrate / general | complexity of algorithm structrue                         | Choice Score                     | Paper URL                                                    | Year |
+| ---------------------------- | ------------------- | ------------------ | ------------------ | --------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------ | ---- |
+| 5 : avalible  0 : unavilible | 5 : quick  0 : slow | 5 : good  0 : poor |                    | 5 : complex  0 : simple                                   | 5 : would choose  0 : not choose | http://openaccess.thecvf.com/content_CVPR_2019/papers/Kotovenko_A_Content_Transformation_Block_for_Image_Style_Transfer_CVPR_2019_paper.pdf | 2019 |
+| 0                            | 4                   | 4                  | General            | 5 (architecture is complex & no official code supplement) | 3                                |                                                              |      |
+
+
+
+Note:
+
+1. Content Transformation Module : not only transfer style, but also emphasis content shape 
+2. style transfer based on underlying object 
+3. rouphly = A Style-Aware Content Loss for Real-time HD Style Transfer + Content transformation module
+
+
+
+![](data/ContentTransformBlock3.png)
+
+![ContentTransformBlock2](data/ContentTransformBlock2.png)
+
+![ContentTransformBlock1](data/ContentTransformBlock1.png)
+
+
+
+### Content and Style Disentanglement for Artistic Style Transfer
+
+> Dmytro Kotovenko
 
 | data avalibility             | algorithm speed     | visual quality     | Portrate / general | complexity of algorithm structrue       | Choice Score                     | Paper URL                                                    | Year |
 | ---------------------------- | ------------------- | ------------------ | ------------------ | --------------------------------------- | -------------------------------- | ------------------------------------------------------------ | ---- |
 | 5 : avalible  0 : unavilible | 5 : quick  0 : slow | 5 : good  0 : poor |                    | 5 : complex  0 : simple                 | 5 : would choose  0 : not choose | http://openaccess.thecvf.com/content_ICCV_2019/papers/Kotovenko_Content_and_Style_Disentanglement_for_Artistic_Style_Transfer_ICCV_2019_paper.pdf | 2019 |
-|                              |                     | 4                  | General            | 5 (no much reference, no official code) | 4                                |                                                              |      |
-
-
+| 0                            | 4                   | 4                  | General            | 5 (no much reference, no official code) | 3                                |                                                              |      |
 
 
 
@@ -372,6 +479,8 @@ Note:
 1. visual quality is good 
 2. variationa and change in several style 
 3. **local texture is well preserved** 
+4. rouphly = A Style-Aware Content Loss for Real-time HD Style Transfer + variation of style 
+   1. most model only learn visual clues most dominate in the style and ignore the rest of the style 
 
 
 
@@ -398,15 +507,6 @@ Note:
 2. the model architecture is way too complicated. 
 
 
-
-
-
-### Multimodal Style Transfer via Graph Cuts
-
-| data avalibility             | algorithm speed     | visual quality     | Portrate / general | complexity of algorithm structrue | Choice Score                     | Paper URL                              | Year |
-| ---------------------------- | ------------------- | ------------------ | ------------------ | --------------------------------- | -------------------------------- | -------------------------------------- | ---- |
-| 5 : avalible  0 : unavilible | 5 : quick  0 : slow | 5 : good  0 : poor |                    | 5 : complex  0 : simple           | 5 : would choose  0 : not choose | https://arxiv.org/pdf/1904.04443v6.pdf | 2020 |
-|                              |                     |                    |                    |                                   |                                  |                                        |      |
 
 
 
