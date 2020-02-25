@@ -137,19 +137,19 @@ def do_inference(hostport, work_dir, concurrency, num_tests):
   Raises:
     IOError: An error occurred processing test data set.
   """
-  test_data_set = mnist_input_data.read_data_sets(work_dir).test
-  channel = grpc.insecure_channel(hostport)
-  stub = prediction_service_pb2_grpc.PredictionServiceStub(channel)
+  test_data_set = mnist_input_data.read_data_sets(work_dir).test    # Can change this line to decode clinet request using another fucntion 
+  channel = grpc.insecure_channel(hostport)   # Establish insecure connection 
+  stub = prediction_service_pb2_grpc.PredictionServiceStub(channel)   # Establish insecure connection 
   result_counter = _ResultCounter(num_tests, concurrency)
   for _ in range(num_tests):
     request = predict_pb2.PredictRequest()
-    request.model_spec.name = 'mnist'
+    request.model_spec.name = 'mnist'         # Model Name 
     request.model_spec.signature_name = 'predict_images'
     image, label = test_data_set.next_batch(1)
-    request.inputs['images'].CopyFrom(
+    request.inputs['images'].CopyFrom(        # Name seted when export model; inputs={'images': tensor_info_input},
         tf.make_tensor_proto(image[0], shape=[1, image[0].size]))
     result_counter.throttle()
-    result_future = stub.Predict.future(request, 5.0)  # 5 seconds
+    result_future = stub.Predict.future(request, 5.0)  # Make prediciton & 5 second time out 
     result_future.add_done_callback(
         _create_rpc_callback(label[0], result_counter))
   return result_counter.get_error_rate()

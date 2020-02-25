@@ -38,6 +38,7 @@ from tensorflow.python.ops import lookup_ops
 
 import mnist_input_data
 
+# Work like argparse
 tf.compat.v1.app.flags.DEFINE_integer('training_iteration', 1000,
                                       'number of training iterations.')
 tf.compat.v1.app.flags.DEFINE_integer('model_version', 1,
