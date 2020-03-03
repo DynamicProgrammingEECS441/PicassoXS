@@ -1,36 +1,26 @@
-# Demo 
-
-* Reference 
-
-[download docker instruction](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
-
-[docker tutorial](https://yeasy.gitbooks.io/docker_practice/image/pull.html)
-
-[docker command document CH_zh](https://www.runoob.com/docker/docker-command-manual.html)
-
-[tf server tutorial 1 - delpoy with tf1.x](https://zhuanlan.zhihu.com/p/52096200)
-
-[tf server tutorial 2 - deploy with tf2.x keras](https://zhuanlan.zhihu.com/p/96917543)
-
-[tf server tutorial 3 - multi model deploy](https://zhuanlan.zhihu.com/p/64413178)
-
-[official document CH_zh](https://bookdown.org/leovan/TensorFlow-Learning-Notes/4-5-deploy-tensorflow-serving.html#serving-a-tensorflow-model--tensorflow-)
-
-[tf official document - Serving a Tensorflow Model](https://www.tensorflow.org/tfx/serving/serving_basic)
-
-[tf official document - tf1.x saved model builder ](https://www.tensorflow.org/api_docs/python/tf/compat/v1/saved_model/Builder)
-
-[tf server official document - RESTful API 有空需要看](https://www.tensorflow.org/tfx/serving/api_rest)
+# TF SERVER  
 
 
+## Anconda 
 
+Install Anconda following [instruction](https://docs.anaconda.com/anaconda/install/)
 
+```shell
+# export conda container (after conda activate ${CONTAINER_NAME})
+conda env export > ${EXPORT_NAME}.yml
+conda env export > conda_enviroment_tf2.yml
+conda env export > conda_enviroment_tf1.yml
 
-## TODO 
+# install container using `.yaml` file 
+conda env create -f ${EXPORT_NAME}.yml
+conda env create -f environment.yml
 
-查看是否能将 tf1.x 与 tf2.keras 结合在一起，把data preprocessing的部分加入到 tf2.keras中
+# Install package inside conda enviroment 
+conda install ${Package_Name}
 
+```
 
+It's recommended to develop program using the given conda enviroment. 
 
 ## TF Note
 
@@ -262,6 +252,9 @@ kill -9 <PID>
 
 see `servable_demo.ipynb` for prepare servable 
 
+Install conda enviroment using `conda_enviroment_tf1.yml`, `conda_enviroment_tf2.yml` file 
+
+
 
 
 * use `tensorflow/serving:latest` to build docker that store and serve ONE servable 
@@ -285,24 +278,26 @@ docker run -t -p 8501:8501 -p 8500:8500 only_generator_servable
 
 
 
-* run tf server by mount servable on `tensorflow/serving:latest-devel`
+* run tf server by mount servable on `tensorflow/serving:latest`
 
 ```shell
 # Run tfserver by mount 
 docker run -t -p 8500:8500 -p 8501:8501 \
     -v $(pwd)/tmp/generator/:/models/generator \   # use -v as mapping 
     -e MODEL_NAME=generator \
-    tensorflow/serving &
+    tensorflow/serving:latest &
     
-docker run -t --rm -p 8501:8501 \
+docker run -t -p 8501:8501 \
     --mount type=bind,source=$(pwd)/model/,target=/models/model \  # use -mount as mount 
     -e MODEL_NAME=model \
-    tensorflow/serving &
+    tensorflow/serving:latest &
+    
+docker run -t -p 8500:8500 -p 8501:8501 -v $(pwd)/servable/styletransfer/:/models/styletransfer  -e MODEL_NAME=styletransfer    tensorflow/serving:latest &
 ```
 
 
 
-* Start TF Server inside container after copy servile into Images
+* Start TF Server inside container after copy servile into Images `tensorflow/serving:latest-devel`
 
 ```shell
 # Start container 
@@ -343,3 +338,15 @@ see `servable_demo.ipynb` for information
 
 
 
+## Reference 
+
+1. [download docker instruction](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
+2. [docker tutorial](https://yeasy.gitbooks.io/docker_practice/image/pull.html)
+3. [docker command document CH_zh](https://www.runoob.com/docker/docker-command-manual.html)
+4. [tf server tutorial 1 - delpoy with tf1.x](https://zhuanlan.zhihu.com/p/52096200)
+5. [tf server tutorial 2 - deploy with tf2.x keras](https://zhuanlan.zhihu.com/p/96917543)
+6. [tf server tutorial 3 - multi model deploy](https://zhuanlan.zhihu.com/p/64413178)
+7. [official document CH_zh](https://bookdown.org/leovan/TensorFlow-Learning-Notes/4-5-deploy-tensorflow-serving.html#serving-a-tensorflow-model--tensorflow-)
+8. [tf official document - Serving a Tensorflow Model](https://www.tensorflow.org/tfx/serving/serving_basic)
+9. [tf official document - tf1.x saved model builder ](https://www.tensorflow.org/api_docs/python/tf/compat/v1/saved_model/Builder)
+10. [tf server official document - RESTful API 有空需要看](https://www.tensorflow.org/tfx/serving/api_rest)
