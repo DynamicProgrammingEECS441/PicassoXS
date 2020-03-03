@@ -98,22 +98,9 @@ ECS (Elastic Container Service):
 - Manage Docker containers on a cluster
 - [ECS documentation](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html)
 
-## 5. NumPy
-Release: 1.18.1
 
-A fundamental package for scientific computing with Python.
-
-Installation
-
-`$ pip install numpy`
-
-[Numpy installation](https://pypi.org/project/numpy/)
-
-[NumPy documentation](https://numpy.org/devdocs/user/quickstart.html)
-
-
-## 6. OpenCV
-Release: 3.3.0
+## 5. OpenCV
+Release: 4.2.0
 
 A library of programming functions mainly aimed at real-time computer vision.
 
@@ -125,7 +112,7 @@ Installation
 
 [OpenCV documentation](https://docs.opencv.org/master/d9/df8/tutorial_root.html)
 
-## 7. SQLAlchemy
+## 6. SQLAlchemy
 Release: 1.3.13
 
 SQLAlchemy is the Python SQL toolkit and Object Relational Mapper that gives application developers the full power and flexibility of SQL.
@@ -139,7 +126,7 @@ Installation
 [SQLAlchemy documentation](https://docs.sqlalchemy.org/en/13/)
 
 
-## 8. PyTorch
+## 7. PyTorch
 Release: 1.4.0
 
 PyTorch is an open source machine learning library based on the Torch library, used for applications such as computer vision and natural language processing.
@@ -152,7 +139,7 @@ Installation
 
 [PyTorch documentation](https://pytorch.org/docs/stable/index.html)
 
-## 9. Tornado
+## 8. Tornado
 Release: 6.0.3
 
 Tornado is a Python web framework and asynchronous networking library
@@ -165,11 +152,54 @@ Installation
 
 [Tornado documentation](https://www.tornadoweb.org/en/stable/guide/intro.html)
 
+## 9. tqdm
+Release: 4.43.0
+
+A progress bar library with good support for nested loops
+
+Installation
+
+`$ pip install tqdm`
+
+[tqdm documentation](https://tqdm.github.io/)
+
+## 10. Pillow
+Release: 2.2.2
+
+Python Image Library. A free library for the Python programming language that adds support for opening, manipulating, and saving many different image file formats
+
+Installation
+
+`$ pip install Pillow==2.2.2`
+
+[Pillow documentation](https://pillow.readthedocs.io/en/stable/)
+
+## 11. SpiPy
+Release: 1.4.1
+
+A python-based ecosystem of open-source software for mathematics, science, and engineering
+
+Installation
+
+`$ pip install scipy`
+
+[SciPy documentation](https://www.scipy.org/docs.html)
+
+## 12. imageio
+Release: 2.8.0
+
+Provides an easy interface to read and write a wide range of image data
+
+Installation
+
+`$ pip install imageio`
+
+[imageio documentation](https://imageio.readthedocs.io/en/stable/)
+
 
 
 
 ## *Set Up Third Party Dependency*
-The installation requirements for the third party dependencies can be found in the package. 
 - **dep_install executable**: one script that install dependencies completely
 - **pip_setup executable**: install python 3.7 and pip 20.0.2
 - **requirements.txt**: list thrid party libaries for pip to install

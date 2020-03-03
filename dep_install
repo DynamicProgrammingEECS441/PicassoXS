@@ -26,9 +26,6 @@ pip install tensorflow
 # install gRPC
 pip install grpcio
 
-# install numpy
-pip install numpy
-
 # install OpenCV
 pip install opencv-python
 
@@ -40,3 +37,15 @@ pip install torch torchvision
 
 # install Tornado
 pip install tornado
+
+# install tqdm
+pip install tqdm
+
+# install Pillow
+pip install Pillow==2.2.2
+
+# install spicy
+pip install spicy
+
+# install imageio
+pip install imageio
