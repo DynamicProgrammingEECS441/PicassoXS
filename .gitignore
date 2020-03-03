@@ -2,3 +2,13 @@
 *Vagrantfile
 .vagrant
 env
+*.png
+*.jpeg
+*.jpg
+.ipynb_checkpoints
+
+# Backend - Serving - Third Party Dependency Code & Dataset & Servable 
+src/backend/tfserver/data/
+src/backend/tfserver/reference/
+src/backend/tfserver/servable/
+src/backend/tfserver/test/
