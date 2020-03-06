@@ -6,7 +6,7 @@ torch
 torchvision
 tornado
 tqdm
-Pillow==2.2.2
+Pillow==6.2.0
 spicy
 imageio
 tensorflow-addons
