@@ -49,3 +49,6 @@ pip install spicy
 
 # install imageio
 pip install imageio
+
+# install tensorflow addons
+pip install tensorflow-addons

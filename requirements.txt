@@ -9,3 +9,4 @@ tqdm
 Pillow==2.2.2
 spicy
 imageio
+tensorflow-addons

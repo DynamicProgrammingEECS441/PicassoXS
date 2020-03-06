@@ -196,6 +196,16 @@ Installation
 
 [imageio documentation](https://imageio.readthedocs.io/en/stable/)
 
+## 13. Tensorflow Addons
+Release: 0.8.2
+
+TensorFlow Addons is a repository of contributions that conform to well- established API patterns, but implement new functionality not available in core TensorFlow
+
+Installation
+
+`$ pip install tensorflow-addons`
+
+
 
 
 
