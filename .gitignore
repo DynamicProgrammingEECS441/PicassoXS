@@ -2,6 +2,7 @@
 *Vagrantfile
 .vagrant
 env
+venv
 *.png
 *.jpeg
 *.jpg
