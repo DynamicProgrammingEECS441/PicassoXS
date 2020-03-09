@@ -98,6 +98,58 @@ def decoder(features, options, reuse=True, name="decoder"):
         print('decode')
         return pred
 
+def discriminator(image, options, reuse=True, name="discriminator"):
+    """
+    Discriminator agent, that provides us with information about image plausibility at
+    different scales.
+    Args:
+        image: input tensor
+        options: options defining number of kernels in conv layers
+        reuse: to create new discriminator or use existing
+        name: name of the discriminator
+
+    Returns:
+        Image estimates at different scales.
+    """
+    with variable_scope(name):
+        if reuse:
+            get_variable_scope().reuse_variables()
+        else:
+            assert get_variable_scope().reuse is False
+
+
+        h0 = lrelu(instance_norm(conv2d(image, options.df_dim * 2, ks=5, name='d_h0_conv'),
+                   name='d_bn0'))
+        h0_pred = conv2d(h0, 1, ks=5, s=1, name='d_h0_pred', activation_fn=None)
+
+        h1 = lrelu(instance_norm(conv2d(h0, options.df_dim * 2, ks=5, name='d_h1_conv'),
+                                 name='d_bn1'))
+        h1_pred = conv2d(h1, 1, ks=10, s=1, name='d_h1_pred', activation_fn=None)
+
+        h2 = lrelu(instance_norm(conv2d(h1, options.df_dim * 4, ks=5, name='d_h2_conv'),
+                                 name='d_bn2'))
+
+        h3 = lrelu(instance_norm(conv2d(h2, options.df_dim * 8, ks=5, name='d_h3_conv'),
+                                 name='d_bn3'))
+        h3_pred = conv2d(h3, 1, ks=10, s=1, name='d_h3_pred', activation_fn=None)
+
+        h4 = lrelu(instance_norm(conv2d(h3, options.df_dim * 8, ks=5, name='d_h4_conv'),
+                                 name='d_bn4'))
+
+        h5 = lrelu(instance_norm(conv2d(h4, options.df_dim * 16, ks=5, name='d_h5_conv'),
+                                 name='d_bn5'))
+        h5_pred = conv2d(h5, 1, ks=6, s=1, name='d_h5_pred', activation_fn=None)
+
+        h6 = lrelu(instance_norm(conv2d(h5, options.df_dim * 16, ks=5, name='d_h6_conv'),
+                                 name='d_bn6'))
+        h6_pred = conv2d(h6, 1, ks=3, s=1, name='d_h6_pred', activation_fn=None)
+
+        return {"scale_0": h0_pred,
+                "scale_1": h1_pred,
+                "scale_3": h3_pred,
+                "scale_5": h5_pred,
+                "scale_6": h6_pred}
+
 
 # ====== Define different types of losses applied to discriminator's output. ====== #
 
@@ -113,3 +165,15 @@ def mse_criterion(in_, target):
 
 def sce_criterion(logits, labels):
     return tf.reduce_mean(tf.nn.sigmoid_cross_entropy_with_logits(logits=logits, labels=labels))
+
+def transformer_block(input_, kernel_size=10):
+    """
+    This is a simplified version of transformer block described in our paper
+    https://arxiv.org/abs/1807.10201.
+    Args:
+        input_tensor: Image(or tensor of rank 4) we want to transform.
+        kernel_size: Size of kernel we apply to the input_tensor.
+    Returns:
+        Transformed tensor
+    """
+    return tf.nn.avg_pool2d(input=input_, ksize=kernel_size, strides=1, padding='SAME')
