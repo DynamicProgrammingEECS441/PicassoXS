@@ -205,6 +205,15 @@ Installation
 
 `$ pip install tensorflow-addons`
 
+## 14. Pandas
+Release: 0.24.0
+
+Installation
+
+`$ pip install pandas`
+
+[pandas documentation](https://pandas.pydata.org/docs/)
+
 
 
 
