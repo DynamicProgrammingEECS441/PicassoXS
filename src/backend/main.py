@@ -129,9 +129,16 @@ def main(_):
         model = Model(sess, args)
 
         if args.phase == 'train':
+            print('Train')
             model.train(args, ckpt_nmbr=args.ckpt_nmbr)
 
+        if args.phase == 'inference' or args.phase == 'test':
+            print("Inference.")
+            model.inference(args, args.inference_images_dir, resize_to_original=False,
+                            to_save_dir=args.save_dir,
+                            ckpt_nmbr=args.ckpt_nmbr)
         sess.close()
+    print('FINISHED')
 
 if __name__ == '__main__':
     tf.compat.v1.app.run()
