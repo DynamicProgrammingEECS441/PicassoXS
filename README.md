@@ -16,10 +16,12 @@ PicassoXS is your professional photo editing app that transfer your own photo in
 │       └── README.md
 └── src    # CODE 
     ├── backend    # code for BACKEND 
+    │   ├── img_augm.py
     │   ├── layers.py
     │   ├── main.py
     │   ├── module.py
-    │   ├── tfserver.    # code for using TF Server 
+    │   ├── prepare_dataset.py
+    │   ├── tfserver    # code for using TF Server 
     │   │   ├── Instruction.md
     │   │   ├── servable    # servile model 
     │   │   │   ├── model1
