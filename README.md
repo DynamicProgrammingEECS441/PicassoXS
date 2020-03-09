@@ -4,6 +4,31 @@ EECS 441 @ UMich Project
 ## *Description*
 PicassoXS is your professional photo editing app that transfer your own photo into different painting
 
+## *Repo Structure*
+
+```shell
+.
+├── README.md
+├── doc    # DOCUMENTATION
+│   ├── AlgorithmSelection    # doc for algorithm selection 
+│   │   └── README.md
+│   └── PaintingSelection    # doc for painting selection 
+│       └── README.md
+└── src    # CODE 
+    ├── backend    # code for BACKEND 
+    │   ├── layers.py
+    │   ├── main.py
+    │   ├── module.py
+    │   ├── tfserver.    # code for using TF Server 
+    │   │   ├── Instruction.md
+    │   │   ├── servable    # servile model 
+    │   │   │   ├── model1
+    │   │   │   └── model2
+    │   │   └── servable_demo.ipynb	
+    │   └── train.py
+    └── frontend    # code for FRONTEND		
+        └── PicassoXS
+```
 
 ## *Contributors*
 ### Frontend
