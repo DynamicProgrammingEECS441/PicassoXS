@@ -9,6 +9,8 @@ venv
 .ipynb_checkpoints
 *__pycache__/
 
+src/backend/models/
+
 # Backend - Serving - Third Party Dependency Code & Dataset & Servable 
 src/backend/tfserver/data/
 src/backend/tfserver/reference/
