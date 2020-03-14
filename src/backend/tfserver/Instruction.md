@@ -244,6 +244,19 @@ kill -9 <PID>
 
 ```
 
+* Upload Docker image to docker hub for easy installation 
+
+After login to docker 
+
+```shell
+
+# Change / Save docker repo with <username>/<docker name>:latest
+docker tag ${EXISTING_CONTAINER_NAME_or_ID} ${USER_NAME}/${NEW_CONTAINER_NAME}:latest
+docker tag 1b16dc687b1b xiaosong99/styletransfer_test1:latest
+
+# Push to docker hub 
+docker push xiaosong99/styletransfer_test1:latest
+```
 
 
 ## Start TF Server
