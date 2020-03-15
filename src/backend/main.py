@@ -134,7 +134,7 @@ def main(_):
 
         if args.phase == 'inference' or args.phase == 'test':
             print("Inference.")
-            model.inference(args, args.inference_images_dir, resize_to_original=False,
+            model.inference(args, args.inference_images_dir, resize_to_original=True,
                             to_save_dir=args.save_dir,
                             ckpt_nmbr=args.ckpt_nmbr)
         sess.close()

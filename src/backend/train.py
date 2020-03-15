@@ -10,6 +10,7 @@ import multiprocessing
 
 import imageio
 from PIL import Image
+import cv2
 
 import img_augm
 import prepare_dataset
@@ -33,7 +34,7 @@ def denormalize_arr_of_imgs(arr):
         arr: numpy array of arbitrary shape and dimensions.
     Returns:
     """
-    return (arr + 1.) * 127.5
+    return ((arr + 1.) * 127.5).astype(np.uint8)
 
 class Model(object):
     def __init__(self, sess, args):
@@ -315,11 +316,10 @@ class Model(object):
 
         if self.load(self.checkpoint_dir, ckpt_nmbr):
             print(" [*] Load SUCCESS")
+        elif self.load(self.checkpoint_long_dir, ckpt_nmbr):
+            print(" [*] Load SUCCESS")
         else:
-            if self.load(self.checkpoint_long_dir, ckpt_nmbr):
-                print(" [*] Load SUCCESS")
-            else:
-                print(" [!] Load failed...")
+            print(" [!] Load failed...")
 
         # Create folder to store results.
         if to_save_dir is None:
@@ -334,17 +334,20 @@ class Model(object):
             names += glob(os.path.join(d, '*'))
         names = [x for x in names if os.path.basename(x)[0] != '.']
         names.sort()
-        for img_idx, img_path in enumerate(tqdm(names)):
-            img = imageio.imread(img_path, pilmode='RGB')
+        for _, img_path in enumerate(tqdm(names)):
+            # img = imageio.imread(img_path, pilmode='RGB')
+            img = cv2.imread(img_path)
+            img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
             img_shape = img.shape[:2]
-
+            print("img", img.shape)
             # Resize the smallest side of the image to the self.image_size
             alpha = float(self.image_size) / float(min(img_shape))
             if img_shape[0] <= img_shape[1]:
                 new_shape = (int(img_shape[0] * alpha), img_shape[1])
             else:
                 new_shape = (img_shape[0], int(img_shape[1] * alpha))
-            img = np.array(Image.fromarray(img).resize(new_shape))
+            # img = np.array(Image.fromarray(img).resize(new_shape))
+            img = cv2.resize(img, (new_shape[1], new_shape[0]), interpolation=cv2.INTER_CUBIC)
             img = np.expand_dims(img, axis=0)
 
             img = self.sess.run(
@@ -356,12 +359,16 @@ class Model(object):
             img = img[0]
             img = denormalize_arr_of_imgs(img)
             if resize_to_original:
-                img = np.array(Image.fromarray(img).resize(img_shape))
+                print("img_shape", img_shape)
+                # img = scipy.misc.imresize(img, size=img_shape)
+                # img = np.array(Image.fromarray(img).resize(img_shape))
+                img = cv2.resize(img, (img_shape[1], img_shape[0]), interpolation=cv2.INTER_CUBIC)
             else:
                 pass
             img_name = os.path.basename(img_path)
-            imageio.imwrite(os.path.join(to_save_dir, img_name[:-4] + "_stylized.jpg"), img)
-
+            # imageio.imwrite(os.path.join(to_save_dir, img_name[:-4] + "_stylized.jpg"), img)
+            img = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
+            cv2.imwrite(os.path.join(to_save_dir, img_name[:-4] + "_stylized.jpg"), img)
         print("Inference is finished.")
     
     def load(self, checkpoint_dir, ckpt_nmbr=None):
