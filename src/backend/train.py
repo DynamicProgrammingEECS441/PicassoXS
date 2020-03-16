@@ -305,7 +305,7 @@ class Model(object):
         # print("Start training.")
         print('train')
         
-    def inference(self, args, path_to_folder, to_save_dir=None):
+    def inference(self, path_to_folder, to_save_dir=None):
 
         init_op = global_variables_initializer()
         self.sess.run(init_op)

@@ -128,7 +128,7 @@ def main(_):
 
         if args.phase == 'inference' or args.phase == 'test':
             print("Inference.")
-            model.inference(args, args.inference_images_dir,
+            model.inference(args.inference_images_dir,
                             to_save_dir=args.save_dir)
         sess.close()
     print('FINISHED')
