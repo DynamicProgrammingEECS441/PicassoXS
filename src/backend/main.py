@@ -111,12 +111,6 @@ parser.add_argument('--save_dir',
                     default=None,
                     help='Directory to save inference output images.'
                          'If not specified will save in the model directory.')
-parser.add_argument('--ckpt_nmbr',
-                    dest='ckpt_nmbr',
-                    type=int,
-                    default=None,
-                    help='Checkpoint number we want to use for inference. '
-                         'Might be None(unspecified), then the latest available will be used.')
 
 args = parser.parse_args()
 
@@ -130,13 +124,12 @@ def main(_):
 
         if args.phase == 'train':
             print('Train')
-            model.train(args, ckpt_nmbr=args.ckpt_nmbr)
+            model.train(args)
 
         if args.phase == 'inference' or args.phase == 'test':
             print("Inference.")
-            model.inference(args, args.inference_images_dir, resize_to_original=True,
-                            to_save_dir=args.save_dir,
-                            ckpt_nmbr=args.ckpt_nmbr)
+            model.inference(args, args.inference_images_dir,
+                            to_save_dir=args.save_dir)
         sess.close()
     print('FINISHED')
 
