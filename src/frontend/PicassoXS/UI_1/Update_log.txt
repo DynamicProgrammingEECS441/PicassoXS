@@ -1,0 +1,6 @@
+https://www.paintcodeapp.com/news/how-to-use-the-code-generated-by-paintcode-plugin-for-sketch
+
+I've exported UI1 through "paintcode"
+The link above is about how to use that
+I haven't modified the swift yet
+18th Mar 2:42 pm rzj
