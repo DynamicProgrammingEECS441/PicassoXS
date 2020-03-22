@@ -41,7 +41,7 @@ xiaosong99/servable   van-gogh            1653250eb149        6 minutes ago     
 
 ```shell
 >> docker run -t -p ${MACHINE_PORT_FOR_gRPC}:8500 -p ${MACHINE_PORT_FOR_RESTfil}:8501 xiaosong99/servable:${MODEL_NAME}
->> docker run -t -p 0000:8500 -p 0001:8501 xiaosong99/servable:morisot
+>> docker run -t -p 0000:8500 -p 0001:8501 xiaosong99/servable:monet
 >> docker run -t -p 0002:8500 -p 0003:8501 xiaosong99/servable:kandinsky
 
 2020-03-14 15:44:42.811819: I external/org_tensorflow/tensorflow/cc/saved_model/loader.cc:203] Restoring SavedModel bundle.
