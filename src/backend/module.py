@@ -4,7 +4,7 @@ import tensorflow_addons as tfa
 
 from tensorflow.compat.v1 import get_variable, get_variable_scope, variable_scope
 from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Conv2D, Activation
+from tensorflow.keras.layers import Conv2D, Activation, LeakyReLU
 
 from layers import *
 
@@ -42,7 +42,6 @@ def encoder(image, options, reuse=True, name="encoder"):
         c5 = encoder_conv2d(c4, options.gf_dim * 8, 3, 2, padding='VALID', name='g_e5_c', is_training=options.is_training, ins_norm_name='g_e5_bn')
         print('encoder')
         return c5
-
 
 def decoder(features, options, reuse=True, name="decoder"):
     """
@@ -118,29 +117,29 @@ def discriminator(image, options, reuse=True, name="discriminator"):
             assert get_variable_scope().reuse is False
 
 
-        h0 = lrelu(instance_norm(conv2d(image, options.df_dim * 2, ks=5, name='d_h0_conv'),
+        h0 = LeakyReLU()(instance_norm(conv2d(image, options.df_dim * 2, ks=5, name='d_h0_conv'),
                    name='d_bn0'))
         h0_pred = conv2d(h0, 1, ks=5, s=1, name='d_h0_pred', activation_fn=None)
 
-        h1 = lrelu(instance_norm(conv2d(h0, options.df_dim * 2, ks=5, name='d_h1_conv'),
+        h1 = LeakyReLU()(instance_norm(conv2d(h0, options.df_dim * 2, ks=5, name='d_h1_conv'),
                                  name='d_bn1'))
         h1_pred = conv2d(h1, 1, ks=10, s=1, name='d_h1_pred', activation_fn=None)
 
-        h2 = lrelu(instance_norm(conv2d(h1, options.df_dim * 4, ks=5, name='d_h2_conv'),
+        h2 = LeakyReLU()(instance_norm(conv2d(h1, options.df_dim * 4, ks=5, name='d_h2_conv'),
                                  name='d_bn2'))
 
-        h3 = lrelu(instance_norm(conv2d(h2, options.df_dim * 8, ks=5, name='d_h3_conv'),
+        h3 = LeakyReLU()(instance_norm(conv2d(h2, options.df_dim * 8, ks=5, name='d_h3_conv'),
                                  name='d_bn3'))
         h3_pred = conv2d(h3, 1, ks=10, s=1, name='d_h3_pred', activation_fn=None)
 
-        h4 = lrelu(instance_norm(conv2d(h3, options.df_dim * 8, ks=5, name='d_h4_conv'),
+        h4 = LeakyReLU()(instance_norm(conv2d(h3, options.df_dim * 8, ks=5, name='d_h4_conv'),
                                  name='d_bn4'))
 
-        h5 = lrelu(instance_norm(conv2d(h4, options.df_dim * 16, ks=5, name='d_h5_conv'),
+        h5 = LeakyReLU()(instance_norm(conv2d(h4, options.df_dim * 16, ks=5, name='d_h5_conv'),
                                  name='d_bn5'))
         h5_pred = conv2d(h5, 1, ks=6, s=1, name='d_h5_pred', activation_fn=None)
 
-        h6 = lrelu(instance_norm(conv2d(h5, options.df_dim * 16, ks=5, name='d_h6_conv'),
+        h6 = LeakyReLU()(instance_norm(conv2d(h5, options.df_dim * 16, ks=5, name='d_h6_conv'),
                                  name='d_bn6'))
         h6_pred = conv2d(h6, 1, ks=3, s=1, name='d_h6_pred', activation_fn=None)
 

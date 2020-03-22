@@ -25,6 +25,7 @@ def normalize_arr_of_imgs(arr):
         arr: numpy array of arbitrary shape and dimensions.
     Returns:
     """
+    print("arr shape", arr.shape)
     return arr/127.5 - 1.
 
 def denormalize_arr_of_imgs(arr):
@@ -36,6 +37,31 @@ def denormalize_arr_of_imgs(arr):
     """
     return ((arr + 1.) * 127.5).astype(np.uint8)
 
+def save_batch(input_painting_batch, input_photo_batch, output_painting_batch, output_photo_batch, filepath):
+    """
+    Concatenates, processes and stores batches as image 'filepath'.
+    Args:
+        input_painting_batch: numpy array of size [B x H x W x C]
+        input_photo_batch: numpy array of size [B x H x W x C]
+        output_painting_batch: numpy array of size [B x H x W x C]
+        output_photo_batch: numpy array of size [B x H x W x C]
+        filepath: full name with path of file that we save
+    Returns:
+    """
+    def batch_to_img(batch):
+        return np.reshape(batch,
+                          newshape=(batch.shape[0]*batch.shape[1], batch.shape[2], batch.shape[3]))
+
+    inputs = np.concatenate([batch_to_img(input_painting_batch), batch_to_img(input_photo_batch)],
+                            axis=0)
+    outputs = np.concatenate([batch_to_img(output_painting_batch), batch_to_img(output_photo_batch)],
+                             axis=0)
+
+    to_save = np.concatenate([inputs,outputs], axis=1)
+    to_save = np.clip(to_save, a_min=0., a_max=255.).astype(np.uint8)
+
+    # scipy.misc.imsave(filepath, arr=to_save)
+    cv2.imwrite(filepath, to_save)
 class Model(object):
     def __init__(self, sess, args):
         self.model_name = args.model_name
@@ -68,19 +94,20 @@ class Model(object):
                                       args.path_to_art_dataset,
                                       args.discr_loss_weight, args.transformer_loss_weight, args.feature_loss_weight
                                       ))
+
         # Create all the folders for saving the model
-        # if not os.path.exists(self.root_dir):
-        #     os.makedirs(self.root_dir)
-        # if not os.path.exists(os.path.join(self.root_dir, self.model_name)):
-        #     os.makedirs(os.path.join(self.root_dir, self.model_name))
-        # if not os.path.exists(self.checkpoint_dir):
-        #     os.makedirs(self.checkpoint_dir)
-        # if not os.path.exists(self.checkpoint_long_dir):
-        #     os.makedirs(self.checkpoint_long_dir)
-        # if not os.path.exists(self.sample_dir):
-        #     os.makedirs(self.sample_dir)
-        # if not os.path.exists(self.inference_dir):
-        #     os.makedirs(self.inference_dir)
+        if not os.path.exists(self.root_dir):
+            os.makedirs(self.root_dir)
+        if not os.path.exists(os.path.join(self.root_dir, self.model_name)):
+            os.makedirs(os.path.join(self.root_dir, self.model_name))
+        if not os.path.exists(self.checkpoint_dir):
+            os.makedirs(self.checkpoint_dir)
+        if not os.path.exists(self.checkpoint_long_dir):
+            os.makedirs(self.checkpoint_long_dir)
+        if not os.path.exists(self.sample_dir):
+            os.makedirs(self.sample_dir)
+        if not os.path.exists(self.inference_dir):
+            os.makedirs(self.inference_dir)
 
         self.build()
         self.saver = tf.compat.v1.train.Saver(max_to_keep=2)
@@ -199,18 +226,18 @@ class Model(object):
             self.encoder_vars = [var for var in t_vars if 'encoder' in var.name]
             self.decoder_vars = [var for var in t_vars if 'decoder' in var.name]
 
-            # # Discriminator and generator steps.
-            # update_ops = tf.compat.v1.get_collection(tf.compat.v1.GraphKeys.UPDATE_OPS)
+            # Discriminator and generator steps.
+            update_ops = tf.compat.v1.get_collection(tf.compat.v1.GraphKeys.UPDATE_OPS)
 
-            # with tf.control_dependencies(update_ops):
-            #     self.d_optim_step = tf.compat.v1.train.AdamOptimizer(self.lr).minimize(
-            #         loss=self.options.discr_loss_weight * self.discr_loss,
-            #         var_list=[self.discr_vars])
-            #     self.g_optim_step = tf.compat.v1.train.AdamOptimizer(self.lr).minimize(
-            #         loss=self.options.discr_loss_weight * self.gener_loss +
-            #              self.options.transformer_loss_weight * self.img_loss +
-            #              self.options.feature_loss_weight * self.feature_loss,
-            #         var_list=[self.encoder_vars + self.decoder_vars])
+            with tf.control_dependencies(update_ops):
+                self.d_optim_step = tf.compat.v1.train.AdamOptimizer(self.lr).minimize(
+                    loss=self.options.discr_loss_weight * self.discr_loss,
+                    var_list=[self.discr_vars])
+                self.g_optim_step = tf.compat.v1.train.AdamOptimizer(self.lr).minimize(
+                    loss=self.options.discr_loss_weight * self.gener_loss +
+                         self.options.transformer_loss_weight * self.img_loss +
+                         self.options.feature_loss_weight * self.feature_loss,
+                    var_list=[self.encoder_vars + self.decoder_vars])
             
             # ============= Write statistics to tensorboard. ================ #
 
@@ -269,25 +296,23 @@ class Model(object):
     def train(self, args):
         # Initialize augmentor.
         augmentor = img_augm.Augmentor(crop_size=[self.options.image_size, self.options.image_size],
-                                       vertical_flip_prb=0.,
-                                       hsv_augm_prb=1.0,
                                        hue_augm_shift=0.05,
                                        saturation_augm_shift=0.05, saturation_augm_scale=0.05,
                                        value_augm_shift=0.05, value_augm_scale=0.05, )
 
-        # content_dataset_places = prepare_dataset.PlacesDataset(path_to_dataset=self.options.path_to_content_dataset)
+        content_dataset_places = prepare_dataset.PlacesDataset(path_to_dataset=self.options.path_to_content_dataset)
         art_dataset = prepare_dataset.ArtDataset(path_to_art_dataset=self.options.path_to_art_dataset)
 
         # Initialize queue workers for both datasets.
-        q_art = multiprocessing.Queue(maxsize=10)
-        q_content = multiprocessing.Queue(maxsize=10)
-        jobs = []
+        # q_art = multiprocessing.Queue(maxsize=10)
+        # q_content = multiprocessing.Queue(maxsize=10)
+        # jobs = []
         # for i in range(5):
         #     print(i)
-        #     # p = multiprocessing.Process(target=content_dataset_places.initialize_batch_worker,
-        #     #                             args=(q_content, augmentor, self.batch_size, i))
-        #     # p.start()
-        #     # jobs.append(p)
+        #     p = multiprocessing.Process(target=content_dataset_places.initialize_batch_worker,
+        #                                 args=(q_content, augmentor, self.batch_size, i))
+        #     p.start()
+        #     jobs.append(p)
 
         #     p = multiprocessing.Process(target=art_dataset.initialize_batch_worker,
         #                                 args=(q_art, augmentor, self.batch_size, i))
@@ -300,10 +325,84 @@ class Model(object):
         # time.sleep(3)
 
         # Now initialize the graph
-        # init_op = tf.compat.v1.global_variables_initializer()
-        # self.sess.run(init_op)
-        # print("Start training.")
-        print('train')
+        init_op = tf.compat.v1.global_variables_initializer()
+        self.sess.run(init_op)
+        print("Start training.")
+        if self.load(self.checkpoint_dir):
+            print(" [*] Load SUCCESS")
+        else:
+            if self.load(self.checkpoint_long_dir):
+                print(" [*] Load SUCCESS")
+            else:
+                print(" [!] Load failed...")
+
+        # Initial discriminator success rate.
+        win_rate = args.discr_success_rate
+        discr_success = args.discr_success_rate
+        alpha = 0.05
+
+        exit(0)
+        
+        for step in tqdm(range(self.initial_step, self.options.total_steps+1),
+                         initial=self.initial_step,
+                         total=self.options.total_steps):
+            # Get batch from the queue with batches q, if the last is non-empty.
+            # while q_art.empty() or q_content.empty():
+            #     pass
+            # batch_art = q_art.get()
+            # batch_content = q_content.get()
+            batch_art = art_dataset.get_batch(augmentor=augmentor, batch_size=self.batch_size)
+            batch_content = content_dataset_places.get_batch(augmentor=augmentor, batch_size=self.batch_size)
+            if discr_success >= win_rate:
+                # Train generator
+                _, summary_all, gener_acc_ = self.sess.run(
+                    [self.g_optim_step, self.summary_merged_all, self.gener_acc],
+                    feed_dict={
+                        self.input_painting: normalize_arr_of_imgs(batch_art['image']),
+                        self.input_photo: normalize_arr_of_imgs(batch_content['image']),
+                        self.lr: self.options.lr
+                    })
+                discr_success = discr_success * (1. - alpha) + alpha * (1. - gener_acc_)
+            else:
+                # Train discriminator.
+                _, summary_all, discr_acc_ = self.sess.run(
+                    [self.d_optim_step, self.summary_merged_all, self.discr_acc],
+                    feed_dict={
+                        self.input_painting: normalize_arr_of_imgs(batch_art['image']),
+                        self.input_photo: normalize_arr_of_imgs(batch_content['image']),
+                        self.lr: self.options.lr
+                    })
+
+                discr_success = discr_success * (1. - alpha) + alpha * discr_acc_
+            self.writer.add_summary(summary_all, step * self.batch_size)
+
+            if step % self.options.save_freq == 0 and step > self.initial_step:
+                self.save(step)
+
+            # And additionally save all checkpoints each 15000 steps.
+            if step % 15000 == 0 and step > self.initial_step:
+                self.save(step, is_long=True)
+
+            if step % 500 == 0:
+                output_paintings_, output_photos_= self.sess.run(
+                    [self.input_painting, self.output_photo],
+                    feed_dict={
+                        self.input_painting: normalize_arr_of_imgs(batch_art['image']),
+                        self.input_photo: normalize_arr_of_imgs(batch_content['image']),
+                        self.lr: self.options.lr
+                    })
+
+                save_batch(input_painting_batch=batch_art['image'],
+                           input_photo_batch=batch_content['image'],
+                           output_painting_batch=denormalize_arr_of_imgs(output_paintings_),
+                           output_photo_batch=denormalize_arr_of_imgs(output_photos_),
+                           filepath='%s/step_%d.jpg' % (self.sample_dir, step))
+        # print("Training is finished. Terminate jobs.")
+        # for p in jobs:
+        #     p.join()
+        #     p.terminate()
+
+        print("Done.")
         
     def inference(self, path_to_folder, to_save_dir=None):
 
@@ -359,7 +458,19 @@ class Model(object):
             img = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
             cv2.imwrite(os.path.join(to_save_dir, img_name[:-4] + "_stylized.jpg"), img)
         print("Inference is finished.")
-    
+
+    def save(self, step, is_long=False):
+        if not os.path.exists(self.checkpoint_dir):
+            os.makedirs(self.checkpoint_dir)
+        if is_long:
+            self.saver_long.save(self.sess,
+                                 os.path.join(self.checkpoint_long_dir, self.model_name+'_%d.ckpt' % step),
+                                 global_step=step)
+        else:
+            self.saver.save(self.sess,
+                            os.path.join(self.checkpoint_dir, self.model_name + '_%d.ckpt' % step),
+                            global_step=step)
+
     def load(self, checkpoint_dir):
         print(" [*] Reading latest checkpoint from folder %s." % (checkpoint_dir))
         ckpt = tf.compat.v1.train.get_checkpoint_state(checkpoint_dir)

@@ -66,20 +66,17 @@ class ArtDataset():
                     # image = scipy.misc.imresize(image, size=[800, 800])
                     image = np.array(Image.fromarray(image).resize([800, 800]))
 
-            if augmentor:
-                batch_image.append(augmentor(image).astype(np.float32))
-            else:
-                batch_image.append((image).astype(np.float32))
+            batch_image.append(augmentor(image).astype(np.float32))
         # Now return a batch in correct form
         batch_image = np.asarray(batch_image)
 
         return {"image": batch_image}
 
-    def initialize_batch_worker(self, queue, augmentor, batch_size=1, seed=228):
-        np.random.seed(seed)
-        while True:
-            batch = self.get_batch(augmentor=augmentor, batch_size=batch_size)
-            queue.put(batch)
+    # def initialize_batch_worker(self, queue, augmentor, batch_size=1, seed=228):
+    #     np.random.seed(seed)
+    #     while True:
+    #         batch = self.get_batch(augmentor=augmentor, batch_size=batch_size)
+    #         queue.put(batch)
 
 
 class PlacesDataset():
@@ -111,15 +108,16 @@ class PlacesDataset():
 
     def __init__(self, path_to_dataset):
         self.dataset = []
-        for category_idx, category_name in enumerate(tqdm(self.categories_names)):
-            print(category_name, category_idx)
-            if os.path.exists(os.path.join(path_to_dataset, category_name)):
-                for file_name in tqdm(os.listdir(os.path.join(path_to_dataset, category_name))):
-                    self.dataset.append(os.path.join(path_to_dataset, category_name, file_name))
-            else:
-                print("Category %s can't be found in path %s. Skip it." %
-                      (category_name, os.path.join(path_to_dataset, category_name)))
-
+        # for category_idx, category_name in enumerate(tqdm(self.categories_names)):
+        #     print(category_name, category_idx)
+        #     if os.path.exists(os.path.join(path_to_dataset, category_name)):
+        #         for file_name in tqdm(os.listdir(os.path.join(path_to_dataset, category_name))):
+        #             self.dataset.append(os.path.join(path_to_dataset, category_name, file_name))
+        #     else:
+        #         print("Category %s can't be found in path %s. Skip it." %
+        #               (category_name, os.path.join(path_to_dataset, category_name)))
+        for file_name in tqdm(os.listdir(path_to_dataset)):
+            self.dataset.append(os.path.join(path_to_dataset, file_name))
         print("Finished. Constructed Places2 dataset of %d images." % len(self.dataset))
 
     def get_batch(self, augmentor, batch_size=1):
@@ -136,11 +134,11 @@ class PlacesDataset():
         batch_image = []
         for _ in range(batch_size):
             # image = scipy.misc.imread(name=random.choice(self.dataset), mode='RGB')
-            image = imageio.imread(random.choice(self.dataset), pilmpde='RGB')
+            image = imageio.imread(random.choice(self.dataset), pilmode='RGB')
             # image = scipy.misc.imresize(image, size=2.)
             image = np.array(Image.fromarray(image).resize([int(image.shape[0] * 2.), int(image.shape[1] * 2.)]))
             image_shape = image.shape[:2]
-
+            # Resize the input image such that the maximum size <= 1800, while minimum size >= 800
             if max(image_shape) > 1800.:
                 alpha = 1800. / max(image_shape)
                 # image = scipy.misc.imresize(image, size=1800. / max(image_shape))
@@ -160,11 +158,11 @@ class PlacesDataset():
 
         return {"image": np.asarray(batch_image)}
 
-    def initialize_batch_worker(self, queue, augmentor, batch_size=1, seed=228):
-        np.random.seed(seed)
-        while True:
-            batch = self.get_batch(augmentor=augmentor, batch_size=batch_size)
-            queue.put(batch)
+    # def initialize_batch_worker(self, queue, augmentor, batch_size=1, seed=228):
+    #     np.random.seed(seed)
+    #     while True:
+    #         batch = self.get_batch(augmentor=augmentor, batch_size=batch_size)
+    #         queue.put(batch)
 
 
 

@@ -7,13 +7,11 @@ class Augmentor():
                  crop_size=(256, 256),
                  scale_augm_prb=0.5, scale_augm_range=0.2,
                  rotation_augm_prb=0.5, rotation_augm_range=0.15,
-                 hsv_augm_prb=1.0,
                  hue_augm_shift=0.05,
                  saturation_augm_shift=0.05, saturation_augm_scale=0.05,
                  value_augm_shift=0.05, value_augm_scale=0.05,
                  affine_trnsfm_prb=0.5, affine_trnsfm_range=0.05,
-                 horizontal_flip_prb=0.5,
-                 vertical_flip_prb=0.5):
+                 horizontal_flip_prb=0.5):
 
         self.crop_size = crop_size
 
@@ -23,7 +21,6 @@ class Augmentor():
         self.rotation_augm_prb = rotation_augm_prb
         self.rotation_augm_range = rotation_augm_range
 
-        self.hsv_augm_prb = hsv_augm_prb
         self.hue_augm_shift = hue_augm_shift
         self.saturation_augm_scale = saturation_augm_scale
         self.saturation_augm_shift = saturation_augm_shift
@@ -34,13 +31,8 @@ class Augmentor():
         self.affine_trnsfm_range = affine_trnsfm_range
 
         self.horizontal_flip_prb = horizontal_flip_prb
-        self.vertical_flip_prb = vertical_flip_prb
     
-    def __call__(self, image, is_inference=False):
-        if is_inference:
-            return cv2.resize(image, None, fx=self.crop_size[0], fy=self.crop_size[1], interpolation=cv2.INTER_CUBIC)
-
-        # If not inference stage apply the pipeline of augmentations.
+    def __call__(self, image):
         if self.scale_augm_prb > np.random.uniform():
             image = self.scale(image=image,
                                scale_x=1. + np.random.uniform(low=-self.scale_augm_range, high=-self.scale_augm_range),
@@ -67,19 +59,16 @@ class Augmentor():
                           crop_size=self.crop_size
                           )
 
-        if self.hsv_augm_prb > np.random.uniform():
-            image = self.hsv_transform(image=image,
-                                       hue_shift=self.hue_augm_shift,
-                                       saturation_shift=self.saturation_augm_shift,
-                                       saturation_scale=self.saturation_augm_scale,
-                                       value_shift=self.value_augm_shift,
-                                       value_scale=self.value_augm_scale)
+        image = self.hsv_transform(image=image,
+                                    hue_shift=self.hue_augm_shift,
+                                    saturation_shift=self.saturation_augm_shift,
+                                    saturation_scale=self.saturation_augm_scale,
+                                    value_shift=self.value_augm_shift,
+                                    value_scale=self.value_augm_scale)
+            
 
         if self.horizontal_flip_prb > np.random.uniform():
             image = self.horizontal_flip(image)
-
-        if self.vertical_flip_prb > np.random.uniform():
-            image = self.vertical_flip(image)
 
         return image
     
