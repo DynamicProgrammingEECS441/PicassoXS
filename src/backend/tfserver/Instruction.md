@@ -351,7 +351,11 @@ see `servable_demo.ipynb` for information
 
 
 
-## Reference 
+
+
+
+
+## Reference
 
 1. [download docker instruction](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 2. [docker tutorial](https://yeasy.gitbooks.io/docker_practice/image/pull.html)
@@ -363,3 +367,5 @@ see `servable_demo.ipynb` for information
 8. [tf official document - Serving a Tensorflow Model](https://www.tensorflow.org/tfx/serving/serving_basic)
 9. [tf official document - tf1.x saved model builder ](https://www.tensorflow.org/api_docs/python/tf/compat/v1/saved_model/Builder)
 10. [tf server official document - RESTful API 有空需要看](https://www.tensorflow.org/tfx/serving/api_rest)
+11. [k8s official document](https://kubernetes.io/zh/docs/home/)
+12. 

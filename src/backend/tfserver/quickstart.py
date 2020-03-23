@@ -5,22 +5,21 @@ import requests
 import numpy as np
 
 # Load Image
-img = Image.open('./test_input_img1.jpg')
+img = Image.open('./test_input_img3.jpg')
 print('input image original size', img.size)
 
 # Resize long side to 1024
 h, w = img.size
 
 if h > w : # h is the long side 
-    h = 1600 
-    w = 1600 * (w / h)
-    w = int(w)
-else:
-    w = 1600 
-    h = 1600 * (h / w)
-    h = int(h)
+    h = int(1600.)
+    w = int(1600. * (w * (1.0) ) / ( h  * (1.0) ) )
+else:      # w is the long side 
+    w = int(1600.)
+    h = int(1600. * (h * (1.0) ) / ( w  * (1.0) ) )
 
-img = img.resize((w, h), resample=Image.BILINEAR)
+
+img = img.resize((h, w), resample=Image.BILINEAR)
 print('input image resized size', img.size)
 
 input_img = np.array(img)
@@ -34,7 +33,9 @@ data = json.dumps({"signature_name": "predict_images",
 headers = {"content-type": "application/json"}
 
 # Send Request
-json_response = requests.post('http://localhost:0001/v1/models/model:predict', \
+url = 'http://35.239.199.254:8501/v1/models/model:predict'
+#url = ''http://localhost:0001/v1/models/model:predict'
+json_response = requests.post(url, \
                               data=data, headers=headers)
 
 # Load response
@@ -55,4 +56,4 @@ print('output image range {} - {}'.format(np.min(output_img), np.max(output_img)
 
 # Save Image
 output_img_pil = Image.fromarray(output_img)
-output_img_pil.save('./test_output_img1.jpg')
+output_img_pil.save('./test_output_img3.jpg')
