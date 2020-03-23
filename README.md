@@ -1,39 +1,47 @@
 # ***PicassoXS***
 EECS 441 @ UMich Project 
 
+
+
 ## *Description*
+
 PicassoXS is your professional photo editing app that transfer your own photo into different painting
+
+
 
 ## *Repo Structure*
 
 ```shell
 .
 ├── README.md
-├── doc    # DOCUMENTATION
-│   ├── AlgorithmSelection    # doc for algorithm selection 
-│   │   └── README.md
+├── doc                      # DOCUMENTATION
+│   ├── AlgorithmSelection   # doc for algorithm selection 
 │   └── PaintingSelection    # doc for painting selection 
-│       └── README.md
-└── src    # CODE 
-    ├── backend    # code for BACKEND 
+└── src                # CODE 
+    ├── backend        # code for BACKEND 
     │   ├── img_augm.py
     │   ├── layers.py
     │   ├── main.py
     │   ├── module.py
     │   ├── prepare_dataset.py
+    |   ├── train.py    
     │   ├── tfserver    # code for using TF Server 
     │   │   ├── Instruction.md
-    │   │   ├── servable    # servile model 
-    │   │   │   ├── model1
-    │   │   │   └── model2
-    │   │   └── servable_demo.ipynb	
-    │   └── train.py
-    └── frontend    # code for FRONTEND		
+    │   │   ├── QuickStart.md   
+    │   │   └── * others 
+    │   └── gcloud      # code for using google cloud to deploy 
+    │   │   ├── Instruction.md
+    │   │   └── * others 
+    └── frontend        # code for FRONTEND		
         └── PicassoXS
 ```
 
+
+
 ## *Contributors*
+
 ### Frontend
+
 - Zhijie Ren (uniqname: rzj)
 - Senhao Wang (uniqname: rogerogw)
 - Juye Xiao (uniqname: juyexiao)
@@ -45,7 +53,9 @@ PicassoXS is your professional photo editing app that transfer your own photo in
 - Jason Zhao (uniqname: jasonyz)
 
 
+
 ## *Development Environment*
+
 ### ***IDE***: 
 - Frontend - Xcode
 
@@ -59,7 +69,9 @@ PicassoXS is your professional photo editing app that transfer your own photo in
 - Ubuntu 18.04 LTS
 
 
+
 ## *Third Party Libraries*
+
 ## 1. TensorFlow
 Release: 2.0
 
