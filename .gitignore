@@ -16,3 +16,4 @@ src/backend/tfserver/data/
 src/backend/tfserver/reference/
 src/backend/tfserver/servable/
 src/backend/tfserver/test/
+src/backend/gcloud/reference/
