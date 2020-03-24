@@ -17,10 +17,10 @@ Swift is a built-in in Xcode, update it if it does not support newer IPHONE vers
 Use git clone 
 
 ```shell
-git clone https://
+git clone https://github.com/DynamicProgrammingEECS441/PicassoXS/tree/master/src/frontend/PicassoXS/UI
 ```
 
-Or user Github website to download
+Or user Github website to download url = https://github.com/DynamicProgrammingEECS441/PicassoXS/tree/master/src/frontend/PicassoXS/UI_raw_frame
 
 ## Usage
 ### Open in Xcode
