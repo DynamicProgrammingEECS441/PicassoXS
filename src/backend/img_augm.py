@@ -106,7 +106,6 @@ class Augmentor():
         # resize obtained patch to desired size.
         if image.shape[0] < crop_size[0] or image.shape[1] < crop_size[1]:
             image = np.array(Image.fromarray(image).resize(crop_size))
-            # image = scipy.misc.imresize(arr=image, size=crop_size)
         return image
     
     def hsv_transform(self, image,
