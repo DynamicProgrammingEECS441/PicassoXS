@@ -11,6 +11,7 @@
    4. project number : 57220460165  
 2. Kubernete Engine : where the k8s cluster is hold 
 3. Container Registry : hold out docker file 
+4. Multi-model are not stored inside single Docker image. Each k8s server can now call single docker image 
 
 
 
@@ -83,16 +84,38 @@
 
    ```shell
    # NEED TO MODIFY the `st_k8s.yaml` file 
-   kubectl create -f tensorflow_serving/example/st_k8s.yaml
+   kubectl create -f st_k8s.yaml
+   kubectl delete -f st_k8s.yaml
    ```
 
 8. check k8s deployment status
 
    ```shell
-   kubectl get deployments
-   kubectl get pods
-   kubectl get services
-   kubectl describe service tf-service
+   >> kubectl get deployments
+   >> kubectl get pods
+   >> kubectl get services
+   >> kubectl describe service st-ske-service
+
+   Name:                     st-ske-service
+   Namespace:                default
+   Labels:                   run=st-ske-service
+   Annotations:              <none>
+   Selector:                 app=st-ske-service
+   Type:                     LoadBalancer
+   IP:                       10.0.20.237
+   LoadBalancer Ingress:     35.202.143.174   # this is used as ip for request 
+   Port:                     <unset>  8501/TCP
+   TargetPort:               8501/TCP
+   NodePort:                 <unset>  31472/TCP
+   Endpoints:                10.24.0.13:8501,10.24.0.14:8501
+   Session Affinity:         None
+   External Traffic Policy:  Cluster
+   Events:
+   Type    Reason                Age   From                Message
+   ----    ------                ----  ----                -------
+   Normal  EnsuringLoadBalancer  58s   service-controller  Ensuring load balancer
+   Normal  EnsuredLoadBalancer   10s   service-controller  Ensured load balancer
+
    ```
 
    
@@ -121,10 +144,10 @@ Your active configuration is: [default]
 
 ## Reference
 
-9. [GCloud - Container Register Quick Start](https://cloud.google.com/container-registry/docs/quickstart)
-10. [TF Server - k8s deploy tutorial](https://www.tensorflow.org/tfx/serving/serving_kubernetes)
+1. [GCloud - Container Register Quick Start](https://cloud.google.com/container-registry/docs/quickstart)
+2. [TF Server - k8s deploy tutorial](https://www.tensorflow.org/tfx/serving/serving_kubernetes)
 3. [Tutorial - TF Server, K8S, MA Azure](https://towardsdatascience.com/deploy-your-machine-learning-models-with-tensorflow-serving-and-kubernetes-9d9e78e569db)
-
+4. [K8S - k8s deplot tutorial]()
 
 
 
