@@ -47,11 +47,11 @@ CUDA_VISIBLE_DEVICES=0 python main.py \
 
 `--model_name=NAME` specifies the name of the model to save as after training is finished.
 
-We also include a shell script `inference.sh` for users to run the above command. To use the script, 
+We also include a shell script `train.sh` for users to run the above command. To use the script, 
 
-1. Run `chmod +x inference.sh`
+1. Run `chmod +x train.sh`
 2. Edit the contents if needed
-3. Run `./inference.sh`
+3. Run `./train.sh`
 
 ## *Inference*
 ### Usage Example:
