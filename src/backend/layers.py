@@ -19,17 +19,11 @@ def instance_norm(input, name="instance_norm", is_training=True):
 def conv2d(input_, output_dim, ks=4, s=2, stddev=0.02, padding='SAME', name="conv2d", activation_fn=None):
     with variable_scope(name):
         dim = [[4, 4, input_.shape[3], output_dim]]
-        # filter = tf.Variable(tf.random.normal([ks, ks, input_.shape[3], output_dim], dtype=tf.float32))
-        # filter = tf.compat.v1.truncated_normal_initializer(stddev=stddev)
     
         var_name = os.path.join('Conv', 'weights')
         filter = get_variable(var_name, dtype=tf.float32, initializer=tf.random.normal([ks, ks, input_.shape[3], output_dim], dtype=tf.float32))
         # filter = tf.compat.v1.truncated_normal_initializer(stddev=stddev)
         return tf.nn.conv2d(input_, filter, strides=[1, s, s, 1], padding=padding)
-
-    # return tf.compat.v1.layers.Conv2D(
-    #     output_dim, ks, strides=(1, 1), padding='same', activation=activation_fn,
-    #     use_bias=True, kernel_initializer=tf.compat.v1.truncated_normal_initializer(stddev=stddev), name=name)
 
 def deconv2d(input_, output_dim, ks=4, s=2, stddev=0.02, name="deconv2d"):
     # Upsampling procedure, like suggested in this article:
@@ -40,6 +34,3 @@ def deconv2d(input_, output_dim, ks=4, s=2, stddev=0.02, name="deconv2d"):
                                 size=tf.shape(input_)[1:3] * s,
                                 method=tf.image.ResizeMethod.NEAREST_NEIGHBOR)
         return conv2d(input_=input_, output_dim=output_dim, ks=ks, s=1, padding='SAME')
-
-# def lrelu(x, leak=0.2, name="lrelu"):
-#     return tf.maximum(x, leak*x)

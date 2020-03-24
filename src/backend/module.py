@@ -155,10 +155,6 @@ def discriminator(image, options, reuse=True, name="discriminator"):
 def abs_criterion(in_, target):
     return tf.reduce_mean(tf.abs(in_ - target))
 
-
-def mae_criterion(in_, target):
-    return tf.reduce_mean(tf.abs(in_-target))
-
 def mse_criterion(in_, target):
     return tf.reduce_mean((in_-target)**2)
 

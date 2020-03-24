@@ -22,7 +22,6 @@ import os
 import time
 from tqdm import tqdm
 import imageio
-# import utils
 import random
 from PIL import Image
 
@@ -53,17 +52,14 @@ class ArtDataset():
 
             if max(image.shape) > 1800.:
                 alpha = 1800. / max(image.shape)
-                # image = scipy.misc.imresize(image, size=1800. / max(image.shape))
                 image = np.array(Image.fromarray(image).resize([int(image_shape[0] * alpha), int(image_shape[1] * alpha)]))
             if max(image.shape) < 800:
                 # Resize the smallest side of the image to 800px
                 alpha = 800. / float(min(image.shape))
                 if alpha < 4.:
-                    # image = scipy.misc.imresize(image, size=alpha)
                     image = np.array(Image.fromarray(image).resize([int(image_shape[0] * alpha), int(image_shape[1] * alpha)]))
                     image = np.expand_dims(image, axis=0)
                 else:
-                    # image = scipy.misc.imresize(image, size=[800, 800])
                     image = np.array(Image.fromarray(image).resize([800, 800]))
 
             batch_image.append(augmentor(image).astype(np.float32))
@@ -71,13 +67,6 @@ class ArtDataset():
         batch_image = np.asarray(batch_image)
 
         return {"image": batch_image}
-
-    # def initialize_batch_worker(self, queue, augmentor, batch_size=1, seed=228):
-    #     np.random.seed(seed)
-    #     while True:
-    #         batch = self.get_batch(augmentor=augmentor, batch_size=batch_size)
-    #         queue.put(batch)
-
 
 class PlacesDataset():
     categories_names = \
@@ -133,37 +122,24 @@ class PlacesDataset():
 
         batch_image = []
         for _ in range(batch_size):
-            # image = scipy.misc.imread(name=random.choice(self.dataset), mode='RGB')
             image = imageio.imread(random.choice(self.dataset), pilmode='RGB')
-            # image = scipy.misc.imresize(image, size=2.)
             image = np.array(Image.fromarray(image).resize([int(image.shape[0] * 2.), int(image.shape[1] * 2.)]))
             image_shape = image.shape[:2]
             # Resize the input image such that the maximum size <= 1800, while minimum size >= 800
             if max(image_shape) > 1800.:
                 alpha = 1800. / max(image_shape)
-                # image = scipy.misc.imresize(image, size=1800. / max(image_shape))
                 image = np.array(Image.fromarray(image).resize([int(image_shape[0] * alpha), int(image_shape[1] * alpha)]))
             if max(image_shape) < 800:
                 # Resize the smallest side of the image to 800px
                 alpha = 800. / float(min(image_shape))
                 if alpha < 4.:
-                    # image = scipy.misc.imresize(image, size=alpha)
                     image = np.array(Image.fromarray(image).resize([int(image_shape[0] * alpha), int(image_shape[1] * alpha)]))
                     image = np.expand_dims(image, axis=0)
                 else:
-                    # image = scipy.misc.imresize(image, size=[800, 800])
                     image = np.array(Image.fromarray(image).resize([800, 800]))
 
             batch_image.append(augmentor(image).astype(np.float32))
 
         return {"image": np.asarray(batch_image)}
-
-    # def initialize_batch_worker(self, queue, augmentor, batch_size=1, seed=228):
-    #     np.random.seed(seed)
-    #     while True:
-    #         batch = self.get_batch(augmentor=augmentor, batch_size=batch_size)
-    #         queue.put(batch)
-
-
 
 

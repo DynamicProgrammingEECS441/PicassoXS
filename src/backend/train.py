@@ -303,27 +303,6 @@ class Model(object):
         content_dataset_places = prepare_dataset.PlacesDataset(path_to_dataset=self.options.path_to_content_dataset)
         art_dataset = prepare_dataset.ArtDataset(path_to_art_dataset=self.options.path_to_art_dataset)
 
-        # Initialize queue workers for both datasets.
-        # q_art = multiprocessing.Queue(maxsize=10)
-        # q_content = multiprocessing.Queue(maxsize=10)
-        # jobs = []
-        # for i in range(5):
-        #     print(i)
-        #     p = multiprocessing.Process(target=content_dataset_places.initialize_batch_worker,
-        #                                 args=(q_content, augmentor, self.batch_size, i))
-        #     p.start()
-        #     jobs.append(p)
-
-        #     p = multiprocessing.Process(target=art_dataset.initialize_batch_worker,
-        #                                 args=(q_art, augmentor, self.batch_size, i))
-        #     print(i)
-        #     p.start()
-        #     print(i)
-        #     jobs.append(p)
-        #     print(i)
-        # print("Processes are started.")
-        # time.sleep(3)
-
         # Now initialize the graph
         init_op = tf.compat.v1.global_variables_initializer()
         self.sess.run(init_op)
@@ -346,11 +325,6 @@ class Model(object):
         for step in tqdm(range(self.initial_step, self.options.total_steps+1),
                          initial=self.initial_step,
                          total=self.options.total_steps):
-            # Get batch from the queue with batches q, if the last is non-empty.
-            # while q_art.empty() or q_content.empty():
-            #     pass
-            # batch_art = q_art.get()
-            # batch_content = q_content.get()
             batch_art = art_dataset.get_batch(augmentor=augmentor, batch_size=self.batch_size)
             batch_content = content_dataset_places.get_batch(augmentor=augmentor, batch_size=self.batch_size)
             if discr_success >= win_rate:
@@ -397,10 +371,6 @@ class Model(object):
                            output_painting_batch=denormalize_arr_of_imgs(output_paintings_),
                            output_photo_batch=denormalize_arr_of_imgs(output_photos_),
                            filepath='%s/step_%d.jpg' % (self.sample_dir, step))
-        # print("Training is finished. Terminate jobs.")
-        # for p in jobs:
-        #     p.join()
-        #     p.terminate()
 
         print("Done.")
         
@@ -431,13 +401,10 @@ class Model(object):
         names = [x for x in names if os.path.basename(x)[0] != '.']
         names.sort()
         for _, img_path in enumerate(tqdm(names)):
-            # img = imageio.imread(img_path, pilmode='RGB')
             img = cv2.imread(img_path)
             img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
             img_shape = img.shape[:2]
-            print("img", img.shape)
         
-            # img = np.array(Image.fromarray(img).resize(new_shape))
             img = cv2.resize(img, (self.image_size, self.image_size), interpolation=cv2.INTER_CUBIC)
             img = np.expand_dims(img, axis=0)
 
@@ -449,12 +416,8 @@ class Model(object):
 
             img = img[0]
             img = denormalize_arr_of_imgs(img)
-            print("img_shape", img_shape)
-            # img = scipy.misc.imresize(img, size=img_shape)
-            # img = np.array(Image.fromarray(img).resize(img_shape))
             img = cv2.resize(img, (img_shape[1], img_shape[0]), interpolation=cv2.INTER_CUBIC)
             img_name = os.path.basename(img_path)
-            # imageio.imwrite(os.path.join(to_save_dir, img_name[:-4] + "_stylized.jpg"), img)
             img = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
             cv2.imwrite(os.path.join(to_save_dir, img_name[:-4] + "_stylized.jpg"), img)
         print("Inference is finished.")
