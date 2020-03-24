@@ -5,5 +5,5 @@ CUDA_VISIBLE_DEVICES="" python main.py \
                  --image_size=768 \
                  --lr=0.0002 \
                  --dsr=0.8 \
-                 --ptcd=/Users/zhangenhao/Pictures/20170402复旦同济 \
+                 --ptcd=/path/to/Places2/data_large \
                  --ptad=./data/vincent-van-gogh_road-with-cypresses-1890
