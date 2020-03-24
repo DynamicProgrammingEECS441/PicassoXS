@@ -20,7 +20,7 @@ Use git clone
 git clone https://github.com/DynamicProgrammingEECS441/PicassoXS/tree/master/src/frontend/PicassoXS/UI
 ```
 
-Or user Github website to download url = https://github.com/DynamicProgrammingEECS441/PicassoXS/tree/master/src/frontend/PicassoXS/UI_raw_frame
+Or user Github website to download https://github.com/DynamicProgrammingEECS441/PicassoXS/tree/master/src/frontend/PicassoXS/UI_raw_frame
 
 ## Usage
 ### Open in Xcode
