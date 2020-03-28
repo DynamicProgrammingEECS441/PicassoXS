@@ -242,6 +242,10 @@ ps -ef | grep <keyword_for_search>
 # Kill running task in unix 
 kill -9 <PID>
 
+# install vim inside docker 
+apt-get update
+apt-get install vim
+
 ```
 
 * Upload Docker image to docker hub for easy installation 

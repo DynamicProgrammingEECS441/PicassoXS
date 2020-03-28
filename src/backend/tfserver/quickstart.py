@@ -12,14 +12,14 @@ print('input image original size', img.size)
 h, w = img.size
 
 if h > w : # h is the long side 
-    h = int(1600.)
-    w = int(1600. * (w * (1.0) ) / ( h  * (1.0) ) )
+    h_new = int(128.)
+    w_new = int(128. * (w * (1.0) ) / ( h  * (1.0) ) )
 else:      # w is the long side 
-    w = int(1600.)
-    h = int(1600. * (h * (1.0) ) / ( w  * (1.0) ) )
+    w_new = int(128.)
+    h_new = int(128. * (h * (1.0) ) / ( w  * (1.0) ) )
 
 
-img = img.resize((h, w), resample=Image.BILINEAR)
+img = img.resize((h_new, w_new), resample=Image.BILINEAR)
 print('input image resized size', img.size)
 
 input_img = np.array(img)
@@ -33,8 +33,8 @@ data = json.dumps({"signature_name": "predict_images",
 headers = {"content-type": "application/json"}
 
 # Send Request
-url = 'http://35.239.199.254:8501/v1/models/model:predict'
-#url = ''http://localhost:0001/v1/models/model:predict'
+url = 'http://35.202.143.174:8501/v1/models/van-gogh:predict'
+#url = 'http://localhost:8501/v1/models/van-gogh:predict'
 json_response = requests.post(url, \
                               data=data, headers=headers)
 
@@ -56,4 +56,4 @@ print('output image range {} - {}'.format(np.min(output_img), np.max(output_img)
 
 # Save Image
 output_img_pil = Image.fromarray(output_img)
-output_img_pil.save('./test_output_img3.jpg')
+output_img_pil.save('./test_output_img3_van-gogh.jpg')

@@ -1,17 +1,17 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-    name: st-deployment
+    name: st-ske-deployment
 spec:
     replicas: 2
     template:
         metadata:
             labels:
-                app: st-server
+                app: st-ske-service
         spec:
             containers:
               - name: st-container
-                image: gcr.io/tensorflow-serving-9905/st:monet
+                image: gcr.io/tensorflow-serving-9905/st:latest-skeleton
                 ports:
                  - containerPort: 8501
 ---
@@ -19,14 +19,14 @@ apiVersion: v1
 kind: Service
 metadata:
     labels:
-        run: st-service
-    name: st-service
+        run: st-ske-service
+    name: st-ske-service
 spec:
     ports:
       - port: 8501
         targetPort: 8501
     selector:
-        app: st-server
+        app: st-ske-service
     type: LoadBalancer
 
 
