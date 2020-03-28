@@ -8,6 +8,9 @@ venv
 *.jpg
 .ipynb_checkpoints
 *__pycache__/
+*.pyc
+__pycache__/
+*.egg-info*
 
 src/backend/models/
 
