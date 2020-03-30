@@ -28,6 +28,8 @@ PicassoXS is your professional photo editing app that transfer your own photo in
     │   ├── prepare_dataset.py
     │   ├── train.py
     │   ├── train.sh    
+    │   ├── arbitary_style_model    # code for model that support user uoload own style 
+    │   │   └── * others 
     │   ├── tfserver    # code for using TF Server 
     │   │   ├── Instruction.md
     │   │   ├── QuickStart.md   
