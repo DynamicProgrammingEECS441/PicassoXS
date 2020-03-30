@@ -1,4 +1,5 @@
 # ***PicassoXS Backend***
+
 EECS 441 Backend @ UMich Project 
 
 
@@ -8,35 +9,68 @@ EECS 441 Backend @ UMich Project
 This repository contains all files needed to develop the backend. 
 
 
+
 ## *Repo Structure*
 
 ```shell
 .
-├── README.md
-├── gcloud      # codes for using google cloud to deploy 
-│   ├── Instruction.md
-│   └── * others 
-├── img_augm.py
-├── inference.sh
-├── layers.py
-├── main.py
-├── module.py
-├── prepare_dataset.py
-├── tfserver        # codes for using TF Server 
-│   ├── Instruction.md
-│   └── * others 
-├── train.py
-└── train.sh
+├── arbitary_style_model       # model for user upload own style 
+│   ├── servable.py
+│   └── * others
+├── flask_app                  # flask web app 
+│   ├── __init__.py
+│   ├── config.py
+│   └── views
+│       ├── __init__.py
+│       └── index.py 
+├── gcloud                     # instructions to start cloud server 
+│   ├── Instruction.md
+│   ├── st_k8s.yaml
+│   └── * others
+├── general_model              # model for portrait mode model & general model 
+│   ├── README.md
+│   ├── StyleTransferrer.proto
+│   ├── img_augm.py
+│   ├── inference.sh
+│   ├── layers.py
+│   ├── main.py
+│   ├── module.py
+│   ├── prepare_dataset.py
+│   ├── setup.py
+│   ├── train.py
+│   └── train.sh
+└── tfserver                  # TensorFlow server : web app for serving model 
+    ├── Instruction.md
+    ├── QuickStart.md
+    ├── QuickStart_ArbitaryStyle.md
+    ├── models.config
+    ├── quickstart.py
+    ├── quickstart_arbitarystyle.ipynb
+    ├── servable_demo.ipynb
+    └──servable             # SERVABLE : packed model that can be used by TensorFlow Server
+        └── * others 
+
+
 ```
 
+
+
+# *General Model*
+
+
+
 ## *Training*
+
 To train a general-purpose style model, two training datasets are needed: content images and style images. 
 
 The content images we used for training is a subset of Places365, which can be downloaded [here](http://data.csail.mit.edu/places/places365/train_large_places365standard.tar).
 
 The style images should include a bunch of paintings from a particular artistic style, e.g. paintings of a particular artist.
 
-### Usage Example: 
+
+
+### Usage Example:
+
 ```
 CUDA_VISIBLE_DEVICES=0 python main.py \
                  --model_name=model_van-gogh \
@@ -53,12 +87,19 @@ We also include a shell script `train.sh` for users to run the above command. To
 2. Edit the contents if needed
 3. Run `./train.sh`
 
+
+
 ## *Inference*
+
 To use inference mode, you must already have your trained model ready in the `./models/` directory. You will have to specify:
 1. the name of your model
 2. input directories of the images that you want to do style transfer on
 3. The output directory to save the generated image
+
+
+
 ### Usage Example:
+
 ```
 CUDA_VISIBLE_DEVICES=0 python main.py \
                  --model_name=[YOUR_MODEL_NAME] \
@@ -68,6 +109,8 @@ CUDA_VISIBLE_DEVICES=0 python main.py \
                  --save_dir=../[OUTPUT_DIR]/
 ```
 If you wish to use CPU instead of GPU, set `CUDA_VISIBLE_DEVICES=''`
+
+
 
 ### Command Line Options:
 - `--model_name NAME` - the name of the model (all model should as subfolders in `./models/`)
@@ -84,5 +127,38 @@ We also include a shell script `inference.sh` for users to run the above command
 
 Note that the default inference uses `model_van-gogh` and CPU setting
 
+
+
 ## *Reference*
+
 Sanakoyeu, Artsiom et al. “A Style-Aware Content Loss for Real-Time HD Style Transfer.” Lecture Notes in Computer Science (2018): 715–731. Crossref. Web.
+
+
+
+# *Arbitary Model*
+
+> model that support users to upload their own style 
+
+
+
+## *Training*
+
+
+
+### Usage Example:
+
+
+
+
+
+## *Inference*
+
+
+
+
+
+### Usage Example:
+
+
+
+## *Reference*
