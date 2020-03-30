@@ -283,10 +283,11 @@ Install conda enviroment using `conda_enviroment_tf1.yml`, `conda_enviroment_tf2
 docker run -d --name serving_base tensorflow/serving:latest
 
 # Copy servable into container
-docker cp $(pwd)/tmp/generator/ serving_base:/models/generator
+docker cp $(pwd)/servable/${MODEL_NAME}/ serving_base:/models/${MODEL_NAME}
+docker cp $(pwd)/servable/arbitary_style/ serving_base:/models/arbitary_style
 
 # Commmit change 
-docker commit --change "ENV MODEL_NAME generator" serving_base only_generator_servable
+docker commit --change "ENV MODEL_NAME arbitary_style" serving_base xiaosong99/servable:arbitary_style
 
 # Run Docker
 docker run -t -p 8501:8501 -p 8500:8500 only_generator_servable

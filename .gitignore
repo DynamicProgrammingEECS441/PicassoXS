@@ -20,3 +20,4 @@ src/backend/tfserver/reference/
 src/backend/tfserver/servable/
 src/backend/tfserver/test/
 src/backend/gcloud/reference/
+src/backend/arbitary_style_model/reference

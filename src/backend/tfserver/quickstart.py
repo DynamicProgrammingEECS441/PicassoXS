@@ -1,5 +1,4 @@
 from PIL import Image
-import PIL 
 import json
 import requests
 import numpy as np

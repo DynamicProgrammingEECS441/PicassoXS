@@ -67,7 +67,7 @@ Note:
 
 
 
-![](data/Demystifying Neural Style Transfer.png)
+![](data/DemystifyingNeuralStyleTransfer.png)
 
 
 
