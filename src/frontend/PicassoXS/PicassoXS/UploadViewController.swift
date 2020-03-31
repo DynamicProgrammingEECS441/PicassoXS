@@ -33,6 +33,12 @@ class UploadViewController: UIViewController{
         
         let imgData = Image.jpegData(compressionQuality: 0.1)!
         
+        AF.upload(multipartFormData: { multipartFormData in
+            multipartFormData.append(imgData, withName: "one")
+        }, to: "http://localhost:8000/upload_img/")
+            .responseJSON { response in
+                debugPrint(response)
+            }
        
 // //       let parameters = ["name": rname] //Optional for extra parameter
         
