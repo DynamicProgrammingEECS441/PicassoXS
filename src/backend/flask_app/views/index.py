@@ -50,7 +50,8 @@ def upload_img():
     output_img = ((output_img + 1.) * 127.5).astype(np.uint8)
     # print("output_img", output_img.max(), output_img.min())
     # Save Image 
-    cv2.imwrite("output.jpg", output_img)
+    cv_img = cv2.cvtColor(output_img, cv2.COLOR_RGB2BGR)
+    cv2.imwrite("output.jpg", cv_img)
 
     # convert numpy array to PIL Image
     output_img = Image.fromarray(output_img)
@@ -65,8 +66,6 @@ def upload_img():
     file_object.seek(0)
 
     return flask.send_file(file_object, mimetype='image/PNG')
-
-    # return flask.render_template("index.html", **context)
 
 @flask_app.app.route('/', methods=['GET'])
 def index():

@@ -19,7 +19,7 @@ depends-top-level:
 - "Data"
 - !private "FloatLiteralType"
 - !private "GlobalVariables"
-- "IntegerLiteralType"
+- !private "IntegerLiteralType"
 - "StringLiteralType"
 - "UIImage"
 - "UIImageView"

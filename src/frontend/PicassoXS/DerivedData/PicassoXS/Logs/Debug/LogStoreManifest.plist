@@ -6,7 +6,7 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>00B4BCB0-07CD-4DF7-B70A-2B89BF575163</key>
+		<key>0270D1C9-1E6E-4343-B28B-08637A2CB71C</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -15,7 +15,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>00B4BCB0-07CD-4DF7-B70A-2B89BF575163.xcactivitylog</string>
+			<string>0270D1C9-1E6E-4343-B28B-08637A2CB71C.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -32,15 +32,15 @@
 			<key>signature</key>
 			<string>Debug PicassoXS</string>
 			<key>timeStartedRecording</key>
-			<real>607318631.91201997</real>
+			<real>607643757.17366397</real>
 			<key>timeStoppedRecording</key>
-			<real>607318869.79298496</real>
+			<real>607643802.18745005</real>
 			<key>title</key>
 			<string>Debug PicassoXS</string>
 			<key>uniqueIdentifier</key>
-			<string>00B4BCB0-07CD-4DF7-B70A-2B89BF575163</string>
+			<string>0270D1C9-1E6E-4343-B28B-08637A2CB71C</string>
 		</dict>
-		<key>2B08A15D-BFB5-4364-9F90-721D2FE1F3E8</key>
+		<key>17340EDA-6FB9-4863-9D5D-7750BA3727C1</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -49,7 +49,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>2B08A15D-BFB5-4364-9F90-721D2FE1F3E8.xcactivitylog</string>
+			<string>17340EDA-6FB9-4863-9D5D-7750BA3727C1.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -66,15 +66,15 @@
 			<key>signature</key>
 			<string>Debug PicassoXS</string>
 			<key>timeStartedRecording</key>
-			<real>607322155.50338101</real>
+			<real>607643802.75102496</real>
 			<key>timeStoppedRecording</key>
-			<real>607323060.307392</real>
+			<real>607643835.09766996</real>
 			<key>title</key>
 			<string>Debug PicassoXS</string>
 			<key>uniqueIdentifier</key>
-			<string>2B08A15D-BFB5-4364-9F90-721D2FE1F3E8</string>
+			<string>17340EDA-6FB9-4863-9D5D-7750BA3727C1</string>
 		</dict>
-		<key>2CA0B670-06E4-456E-93AF-9DA8E2B7C2CE</key>
+		<key>36DDC336-0E6C-4889-BA0A-6DDA363085AE</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -83,7 +83,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>2CA0B670-06E4-456E-93AF-9DA8E2B7C2CE.xcactivitylog</string>
+			<string>36DDC336-0E6C-4889-BA0A-6DDA363085AE.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -100,387 +100,13 @@
 			<key>signature</key>
 			<string>Debug PicassoXS</string>
 			<key>timeStartedRecording</key>
-			<real>607319263.65724099</real>
+			<real>607642023.11419106</real>
 			<key>timeStoppedRecording</key>
-			<real>607319299.68096304</real>
+			<real>607642121.66104305</real>
 			<key>title</key>
 			<string>Debug PicassoXS</string>
 			<key>uniqueIdentifier</key>
-			<string>2CA0B670-06E4-456E-93AF-9DA8E2B7C2CE</string>
-		</dict>
-		<key>2DCE4B2A-915D-4A18-92F3-7DD0E2368FAC</key>
-		<dict>
-			<key>className</key>
-			<string>DBGConsoleLog</string>
-			<key>documentTypeString</key>
-			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
-			<key>fileName</key>
-			<string>2DCE4B2A-915D-4A18-92F3-7DD0E2368FAC.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>PicassoXS project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>PicassoXS</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Debug PicassoXS</string>
-			<key>timeStartedRecording</key>
-			<real>607383340.05857599</real>
-			<key>timeStoppedRecording</key>
-			<real>607386782.24915302</real>
-			<key>title</key>
-			<string>Debug PicassoXS</string>
-			<key>uniqueIdentifier</key>
-			<string>2DCE4B2A-915D-4A18-92F3-7DD0E2368FAC</string>
-		</dict>
-		<key>41D664DF-E895-4525-9581-7721F26B088B</key>
-		<dict>
-			<key>className</key>
-			<string>DBGConsoleLog</string>
-			<key>documentTypeString</key>
-			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
-			<key>fileName</key>
-			<string>41D664DF-E895-4525-9581-7721F26B088B.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>PicassoXS project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>PicassoXS</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Debug PicassoXS</string>
-			<key>timeStartedRecording</key>
-			<real>607318987.779055</real>
-			<key>timeStoppedRecording</key>
-			<real>607319020.20490503</real>
-			<key>title</key>
-			<string>Debug PicassoXS</string>
-			<key>uniqueIdentifier</key>
-			<string>41D664DF-E895-4525-9581-7721F26B088B</string>
-		</dict>
-		<key>44430F14-7120-4CCE-82F9-3318CB0CC150</key>
-		<dict>
-			<key>className</key>
-			<string>DBGConsoleLog</string>
-			<key>documentTypeString</key>
-			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
-			<key>fileName</key>
-			<string>44430F14-7120-4CCE-82F9-3318CB0CC150.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>PicassoXS project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>PicassoXS</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Debug PicassoXS</string>
-			<key>timeStartedRecording</key>
-			<real>607320473.75609398</real>
-			<key>timeStoppedRecording</key>
-			<real>607321363.03786397</real>
-			<key>title</key>
-			<string>Debug PicassoXS</string>
-			<key>uniqueIdentifier</key>
-			<string>44430F14-7120-4CCE-82F9-3318CB0CC150</string>
-		</dict>
-		<key>4925907E-8811-400F-8524-410BA7C811A5</key>
-		<dict>
-			<key>className</key>
-			<string>DBGConsoleLog</string>
-			<key>documentTypeString</key>
-			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
-			<key>fileName</key>
-			<string>4925907E-8811-400F-8524-410BA7C811A5.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>PicassoXS project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>PicassoXS</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Debug PicassoXS</string>
-			<key>timeStartedRecording</key>
-			<real>607318870.06513596</real>
-			<key>timeStoppedRecording</key>
-			<real>607318898.55614698</real>
-			<key>title</key>
-			<string>Debug PicassoXS</string>
-			<key>uniqueIdentifier</key>
-			<string>4925907E-8811-400F-8524-410BA7C811A5</string>
-		</dict>
-		<key>4BBFB95F-327E-419C-85FB-DF0CCF87126C</key>
-		<dict>
-			<key>className</key>
-			<string>DBGConsoleLog</string>
-			<key>documentTypeString</key>
-			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
-			<key>fileName</key>
-			<string>4BBFB95F-327E-419C-85FB-DF0CCF87126C.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>PicassoXS project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>PicassoXS</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Debug PicassoXS</string>
-			<key>timeStartedRecording</key>
-			<real>607389697.77664196</real>
-			<key>timeStoppedRecording</key>
-			<real>607389920.31795502</real>
-			<key>title</key>
-			<string>Debug PicassoXS</string>
-			<key>uniqueIdentifier</key>
-			<string>4BBFB95F-327E-419C-85FB-DF0CCF87126C</string>
-		</dict>
-		<key>4FC07E61-ED16-44AF-93A9-EA34BFF9A268</key>
-		<dict>
-			<key>className</key>
-			<string>DBGConsoleLog</string>
-			<key>documentTypeString</key>
-			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
-			<key>fileName</key>
-			<string>4FC07E61-ED16-44AF-93A9-EA34BFF9A268.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>PicassoXS project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>PicassoXS</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Debug PicassoXS</string>
-			<key>timeStartedRecording</key>
-			<real>607390639.088763</real>
-			<key>timeStoppedRecording</key>
-			<real>607390915.31895697</real>
-			<key>title</key>
-			<string>Debug PicassoXS</string>
-			<key>uniqueIdentifier</key>
-			<string>4FC07E61-ED16-44AF-93A9-EA34BFF9A268</string>
-		</dict>
-		<key>6846F9CC-D377-4C64-8963-896BF9A5497E</key>
-		<dict>
-			<key>className</key>
-			<string>DBGConsoleLog</string>
-			<key>documentTypeString</key>
-			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
-			<key>fileName</key>
-			<string>6846F9CC-D377-4C64-8963-896BF9A5497E.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>PicassoXS project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>PicassoXS</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Debug PicassoXS</string>
-			<key>timeStartedRecording</key>
-			<real>607386799.57956898</real>
-			<key>timeStoppedRecording</key>
-			<real>607388043.53249598</real>
-			<key>title</key>
-			<string>Debug PicassoXS</string>
-			<key>uniqueIdentifier</key>
-			<string>6846F9CC-D377-4C64-8963-896BF9A5497E</string>
-		</dict>
-		<key>6DA8F64E-BA56-48E4-AD43-F5942C048DD9</key>
-		<dict>
-			<key>className</key>
-			<string>DBGConsoleLog</string>
-			<key>documentTypeString</key>
-			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
-			<key>fileName</key>
-			<string>6DA8F64E-BA56-48E4-AD43-F5942C048DD9.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>PicassoXS project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>PicassoXS</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Debug PicassoXS</string>
-			<key>timeStartedRecording</key>
-			<real>607319107.11105704</real>
-			<key>timeStoppedRecording</key>
-			<real>607319234.75362396</real>
-			<key>title</key>
-			<string>Debug PicassoXS</string>
-			<key>uniqueIdentifier</key>
-			<string>6DA8F64E-BA56-48E4-AD43-F5942C048DD9</string>
-		</dict>
-		<key>7799FDB7-EB20-4A41-837E-C6EA65D7957C</key>
-		<dict>
-			<key>className</key>
-			<string>DBGConsoleLog</string>
-			<key>documentTypeString</key>
-			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
-			<key>fileName</key>
-			<string>7799FDB7-EB20-4A41-837E-C6EA65D7957C.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>PicassoXS project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>PicassoXS</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Debug PicassoXS</string>
-			<key>timeStartedRecording</key>
-			<real>607321364.75170898</real>
-			<key>timeStoppedRecording</key>
-			<real>607321628.81936896</real>
-			<key>title</key>
-			<string>Debug PicassoXS</string>
-			<key>uniqueIdentifier</key>
-			<string>7799FDB7-EB20-4A41-837E-C6EA65D7957C</string>
-		</dict>
-		<key>790ACFAA-85D2-49CD-A521-628556952753</key>
-		<dict>
-			<key>className</key>
-			<string>DBGConsoleLog</string>
-			<key>documentTypeString</key>
-			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
-			<key>fileName</key>
-			<string>790ACFAA-85D2-49CD-A521-628556952753.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>PicassoXS project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>PicassoXS</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Debug PicassoXS</string>
-			<key>timeStartedRecording</key>
-			<real>607322073.37419295</real>
-			<key>timeStoppedRecording</key>
-			<real>607322153.38894999</real>
-			<key>title</key>
-			<string>Debug PicassoXS</string>
-			<key>uniqueIdentifier</key>
-			<string>790ACFAA-85D2-49CD-A521-628556952753</string>
-		</dict>
-		<key>87C16A62-CC0A-4DCA-9B05-DC71F54E317E</key>
-		<dict>
-			<key>className</key>
-			<string>DBGConsoleLog</string>
-			<key>documentTypeString</key>
-			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
-			<key>fileName</key>
-			<string>87C16A62-CC0A-4DCA-9B05-DC71F54E317E.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>PicassoXS project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>PicassoXS</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Debug PicassoXS</string>
-			<key>timeStartedRecording</key>
-			<real>607318904.67028499</real>
-			<key>timeStoppedRecording</key>
-			<real>607318968.874704</real>
-			<key>title</key>
-			<string>Debug PicassoXS</string>
-			<key>uniqueIdentifier</key>
-			<string>87C16A62-CC0A-4DCA-9B05-DC71F54E317E</string>
+			<string>36DDC336-0E6C-4889-BA0A-6DDA363085AE</string>
 		</dict>
 		<key>87DC62D0-BF0C-4947-925D-E42F2A414A84</key>
 		<dict>
@@ -516,7 +142,7 @@
 			<key>uniqueIdentifier</key>
 			<string>87DC62D0-BF0C-4947-925D-E42F2A414A84</string>
 		</dict>
-		<key>8980ECF7-1B33-43B9-AB72-2C79A1781FC5</key>
+		<key>9B5E7C50-9C32-419F-ADC7-CF9F0421BAE2</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -525,7 +151,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>8980ECF7-1B33-43B9-AB72-2C79A1781FC5.xcactivitylog</string>
+			<string>9B5E7C50-9C32-419F-ADC7-CF9F0421BAE2.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -542,15 +168,15 @@
 			<key>signature</key>
 			<string>Debug PicassoXS</string>
 			<key>timeStartedRecording</key>
-			<real>607390926.55640399</real>
+			<real>607643150.56276798</real>
 			<key>timeStoppedRecording</key>
-			<real>607391026.29587495</real>
+			<real>607643163.74716496</real>
 			<key>title</key>
 			<string>Debug PicassoXS</string>
 			<key>uniqueIdentifier</key>
-			<string>8980ECF7-1B33-43B9-AB72-2C79A1781FC5</string>
+			<string>9B5E7C50-9C32-419F-ADC7-CF9F0421BAE2</string>
 		</dict>
-		<key>8AE3F5AA-7B7A-4EF0-9FE8-0D7C78CE951F</key>
+		<key>B628E4B5-0562-4464-A472-B9B20644C3A7</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -559,7 +185,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>8AE3F5AA-7B7A-4EF0-9FE8-0D7C78CE951F.xcactivitylog</string>
+			<string>B628E4B5-0562-4464-A472-B9B20644C3A7.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -576,15 +202,15 @@
 			<key>signature</key>
 			<string>Debug PicassoXS</string>
 			<key>timeStartedRecording</key>
-			<real>607389350.441113</real>
+			<real>607643212.59766603</real>
 			<key>timeStoppedRecording</key>
-			<real>607389395.98752606</real>
+			<real>607643308.513116</real>
 			<key>title</key>
 			<string>Debug PicassoXS</string>
 			<key>uniqueIdentifier</key>
-			<string>8AE3F5AA-7B7A-4EF0-9FE8-0D7C78CE951F</string>
+			<string>B628E4B5-0562-4464-A472-B9B20644C3A7</string>
 		</dict>
-		<key>92844E1F-9910-4E2B-BC6F-916DA77792B0</key>
+		<key>CDD91C9D-EA77-44EE-8E39-F8A652EF0CA4</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -593,7 +219,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>92844E1F-9910-4E2B-BC6F-916DA77792B0.xcactivitylog</string>
+			<string>CDD91C9D-EA77-44EE-8E39-F8A652EF0CA4.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -610,15 +236,15 @@
 			<key>signature</key>
 			<string>Debug PicassoXS</string>
 			<key>timeStartedRecording</key>
-			<real>607321668.735618</real>
+			<real>607642139.60088396</real>
 			<key>timeStoppedRecording</key>
-			<real>607321720.08422196</real>
+			<real>607643148.70466602</real>
 			<key>title</key>
 			<string>Debug PicassoXS</string>
 			<key>uniqueIdentifier</key>
-			<string>92844E1F-9910-4E2B-BC6F-916DA77792B0</string>
+			<string>CDD91C9D-EA77-44EE-8E39-F8A652EF0CA4</string>
 		</dict>
-		<key>AB4FDE19-835C-4381-9F95-550E7A984BBF</key>
+		<key>E3124443-E78B-4F1E-A57A-5BF1B0910798</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -627,7 +253,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>AB4FDE19-835C-4381-9F95-550E7A984BBF.xcactivitylog</string>
+			<string>E3124443-E78B-4F1E-A57A-5BF1B0910798.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -644,47 +270,13 @@
 			<key>signature</key>
 			<string>Debug PicassoXS</string>
 			<key>timeStartedRecording</key>
-			<real>607388230.35961199</real>
+			<real>607641125.95784199</real>
 			<key>timeStoppedRecording</key>
-			<real>607388907.25746703</real>
+			<real>607641984.92232597</real>
 			<key>title</key>
 			<string>Debug PicassoXS</string>
 			<key>uniqueIdentifier</key>
-			<string>AB4FDE19-835C-4381-9F95-550E7A984BBF</string>
-		</dict>
-		<key>D94DF5EF-1763-443F-9208-898681F1AA4D</key>
-		<dict>
-			<key>className</key>
-			<string>DBGConsoleLog</string>
-			<key>documentTypeString</key>
-			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
-			<key>fileName</key>
-			<string>D94DF5EF-1763-443F-9208-898681F1AA4D.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>PicassoXS project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>PicassoXS</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Debug PicassoXS</string>
-			<key>timeStartedRecording</key>
-			<real>607321722.90842402</real>
-			<key>timeStoppedRecording</key>
-			<real>607322056.01411498</real>
-			<key>title</key>
-			<string>Debug PicassoXS</string>
-			<key>uniqueIdentifier</key>
-			<string>D94DF5EF-1763-443F-9208-898681F1AA4D</string>
+			<string>E3124443-E78B-4F1E-A57A-5BF1B0910798</string>
 		</dict>
 	</dict>
 </dict>

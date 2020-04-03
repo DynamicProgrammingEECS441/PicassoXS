@@ -15,7 +15,7 @@ SESSION_COOKIE_NAME = 'login'
 FLASK_APP_ROOT = pathlib.Path(__file__).resolve().parent.parent
 # UPLOAD_FOLDER = FLASK_APP_ROOT/'var'/'uploads'
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'gif'])
-MAX_CONTENT_LENGTH = 16 * 1024 * 1024
+# MAX_CONTENT_LENGTH = 16 * 1024 * 1024
 
 # Database file is var/insta485.sqlite3
 # DATABASE_FILENAME = FLASK_APP_ROOT/'var'/'insta485.sqlite3'
