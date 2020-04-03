@@ -1,0 +1,485 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "UploadViewController"
+provides-nominal:
+- "9PicassoXS20UploadViewControllerC"
+provides-member:
+- ["9PicassoXS20UploadViewControllerC", ""]
+- ["So7UIImageC", ""]
+- ["So7UIImageC", "jpeg"]
+- ["So7UIImageC", "png"]
+provides-dynamic-lookup:
+- "FilterIm"
+- "InputIm"
+- "OutputIm"
+- "viewDidLoad"
+depends-top-level:
+- !private "AF"
+- "AssignmentPrecedence"
+- "Data"
+- !private "FloatLiteralType"
+- !private "GlobalVariables"
+- "IntegerLiteralType"
+- "StringLiteralType"
+- "UIImage"
+- "UIImageView"
+- "UIViewController"
+- "UploadViewController"
+- !private "print"
+depends-member:
+- !private ["9Alamofire0A8ExtendedP", "image"]
+- !private ["9Alamofire0A8ExtendedP", "jpegData"]
+- !private ["9Alamofire0A8ExtendedP", "pngData"]
+- !private ["So15CALayerDelegateP", "image"]
+- !private ["s7CVarArgP", "AF"]
+- !private ["s7CVarArgP", "FilterIm"]
+- !private ["s7CVarArgP", "GlobalVariables"]
+- !private ["s7CVarArgP", "InputIm"]
+- !private ["s7CVarArgP", "OutputIm"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "image"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "jpegData"]
+- !private ["s7CVarArgP", "pngData"]
+- !private ["s7CVarArgP", "print"]
+- !private ["s7CVarArgP", "sendRequest"]
+- !private ["s7CVarArgP", "viewDidLoad"]
+- !private ["s28CustomDebugStringConvertibleP", "AF"]
+- !private ["s28CustomDebugStringConvertibleP", "FilterIm"]
+- !private ["s28CustomDebugStringConvertibleP", "GlobalVariables"]
+- !private ["s28CustomDebugStringConvertibleP", "InputIm"]
+- !private ["s28CustomDebugStringConvertibleP", "OutputIm"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "image"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "jpegData"]
+- !private ["s28CustomDebugStringConvertibleP", "pngData"]
+- !private ["s28CustomDebugStringConvertibleP", "print"]
+- !private ["s28CustomDebugStringConvertibleP", "result"]
+- !private ["s28CustomDebugStringConvertibleP", "sendRequest"]
+- !private ["s28CustomDebugStringConvertibleP", "viewDidLoad"]
+- !private ["s17CustomReflectableP", "image"]
+- !private ["s23CustomStringConvertibleP", "AF"]
+- !private ["s23CustomStringConvertibleP", "FilterIm"]
+- !private ["s23CustomStringConvertibleP", "GlobalVariables"]
+- !private ["s23CustomStringConvertibleP", "InputIm"]
+- !private ["s23CustomStringConvertibleP", "OutputIm"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "appendInterpolation"]
+- !private ["s23CustomStringConvertibleP", "appendLiteral"]
+- !private ["s23CustomStringConvertibleP", "image"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "jpegData"]
+- !private ["s23CustomStringConvertibleP", "pngData"]
+- !private ["s23CustomStringConvertibleP", "print"]
+- !private ["s23CustomStringConvertibleP", "responseImage"]
+- !private ["s23CustomStringConvertibleP", "result"]
+- !private ["s23CustomStringConvertibleP", "sendRequest"]
+- !private ["s23CustomStringConvertibleP", "viewDidLoad"]
+- !private ["9Alamofire11DataRequestC", "responseImage"]
+- !private ["9Alamofire12DataResponseV", "result"]
+- !private ["Se", "image"]
+- !private ["s26DefaultStringInterpolationV", "appendInterpolation"]
+- !private ["s26DefaultStringInterpolationV", "appendLiteral"]
+- !private ["SE", "image"]
+- !private ["SQ", "AF"]
+- !private ["SQ", "FilterIm"]
+- !private ["SQ", "GlobalVariables"]
+- !private ["SQ", "InputIm"]
+- !private ["SQ", "OutputIm"]
+- ["SQ", ""]
+- !private ["SQ", "image"]
+- !private ["SQ", "init"]
+- !private ["SQ", "jpegData"]
+- !private ["SQ", "pngData"]
+- !private ["SQ", "print"]
+- !private ["SQ", "responseImage"]
+- !private ["SQ", "sendRequest"]
+- !private ["SQ", "success"]
+- !private ["SQ", "viewDidLoad"]
+- !private ["s23ExpressibleByNilLiteralP", "image"]
+- !private ["9PicassoXS15GlobalVariablesV", "curFilter"]
+- !private ["9PicassoXS15GlobalVariablesV", "curInput"]
+- !private ["SH", "AF"]
+- !private ["SH", "FilterIm"]
+- !private ["SH", "GlobalVariables"]
+- !private ["SH", "InputIm"]
+- !private ["SH", "OutputIm"]
+- ["SH", ""]
+- !private ["SH", "image"]
+- !private ["SH", "init"]
+- !private ["SH", "jpegData"]
+- !private ["SH", "pngData"]
+- !private ["SH", "print"]
+- !private ["SH", "responseImage"]
+- !private ["SH", "sendRequest"]
+- !private ["SH", "success"]
+- !private ["SH", "viewDidLoad"]
+- !private ["9Alamofire17MultipartFormDataC", "append"]
+- !private ["So8NSCodingP", "AF"]
+- !private ["So8NSCodingP", "FilterIm"]
+- !private ["So8NSCodingP", "GlobalVariables"]
+- !private ["So8NSCodingP", "InputIm"]
+- !private ["So8NSCodingP", "OutputIm"]
+- ["So8NSCodingP", ""]
+- !private ["So8NSCodingP", "image"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "jpegData"]
+- !private ["So8NSCodingP", "pngData"]
+- !private ["So8NSCodingP", "print"]
+- !private ["So8NSCodingP", "sendRequest"]
+- !private ["So8NSCodingP", "viewDidLoad"]
+- !private ["So26NSExtensionRequestHandlingP", "AF"]
+- !private ["So26NSExtensionRequestHandlingP", "FilterIm"]
+- !private ["So26NSExtensionRequestHandlingP", "GlobalVariables"]
+- !private ["So26NSExtensionRequestHandlingP", "InputIm"]
+- !private ["So26NSExtensionRequestHandlingP", "OutputIm"]
+- ["So26NSExtensionRequestHandlingP", ""]
+- !private ["So26NSExtensionRequestHandlingP", "init"]
+- !private ["So26NSExtensionRequestHandlingP", "print"]
+- !private ["So26NSExtensionRequestHandlingP", "sendRequest"]
+- !private ["So26NSExtensionRequestHandlingP", "viewDidLoad"]
+- !private ["So21NSItemProviderReadingP", "jpegData"]
+- !private ["So21NSItemProviderReadingP", "pngData"]
+- !private ["So21NSItemProviderWritingP", "jpegData"]
+- !private ["So21NSItemProviderWritingP", "pngData"]
+- !private ["So8NSObjectC", "AF"]
+- ["So8NSObjectC", "Data"]
+- ["So8NSObjectC", "FilterIm"]
+- !private ["So8NSObjectC", "GlobalVariables"]
+- ["So8NSObjectC", "InputIm"]
+- ["So8NSObjectC", "OutputIm"]
+- ["So8NSObjectC", "UIImage"]
+- ["So8NSObjectC", "UIImageView"]
+- !private ["So8NSObjectC", "image"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "jpeg"]
+- !private ["So8NSObjectC", "jpegData"]
+- ["So8NSObjectC", "png"]
+- !private ["So8NSObjectC", "pngData"]
+- !private ["So8NSObjectC", "print"]
+- ["So8NSObjectC", "sendRequest"]
+- ["So8NSObjectC", "viewDidLoad"]
+- !private ["So8NSObjectP", "AF"]
+- !private ["So8NSObjectP", "FilterIm"]
+- !private ["So8NSObjectP", "GlobalVariables"]
+- !private ["So8NSObjectP", "InputIm"]
+- !private ["So8NSObjectP", "OutputIm"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "image"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "jpegData"]
+- !private ["So8NSObjectP", "pngData"]
+- !private ["So8NSObjectP", "print"]
+- !private ["So8NSObjectP", "sendRequest"]
+- !private ["So8NSObjectP", "viewDidLoad"]
+- !private ["So14NSSecureCodingP", "jpegData"]
+- !private ["So14NSSecureCodingP", "pngData"]
+- !private ["Sq", "image"]
+- !private ["9Alamofire7RequestC", "responseImage"]
+- !private ["9Alamofire15RequestDelegateP", "upload"]
+- !private ["s6ResultO", "success"]
+- !private ["9Alamofire7SessionC", "upload"]
+- !private ["9Alamofire20SessionStateProviderP", "upload"]
+- !private ["s27StringInterpolationProtocolP", "appendInterpolation"]
+- !private ["s27StringInterpolationProtocolP", "appendLiteral"]
+- !private ["s16TextOutputStreamP", "appendInterpolation"]
+- !private ["s16TextOutputStreamP", "appendLiteral"]
+- !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "image"]
+- !private ["So29UIAccessibilityIdentificationP", "image"]
+- !private ["So29UIAccessibilityIdentificationP", "jpegData"]
+- !private ["So29UIAccessibilityIdentificationP", "pngData"]
+- !private ["So12UIAppearanceP", "image"]
+- !private ["So21UIAppearanceContainerP", "AF"]
+- !private ["So21UIAppearanceContainerP", "FilterIm"]
+- !private ["So21UIAppearanceContainerP", "GlobalVariables"]
+- !private ["So21UIAppearanceContainerP", "InputIm"]
+- !private ["So21UIAppearanceContainerP", "OutputIm"]
+- ["So21UIAppearanceContainerP", ""]
+- !private ["So21UIAppearanceContainerP", "image"]
+- !private ["So21UIAppearanceContainerP", "init"]
+- !private ["So21UIAppearanceContainerP", "print"]
+- !private ["So21UIAppearanceContainerP", "sendRequest"]
+- !private ["So21UIAppearanceContainerP", "viewDidLoad"]
+- !private ["So18UIContentContainerP", "AF"]
+- !private ["So18UIContentContainerP", "FilterIm"]
+- !private ["So18UIContentContainerP", "GlobalVariables"]
+- !private ["So18UIContentContainerP", "InputIm"]
+- !private ["So18UIContentContainerP", "OutputIm"]
+- ["So18UIContentContainerP", ""]
+- !private ["So18UIContentContainerP", "init"]
+- !private ["So18UIContentContainerP", "print"]
+- !private ["So18UIContentContainerP", "sendRequest"]
+- !private ["So18UIContentContainerP", "viewDidLoad"]
+- !private ["So17UICoordinateSpaceP", "image"]
+- !private ["So13UIDynamicItemP", "image"]
+- !private ["So18UIFocusEnvironmentP", "AF"]
+- !private ["So18UIFocusEnvironmentP", "FilterIm"]
+- !private ["So18UIFocusEnvironmentP", "GlobalVariables"]
+- !private ["So18UIFocusEnvironmentP", "InputIm"]
+- !private ["So18UIFocusEnvironmentP", "OutputIm"]
+- ["So18UIFocusEnvironmentP", ""]
+- !private ["So18UIFocusEnvironmentP", "image"]
+- !private ["So18UIFocusEnvironmentP", "init"]
+- !private ["So18UIFocusEnvironmentP", "print"]
+- !private ["So18UIFocusEnvironmentP", "sendRequest"]
+- !private ["So18UIFocusEnvironmentP", "viewDidLoad"]
+- !private ["So11UIFocusItemP", "image"]
+- !private ["So20UIFocusItemContainerP", "image"]
+- ["So7UIImageC", "Data"]
+- ["So7UIImageC", "jpeg"]
+- !private ["So7UIImageC", "jpegData"]
+- ["So7UIImageC", "png"]
+- !private ["So7UIImageC", "pngData"]
+- !private ["So11UIImageViewC", "image"]
+- !private ["So39UIItemProviderPresentationSizeProvidingP", "jpegData"]
+- !private ["So39UIItemProviderPresentationSizeProvidingP", "pngData"]
+- !private ["So24UILargeContentViewerItemP", "image"]
+- !private ["So30UIPasteConfigurationSupportingP", "AF"]
+- !private ["So30UIPasteConfigurationSupportingP", "FilterIm"]
+- !private ["So30UIPasteConfigurationSupportingP", "GlobalVariables"]
+- !private ["So30UIPasteConfigurationSupportingP", "InputIm"]
+- !private ["So30UIPasteConfigurationSupportingP", "OutputIm"]
+- ["So30UIPasteConfigurationSupportingP", ""]
+- !private ["So30UIPasteConfigurationSupportingP", "image"]
+- !private ["So30UIPasteConfigurationSupportingP", "init"]
+- !private ["So30UIPasteConfigurationSupportingP", "print"]
+- !private ["So30UIPasteConfigurationSupportingP", "sendRequest"]
+- !private ["So30UIPasteConfigurationSupportingP", "viewDidLoad"]
+- !private ["So11UIResponderC", "AF"]
+- ["So11UIResponderC", "FilterIm"]
+- !private ["So11UIResponderC", "GlobalVariables"]
+- ["So11UIResponderC", "InputIm"]
+- ["So11UIResponderC", "OutputIm"]
+- ["So11UIResponderC", "UIImage"]
+- ["So11UIResponderC", "UIImageView"]
+- !private ["So11UIResponderC", "image"]
+- ["So11UIResponderC", "init"]
+- !private ["So11UIResponderC", "print"]
+- ["So11UIResponderC", "sendRequest"]
+- ["So11UIResponderC", "viewDidLoad"]
+- !private ["So30UIResponderStandardEditActionsP", "AF"]
+- !private ["So30UIResponderStandardEditActionsP", "FilterIm"]
+- !private ["So30UIResponderStandardEditActionsP", "GlobalVariables"]
+- !private ["So30UIResponderStandardEditActionsP", "InputIm"]
+- !private ["So30UIResponderStandardEditActionsP", "OutputIm"]
+- ["So30UIResponderStandardEditActionsP", ""]
+- !private ["So30UIResponderStandardEditActionsP", "image"]
+- !private ["So30UIResponderStandardEditActionsP", "init"]
+- !private ["So30UIResponderStandardEditActionsP", "print"]
+- !private ["So30UIResponderStandardEditActionsP", "sendRequest"]
+- !private ["So30UIResponderStandardEditActionsP", "viewDidLoad"]
+- !private ["So16UIStateRestoringP", "AF"]
+- !private ["So16UIStateRestoringP", "FilterIm"]
+- !private ["So16UIStateRestoringP", "GlobalVariables"]
+- !private ["So16UIStateRestoringP", "InputIm"]
+- !private ["So16UIStateRestoringP", "OutputIm"]
+- ["So16UIStateRestoringP", ""]
+- !private ["So16UIStateRestoringP", "init"]
+- !private ["So16UIStateRestoringP", "print"]
+- !private ["So16UIStateRestoringP", "sendRequest"]
+- !private ["So16UIStateRestoringP", "viewDidLoad"]
+- !private ["So18UITraitEnvironmentP", "AF"]
+- !private ["So18UITraitEnvironmentP", "FilterIm"]
+- !private ["So18UITraitEnvironmentP", "GlobalVariables"]
+- !private ["So18UITraitEnvironmentP", "InputIm"]
+- !private ["So18UITraitEnvironmentP", "OutputIm"]
+- ["So18UITraitEnvironmentP", ""]
+- !private ["So18UITraitEnvironmentP", "image"]
+- !private ["So18UITraitEnvironmentP", "init"]
+- !private ["So18UITraitEnvironmentP", "print"]
+- !private ["So18UITraitEnvironmentP", "sendRequest"]
+- !private ["So18UITraitEnvironmentP", "viewDidLoad"]
+- !private ["So23UIUserActivityRestoringP", "AF"]
+- !private ["So23UIUserActivityRestoringP", "FilterIm"]
+- !private ["So23UIUserActivityRestoringP", "GlobalVariables"]
+- !private ["So23UIUserActivityRestoringP", "InputIm"]
+- !private ["So23UIUserActivityRestoringP", "OutputIm"]
+- ["So23UIUserActivityRestoringP", ""]
+- !private ["So23UIUserActivityRestoringP", "image"]
+- !private ["So23UIUserActivityRestoringP", "init"]
+- !private ["So23UIUserActivityRestoringP", "print"]
+- !private ["So23UIUserActivityRestoringP", "sendRequest"]
+- !private ["So23UIUserActivityRestoringP", "viewDidLoad"]
+- !private ["So6UIViewC", "image"]
+- !private ["So16UIViewControllerC", "AF"]
+- ["So16UIViewControllerC", "FilterIm"]
+- !private ["So16UIViewControllerC", "GlobalVariables"]
+- ["So16UIViewControllerC", "InputIm"]
+- ["So16UIViewControllerC", "OutputIm"]
+- ["So16UIViewControllerC", "UIImage"]
+- ["So16UIViewControllerC", "UIImageView"]
+- ["So16UIViewControllerC", ""]
+- ["So16UIViewControllerC", "init"]
+- !private ["So16UIViewControllerC", "print"]
+- ["So16UIViewControllerC", "sendRequest"]
+- ["So16UIViewControllerC", "viewDidLoad"]
+- !private ["9Alamofire13UploadRequestC", "responseImage"]
+- !private ["9PicassoXS20UploadViewControllerC", "AF"]
+- ["9PicassoXS20UploadViewControllerC", "FilterIm"]
+- !private ["9PicassoXS20UploadViewControllerC", "GlobalVariables"]
+- ["9PicassoXS20UploadViewControllerC", "InputIm"]
+- ["9PicassoXS20UploadViewControllerC", "OutputIm"]
+- ["9PicassoXS20UploadViewControllerC", "UIImage"]
+- ["9PicassoXS20UploadViewControllerC", "UIImageView"]
+- ["9PicassoXS20UploadViewControllerC", "deinit"]
+- ["9PicassoXS20UploadViewControllerC", "init"]
+- !private ["9PicassoXS20UploadViewControllerC", "print"]
+- ["9PicassoXS20UploadViewControllerC", "sendRequest"]
+- ["9PicassoXS20UploadViewControllerC", "viewDidLoad"]
+- !private ["s26_ExpressibleByImageLiteralP", "jpegData"]
+- !private ["s26_ExpressibleByImageLiteralP", "pngData"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "AF"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "FilterIm"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "GlobalVariables"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "InputIm"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "OutputIm"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "image"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "jpegData"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "pngData"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "sendRequest"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidLoad"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "AF"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "FilterIm"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "GlobalVariables"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "InputIm"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "OutputIm"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "image"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "jpegData"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "pngData"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "print"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "sendRequest"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "viewDidLoad"]
+- !private ["s21_ObjectiveCBridgeableP", "image"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "image"]
+depends-nominal:
+- !private "9Alamofire0A8ExtendedP"
+- !private "So15CALayerDelegateP"
+- "s7CVarArgP"
+- "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "9Alamofire11DataRequestC"
+- !private "9Alamofire12DataResponseV"
+- !private "Se"
+- !private "s26DefaultStringInterpolationV"
+- !private "SE"
+- "SQ"
+- !private "s23ExpressibleByNilLiteralP"
+- !private "9PicassoXS15GlobalVariablesV"
+- "SH"
+- !private "9Alamofire17MultipartFormDataC"
+- "So8NSCodingP"
+- "So26NSExtensionRequestHandlingP"
+- !private "So21NSItemProviderReadingP"
+- !private "So21NSItemProviderWritingP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "So14NSSecureCodingP"
+- !private "Sq"
+- !private "9Alamofire7RequestC"
+- !private "9Alamofire15RequestDelegateP"
+- !private "s6ResultO"
+- !private "9Alamofire7SessionC"
+- !private "9Alamofire20SessionStateProviderP"
+- !private "s27StringInterpolationProtocolP"
+- !private "s16TextOutputStreamP"
+- !private "So48UIAccessibilityContentSizeCategoryImageAdjustingP"
+- !private "So29UIAccessibilityIdentificationP"
+- !private "So12UIAppearanceP"
+- "So21UIAppearanceContainerP"
+- "So18UIContentContainerP"
+- !private "So17UICoordinateSpaceP"
+- !private "So13UIDynamicItemP"
+- "So18UIFocusEnvironmentP"
+- !private "So11UIFocusItemP"
+- !private "So20UIFocusItemContainerP"
+- "So7UIImageC"
+- !private "So11UIImageViewC"
+- !private "So39UIItemProviderPresentationSizeProvidingP"
+- !private "So24UILargeContentViewerItemP"
+- "So30UIPasteConfigurationSupportingP"
+- "So11UIResponderC"
+- "So30UIResponderStandardEditActionsP"
+- "So16UIStateRestoringP"
+- "So18UITraitEnvironmentP"
+- "So23UIUserActivityRestoringP"
+- !private "So6UIViewC"
+- "So16UIViewControllerC"
+- !private "9Alamofire13UploadRequestC"
+- "9PicassoXS20UploadViewControllerC"
+- !private "s26_ExpressibleByImageLiteralP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "10Foundation37_KeyValueCodingAndObservingPublishingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s38__DefaultCustomPlaygroundQuickLookableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/ObjectiveC.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/CoreMIDI.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/CoreMedia.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/simd.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/CoreImage.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/QuartzCore.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/Dispatch.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/Metal.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/Darwin.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/Foundation.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/AVFoundation.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/CoreFoundation.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/CoreAudio.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/CoreGraphics.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/Swift.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/UIKit.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/SwiftOnoneSupport.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Combine.framework/Modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreMIDI.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreMedia.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/simd.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Metal.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Darwin.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Foundation.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/AVFoundation.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreFoundation.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreAudio.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreGraphics.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64.swiftmodule"
+- "/Users/zhangenhao/Desktop/UM/2020_Winter/EECS_441/PicassoXS/src/frontend/PicassoXS/DerivedData/PicassoXS/Build/Products/Debug-iphonesimulator/AlamofireImage/AlamofireImage.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/zhangenhao/Desktop/UM/2020_Winter/EECS_441/PicassoXS/src/frontend/PicassoXS/DerivedData/PicassoXS/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/zhangenhao/Desktop/UM/2020_Winter/EECS_441/PicassoXS/src/frontend/PicassoXS/DerivedData/PicassoXS/Build/Products/Debug-iphonesimulator/AlamofireImage/AlamofireImage-umbrella.h"
+- "/Users/zhangenhao/Desktop/UM/2020_Winter/EECS_441/PicassoXS/src/frontend/PicassoXS/DerivedData/PicassoXS/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire-umbrella.h"
+- "/Users/zhangenhao/Desktop/UM/2020_Winter/EECS_441/PicassoXS/src/frontend/PicassoXS/DerivedData/PicassoXS/Build/Products/Debug-iphonesimulator/AlamofireImage/Swift Compatibility Header/AlamofireImage-Swift.h"
+- "/Users/zhangenhao/Desktop/UM/2020_Winter/EECS_441/PicassoXS/src/frontend/PicassoXS/DerivedData/PicassoXS/Build/Products/Debug-iphonesimulator/Alamofire/Swift Compatibility Header/Alamofire-Swift.h"
+- "/Users/zhangenhao/Desktop/UM/2020_Winter/EECS_441/PicassoXS/src/frontend/PicassoXS/DerivedData/PicassoXS/Build/Products/Debug-iphonesimulator/AlamofireImage/AlamofireImage.modulemap"
+- "/Users/zhangenhao/Desktop/UM/2020_Winter/EECS_441/PicassoXS/src/frontend/PicassoXS/DerivedData/PicassoXS/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CoreMedia.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreAudioTypes.framework/Headers/CoreAudioTypes.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "1b6adeff9263c9e2741b51a97c7f65e8"

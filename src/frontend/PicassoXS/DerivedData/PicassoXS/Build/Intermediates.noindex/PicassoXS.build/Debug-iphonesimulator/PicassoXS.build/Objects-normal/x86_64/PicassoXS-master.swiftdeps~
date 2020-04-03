@@ -1,0 +1,14 @@
+version: "Apple Swift version 5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)"
+options: "647bf322e2e8d63ef1fbba9326c73344"
+build_time: [1585698124, 293013000]
+inputs:
+  "/Users/zhangenhao/Desktop/UM/2020_Winter/EECS_441/PicassoXS/src/frontend/PicassoXS/PicassoXS/FiltersClass.swift": [1585013837, 789039574]
+  "/Users/zhangenhao/Desktop/UM/2020_Winter/EECS_441/PicassoXS/src/frontend/PicassoXS/PicassoXS/UploadViewController.swift": [1585698120, 552844756]
+  "/Users/zhangenhao/Desktop/UM/2020_Winter/EECS_441/PicassoXS/src/frontend/PicassoXS/PicassoXS/DetailViewController.swift": [1585013837, 787935105]
+  "/Users/zhangenhao/Desktop/UM/2020_Winter/EECS_441/PicassoXS/src/frontend/PicassoXS/PicassoXS/FilterViewController.swift": [1585013837, 788506622]
+  "/Users/zhangenhao/Desktop/UM/2020_Winter/EECS_441/PicassoXS/src/frontend/PicassoXS/PicassoXS/MadeImages.swift": [1585013837, 790717551]
+  "/Users/zhangenhao/Desktop/UM/2020_Winter/EECS_441/PicassoXS/src/frontend/PicassoXS/PicassoXS/HomeViewController.swift": [1585013837, 789387921]
+  "/Users/zhangenhao/Desktop/UM/2020_Winter/EECS_441/PicassoXS/src/frontend/PicassoXS/PicassoXS/SceneDelegate.swift": [1585013837, 791062331]
+  "/Users/zhangenhao/Desktop/UM/2020_Winter/EECS_441/PicassoXS/src/frontend/PicassoXS/HomeViewCell.swift": [1585626951, 217740976]
+  "/Users/zhangenhao/Desktop/UM/2020_Winter/EECS_441/PicassoXS/src/frontend/PicassoXS/PicassoXS/TableViewCell.swift": [1585013837, 791346251]
+  "/Users/zhangenhao/Desktop/UM/2020_Winter/EECS_441/PicassoXS/src/frontend/PicassoXS/PicassoXS/AppDelegate.swift": [1585013837, 759131510]

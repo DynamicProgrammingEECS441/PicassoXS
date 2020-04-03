@@ -1,0 +1,13 @@
+version: "Apple Swift version 5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)"
+options: "86d86db4a38efad3252bd26f2182dfac"
+build_time: [1585697830, 155108000]
+inputs:
+  "/Users/zhangenhao/Desktop/UM/2020_Winter/EECS_441/PicassoXS/src/frontend/PicassoXS/Pods/AlamofireImage/Source/AFIError.swift": [1585697820, 652673004]
+  "/Users/zhangenhao/Desktop/UM/2020_Winter/EECS_441/PicassoXS/src/frontend/PicassoXS/Pods/AlamofireImage/Source/Image.swift": [1585697820, 652867869]
+  "/Users/zhangenhao/Desktop/UM/2020_Winter/EECS_441/PicassoXS/src/frontend/PicassoXS/Pods/AlamofireImage/Source/ImageCache.swift": [1585697820, 652039396]
+  "/Users/zhangenhao/Desktop/UM/2020_Winter/EECS_441/PicassoXS/src/frontend/PicassoXS/Pods/AlamofireImage/Source/ImageDownloader.swift": [1585697820, 653353439]
+  "/Users/zhangenhao/Desktop/UM/2020_Winter/EECS_441/PicassoXS/src/frontend/PicassoXS/Pods/AlamofireImage/Source/ImageFilter.swift": [1585697820, 654234924]
+  "/Users/zhangenhao/Desktop/UM/2020_Winter/EECS_441/PicassoXS/src/frontend/PicassoXS/Pods/AlamofireImage/Source/Request+AlamofireImage.swift": [1585697820, 654024919]
+  "/Users/zhangenhao/Desktop/UM/2020_Winter/EECS_441/PicassoXS/src/frontend/PicassoXS/Pods/AlamofireImage/Source/UIButton+AlamofireImage.swift": [1585697820, 653099558]
+  "/Users/zhangenhao/Desktop/UM/2020_Winter/EECS_441/PicassoXS/src/frontend/PicassoXS/Pods/AlamofireImage/Source/UIImage+AlamofireImage.swift": [1585697820, 652425935]
+  "/Users/zhangenhao/Desktop/UM/2020_Winter/EECS_441/PicassoXS/src/frontend/PicassoXS/Pods/AlamofireImage/Source/UIImageView+AlamofireImage.swift": [1585697820, 653725669]

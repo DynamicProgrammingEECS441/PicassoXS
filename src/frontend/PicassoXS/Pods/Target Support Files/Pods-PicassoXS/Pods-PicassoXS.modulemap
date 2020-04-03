@@ -1,0 +1,6 @@
+module Pods_PicassoXS {
+  umbrella header "Pods-PicassoXS-umbrella.h"
+
+  export *
+  module * { export * }
+}

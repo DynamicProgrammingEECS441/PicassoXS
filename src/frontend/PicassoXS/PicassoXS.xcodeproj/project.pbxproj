@@ -7,23 +7,47 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A5CB016F23F1136B00961876 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CB016E23F1136B00961876 /* AppDelegate.swift */; };
-		A5CB017123F1136B00961876 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CB017023F1136B00961876 /* SceneDelegate.swift */; };
-		A5CB017323F1136B00961876 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CB017223F1136B00961876 /* ViewController.swift */; };
-		A5CB017623F1136B00961876 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5CB017423F1136B00961876 /* Main.storyboard */; };
-		A5CB017823F1136F00961876 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5CB017723F1136F00961876 /* Assets.xcassets */; };
-		A5CB017B23F1136F00961876 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5CB017923F1136F00961876 /* LaunchScreen.storyboard */; };
+		85E00FF4195E0AA8FE3F3762 /* libPods-PicassoXS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A61C938415B13267D8CCDA3B /* libPods-PicassoXS.a */; };
+		AD58FAA32432DF8D007A1E61 /* FiltersClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD58FA932432DF8D007A1E61 /* FiltersClass.swift */; };
+		AD58FAA42432DF8D007A1E61 /* MadeImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD58FA942432DF8D007A1E61 /* MadeImages.swift */; };
+		AD58FAA52432DF8D007A1E61 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD58FA952432DF8D007A1E61 /* DetailViewController.swift */; };
+		AD58FAA72432DF8D007A1E61 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD58FA972432DF8D007A1E61 /* TableViewCell.swift */; };
+		AD58FAAA2432DF8D007A1E61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD58FA9B2432DF8D007A1E61 /* Main.storyboard */; };
+		AD58FAAB2432DF8D007A1E61 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD58FA9D2432DF8D007A1E61 /* UploadViewController.swift */; };
+		AD58FAAC2432DF8D007A1E61 /* picasso.py in Resources */ = {isa = PBXBuildFile; fileRef = AD58FA9E2432DF8D007A1E61 /* picasso.py */; };
+		AD58FAAD2432DF8D007A1E61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD58FA9F2432DF8D007A1E61 /* AppDelegate.swift */; };
+		AD58FAAF2432DF8D007A1E61 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD58FAA12432DF8D007A1E61 /* SceneDelegate.swift */; };
+		AD58FAB02432DF8D007A1E61 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD58FAA22432DF8D007A1E61 /* FilterViewController.swift */; };
+		AD58FAB22432E6D0007A1E61 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = AD58FAB12432E6D0007A1E61 /* Podfile */; };
+		AD58FAB42432E94A007A1E61 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD58FAB32432E94A007A1E61 /* Default-568h@2x.png */; };
+		AD58FAB62432F25C007A1E61 /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD58FAB52432F25C007A1E61 /* HomeViewCell.swift */; };
+		AD58FAB82432F438007A1E61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD58FAB72432F438007A1E61 /* Assets.xcassets */; };
+		AD58FABC2433EE60007A1E61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD58FABA2433EE60007A1E61 /* LaunchScreen.storyboard */; };
+		AD58FABE2433EE9F007A1E61 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD58FABD2433EE9F007A1E61 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F6DD738A0641E902425AEA3 /* Pods-PicassoXS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PicassoXS.release.xcconfig"; path = "Target Support Files/Pods-PicassoXS/Pods-PicassoXS.release.xcconfig"; sourceTree = "<group>"; };
 		A5CB016B23F1136B00961876 /* PicassoXS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PicassoXS.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A5CB016E23F1136B00961876 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A5CB017023F1136B00961876 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A5CB017223F1136B00961876 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A5CB017523F1136B00961876 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A5CB017723F1136F00961876 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A5CB017A23F1136F00961876 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		A5CB017C23F1136F00961876 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A61C938415B13267D8CCDA3B /* libPods-PicassoXS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PicassoXS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD58FA932432DF8D007A1E61 /* FiltersClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiltersClass.swift; sourceTree = "<group>"; };
+		AD58FA942432DF8D007A1E61 /* MadeImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MadeImages.swift; sourceTree = "<group>"; };
+		AD58FA952432DF8D007A1E61 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		AD58FA972432DF8D007A1E61 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		AD58FA9C2432DF8D007A1E61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AD58FA9D2432DF8D007A1E61 /* UploadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
+		AD58FA9E2432DF8D007A1E61 /* picasso.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = picasso.py; sourceTree = "<group>"; };
+		AD58FA9F2432DF8D007A1E61 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AD58FAA02432DF8D007A1E61 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD58FAA12432DF8D007A1E61 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		AD58FAA22432DF8D007A1E61 /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		AD58FAB12432E6D0007A1E61 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AD58FAB32432E94A007A1E61 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		AD58FAB52432F25C007A1E61 /* HomeViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = SOURCE_ROOT; };
+		AD58FAB72432F438007A1E61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		AD58FABB2433EE60007A1E61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AD58FABD2433EE9F007A1E61 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F192C822DF32A379AA0CD7FC /* Pods-PicassoXS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PicassoXS.debug.xcconfig"; path = "Target Support Files/Pods-PicassoXS/Pods-PicassoXS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +55,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85E00FF4195E0AA8FE3F3762 /* libPods-PicassoXS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		77CE9E52F0C8301A8908D344 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F192C822DF32A379AA0CD7FC /* Pods-PicassoXS.debug.xcconfig */,
+				7F6DD738A0641E902425AEA3 /* Pods-PicassoXS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A5CB016223F1136B00961876 = {
 			isa = PBXGroup;
 			children = (
+				AD58FAB32432E94A007A1E61 /* Default-568h@2x.png */,
 				A5CB016D23F1136B00961876 /* PicassoXS */,
 				A5CB016C23F1136B00961876 /* Products */,
+				77CE9E52F0C8301A8908D344 /* Pods */,
+				F92F02A5D30B79F4B40578CE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +93,32 @@
 		A5CB016D23F1136B00961876 /* PicassoXS */ = {
 			isa = PBXGroup;
 			children = (
-				A5CB016E23F1136B00961876 /* AppDelegate.swift */,
-				A5CB017023F1136B00961876 /* SceneDelegate.swift */,
-				A5CB017223F1136B00961876 /* ViewController.swift */,
-				A5CB017423F1136B00961876 /* Main.storyboard */,
-				A5CB017723F1136F00961876 /* Assets.xcassets */,
-				A5CB017923F1136F00961876 /* LaunchScreen.storyboard */,
-				A5CB017C23F1136F00961876 /* Info.plist */,
+				AD58FAB12432E6D0007A1E61 /* Podfile */,
+				AD58FA932432DF8D007A1E61 /* FiltersClass.swift */,
+				AD58FA942432DF8D007A1E61 /* MadeImages.swift */,
+				AD58FAB52432F25C007A1E61 /* HomeViewCell.swift */,
+				AD58FABD2433EE9F007A1E61 /* HomeViewController.swift */,
+				AD58FA952432DF8D007A1E61 /* DetailViewController.swift */,
+				AD58FA972432DF8D007A1E61 /* TableViewCell.swift */,
+				AD58FAB72432F438007A1E61 /* Assets.xcassets */,
+				AD58FA9B2432DF8D007A1E61 /* Main.storyboard */,
+				AD58FABA2433EE60007A1E61 /* LaunchScreen.storyboard */,
+				AD58FA9D2432DF8D007A1E61 /* UploadViewController.swift */,
+				AD58FA9E2432DF8D007A1E61 /* picasso.py */,
+				AD58FA9F2432DF8D007A1E61 /* AppDelegate.swift */,
+				AD58FAA02432DF8D007A1E61 /* Info.plist */,
+				AD58FAA12432DF8D007A1E61 /* SceneDelegate.swift */,
+				AD58FAA22432DF8D007A1E61 /* FilterViewController.swift */,
 			);
 			path = PicassoXS;
+			sourceTree = "<group>";
+		};
+		F92F02A5D30B79F4B40578CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A61C938415B13267D8CCDA3B /* libPods-PicassoXS.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +128,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A5CB017F23F1136F00961876 /* Build configuration list for PBXNativeTarget "PicassoXS" */;
 			buildPhases = (
+				C4D3FECC2A346AA8FC433874 /* [CP] Check Pods Manifest.lock */,
 				A5CB016723F1136B00961876 /* Sources */,
 				A5CB016823F1136B00961876 /* Frameworks */,
 				A5CB016923F1136B00961876 /* Resources */,
@@ -125,40 +180,75 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5CB017B23F1136F00961876 /* LaunchScreen.storyboard in Resources */,
-				A5CB017823F1136F00961876 /* Assets.xcassets in Resources */,
-				A5CB017623F1136B00961876 /* Main.storyboard in Resources */,
+				AD58FAAC2432DF8D007A1E61 /* picasso.py in Resources */,
+				AD58FAB42432E94A007A1E61 /* Default-568h@2x.png in Resources */,
+				AD58FAAA2432DF8D007A1E61 /* Main.storyboard in Resources */,
+				AD58FAB22432E6D0007A1E61 /* Podfile in Resources */,
+				AD58FABC2433EE60007A1E61 /* LaunchScreen.storyboard in Resources */,
+				AD58FAB82432F438007A1E61 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C4D3FECC2A346AA8FC433874 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PicassoXS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A5CB016723F1136B00961876 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5CB017323F1136B00961876 /* ViewController.swift in Sources */,
-				A5CB016F23F1136B00961876 /* AppDelegate.swift in Sources */,
-				A5CB017123F1136B00961876 /* SceneDelegate.swift in Sources */,
+				AD58FAA32432DF8D007A1E61 /* FiltersClass.swift in Sources */,
+				AD58FAAB2432DF8D007A1E61 /* UploadViewController.swift in Sources */,
+				AD58FAA52432DF8D007A1E61 /* DetailViewController.swift in Sources */,
+				AD58FAB02432DF8D007A1E61 /* FilterViewController.swift in Sources */,
+				AD58FAA42432DF8D007A1E61 /* MadeImages.swift in Sources */,
+				AD58FABE2433EE9F007A1E61 /* HomeViewController.swift in Sources */,
+				AD58FAAF2432DF8D007A1E61 /* SceneDelegate.swift in Sources */,
+				AD58FAB62432F25C007A1E61 /* HomeViewCell.swift in Sources */,
+				AD58FAA72432DF8D007A1E61 /* TableViewCell.swift in Sources */,
+				AD58FAAD2432DF8D007A1E61 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A5CB017423F1136B00961876 /* Main.storyboard */ = {
+		AD58FA9B2432DF8D007A1E61 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				A5CB017523F1136B00961876 /* Base */,
+				AD58FA9C2432DF8D007A1E61 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		A5CB017923F1136F00961876 /* LaunchScreen.storyboard */ = {
+		AD58FABA2433EE60007A1E61 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				A5CB017A23F1136F00961876 /* Base */,
+				AD58FABB2433EE60007A1E61 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -282,6 +372,7 @@
 		};
 		A5CB018023F1136F00961876 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F192C822DF32A379AA0CD7FC /* Pods-PicassoXS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +390,7 @@
 		};
 		A5CB018123F1136F00961876 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F6DD738A0641E902425AEA3 /* Pods-PicassoXS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
