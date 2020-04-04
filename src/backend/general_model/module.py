@@ -1,6 +1,6 @@
 from __future__ import division
 import tensorflow as tf
-import tensorflow_addons as tfa
+#import tensorflow_addons as tfa
 
 from tensorflow.compat.v1 import get_variable, get_variable_scope, variable_scope
 from tensorflow.keras.models import Sequential
