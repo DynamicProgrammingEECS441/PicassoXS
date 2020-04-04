@@ -54,7 +54,7 @@ parser.add_argument('--total_steps',
 parser.add_argument('--batch_size',
                     dest='batch_size',
                     type=int,
-                    default=1,
+                    default=32,
                     help='# images in batch')
 parser.add_argument('--lr',
                     dest='lr',
@@ -134,4 +134,5 @@ def main(_):
     print('FINISHED')
 
 if __name__ == '__main__':
+    print('tensorflow version', tf.__version__)
     tf.compat.v1.app.run()
