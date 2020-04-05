@@ -40,6 +40,11 @@ xiaosong99/servable   van-gogh            1653250eb149        6 minutes ago     
    1. each docker image take 2 port
    2. you need to specify the machine port and docker port (8501, 8500 fixed)
 
+Note :
+
+1. tf server runs use port `8500`(gRPC), `8501`(REST) `inside docker`
+2. `-p` command "link" your local computer / server's port with docker port 
+3. `-p 0000:8500` means you have link your local computer `0000` port with docker port `8500` and you can send your gRPC request to `localhost:0000` and this request will be re-direct to `8500` inside docker, which is the port that tf server use. 
 
 ```shell
 >> docker run -t -p ${MACHINE_PORT_FOR_gRPC}:8500 -p ${MACHINE_PORT_FOR_RESTfil}:8501 xiaosong99/servable:${MODEL_NAME}

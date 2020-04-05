@@ -2,6 +2,7 @@ import grpc
 from PIL import Image
 import tensorflow as tf  # tf 2.x 
 import numpy as np
+# pip install tensorflow-serving-api 
 from tensorflow_serving.apis import predict_pb2 # TODO you need to download tensorflow_serving on your server 
 from tensorflow_serving.apis import prediction_service_pb2_grpc
 
@@ -44,6 +45,9 @@ def main():
 
     # 3. Prepare & Send Request 
     ip_port = "0.0.0.0:8500"  # TODO change this to your ip:port 
+    # if you run docker run -t -p 0000:8500 -p 0001:8501 xiaosong99/servable:latest-skeleton 
+    # then the port should be "0000"
+    # For more information, see `QuickStart_GeneralModel.md` 
     channel = grpc.insecure_channel(ip_port)
     stub = prediction_service_pb2_grpc.PredictionServiceStub(channel)
     request = predict_pb2.PredictRequest()
