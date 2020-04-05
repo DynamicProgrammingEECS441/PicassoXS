@@ -25,7 +25,7 @@ parser.add_argument('--phase',
 parser.add_argument('--image_size',
                     dest='image_size',
                     type=int,
-                    default=256*3,
+                    default=762,
                     help='For training phase: will crop out images of this particular size.'
                          'For inference phase: each input image will have the smallest side of this size. '
                          'For inference recommended size is 1280.')
@@ -54,7 +54,7 @@ parser.add_argument('--total_steps',
 parser.add_argument('--batch_size',
                     dest='batch_size',
                     type=int,
-                    default=32,
+                    default=1,
                     help='# images in batch')
 parser.add_argument('--lr',
                     dest='lr',
