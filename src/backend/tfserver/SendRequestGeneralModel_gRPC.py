@@ -37,7 +37,7 @@ def main():
     img = np.expand_dims(np.array(img).astype(np.float32), axis=0)  # float32, (1, h, w, 3) representaiton 
 
     # 3. Prepare & Send Request 
-    ip_port = "0.0.0.0:0002"  # TODO change this to your ip:port 
+    ip_port = "0.0.0.0:8500"  # TODO change this to your ip:port 
     # if you run docker run -t -p 0000:8500 -p 0001:8501 xiaosong99/servable:latest-skeleton  
     # then the port should be "0000"
     # For more information, see `QuickStart_GeneralModel.md`
@@ -68,7 +68,7 @@ def main():
 
     # 5. Save Image / Send image back to frontend 
     output_img_pil = Image.fromarray(output_img[0])
-    output_img_pil.save('test_gRPC_img1.jpg')
+    output_img_pil.save('test_output_gRPC_img1.jpg')
     #plt.figure()
     #plt.imshow(output_img[0])
     #plt.axis('off')

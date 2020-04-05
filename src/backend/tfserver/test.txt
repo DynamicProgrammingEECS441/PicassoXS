@@ -24,3 +24,6 @@ e.g. : http://35.202.143.174:8501/v1/models/van-gogh:predict
 2. 现在支持多个模型 MODEL_NAME = {van-gogh, monet, morisot, kandinsky, cezanne}
 
 3. 需要把图片resize到最大边128，现在的这个服务器比较小
+
+
+docker cp $(pwd)/servable/monet serving_base:/models/ 
