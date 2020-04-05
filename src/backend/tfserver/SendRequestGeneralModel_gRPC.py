@@ -40,7 +40,7 @@ def main():
     channel = grpc.insecure_channel(ip_port)
     stub = prediction_service_pb2_grpc.PredictionServiceStub(channel)
     request = predict_pb2.PredictRequest()
-    request.model_spec.name = "model"  # TODO change this to the mode you're using 
+    request.model_spec.name = "model"  # TODO change this to the model you're using 
     request.model_spec.signature_name = "predict_images" 
     request.inputs["input_img"].CopyFrom(  
         tf.make_tensor_proto(img, shape=list(img.shape))) 
