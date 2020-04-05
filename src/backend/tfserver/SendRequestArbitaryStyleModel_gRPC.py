@@ -9,7 +9,7 @@ from tensorflow_serving.apis import prediction_service_pb2_grpc
 def main():
     # 1. Load Image
     content_img = Image.open('./test_content_img1.jpg') # TODO change this to your imaeg read in  
-    style_img = Image.open('./test_style_img3.jpg')
+    style_img = Image.open('./test_style_img1.jpg')
 
     # 2. Image Preprocess 
     # 2.1  Resize 
@@ -23,7 +23,7 @@ def main():
             img (PIL.Image) : <PIL.Image> class objecy represent image 
         '''
         h, w = img.size
-        IMG_LONG_SIZE = 700.
+        IMG_LONG_SIZE = 256.
 
         if h > w : # h is the long side 
             h_new = int(IMG_LONG_SIZE)
@@ -51,7 +51,7 @@ def main():
     channel = grpc.insecure_channel(ip_port)
     stub = prediction_service_pb2_grpc.PredictionServiceStub(channel)
     request = predict_pb2.PredictRequest()
-    request.model_spec.name = "model" # TODO change this to the model you're using 
+    request.model_spec.name = "arbitary_style" # TODO change this to the model you're using 
     request.model_spec.signature_name = "predict_images" 
     request.inputs["content_img"].CopyFrom(  
             tf.make_tensor_proto(content_img_np, shape=list(content_img_np.shape)))  
@@ -60,9 +60,10 @@ def main():
     response = stub.Predict(request, 10.0)  # TODO change the request timeout, default is 10s
     
     # 4. Image Postprocess 
-    output_img = tf.make_ndarray(response.outputs['output_img']) # value range : [0-1], dtype float32, (1, H, W, 3)
-    output_img = output_img * 255 
+    output_img = tf.make_ndarray(response.outputs['output_img']) # value range : [0-255], dtype float32, (1, H, W, 3)
     output_img = output_img.astype(np.uint8)  # value range : [0-255], dtype : uint8, (1, H, W, 3)
     output_img_pil = Image.fromarray(output_img[0])
-    output_img_pil.save('test_gRPC_img1.jpg')
+    output_img_pil.save('test_output_gRPC_img1.jpg')
 
+if __name__ == '__main__':
+    main()
