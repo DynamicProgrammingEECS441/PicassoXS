@@ -320,8 +320,6 @@ class Model(object):
         discr_success = args.discr_success_rate
         alpha = 0.05
 
-        #exit(0)
-        
         for step in tqdm(range(self.initial_step, self.options.total_steps+1),
                          initial=self.initial_step,
                          total=self.options.total_steps):
