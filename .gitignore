@@ -12,7 +12,7 @@ venv
 __pycache__/
 *.egg-info*
 
-src/backend/models/
+src/backend/general_model/models/
 
 # Backend - Serving - Third Party Dependency Code & Dataset & Servable 
 src/backend/tfserver/data/
