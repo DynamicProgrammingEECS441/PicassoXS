@@ -12,6 +12,11 @@ import Alamofire
 import AlamofireImage
 
 
+public struct imageJson : Codable {
+   public let signature_name:String
+   public let instances:String
+}
+
 
 class UploadViewController: UIViewController{
     
@@ -19,20 +24,18 @@ class UploadViewController: UIViewController{
     @IBOutlet weak var InputIm: UIImageView!
     @IBOutlet weak var FilterIm: UIImageView!
     @IBOutlet weak var OutputIm: UIImageView!
-
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
-        InputIm.image = GlobalVariables.curInput
-        FilterIm.image = GlobalVariables.curFilter
-        sendRequest(Image: InputIm.image!)
-    }
+            super.viewDidLoad()
+            InputIm.image = GlobalVariables.curInput
+            FilterIm.image = GlobalVariables.curFilter
+            sendRequest(Image: InputIm.image!)
+        }
     
     //Upload Filter Image for Filtering
     //TODO: IMPLEMENT SELECTION FOR DIFFERENT FILTERS
     func sendRequest(Image: UIImage){
-      
         let imgData = Image.jpegData(compressionQuality: 1)!
-        
         AF.upload(multipartFormData: { multipartFormData in
             multipartFormData.append(imgData, withName: "document", fileName: "document.png", mimeType: "image/png")
         }, to: "http://localhost:8000/upload_img/")
@@ -44,11 +47,9 @@ class UploadViewController: UIViewController{
             }
     }
 }
-
-
-
+    
 
 extension UIImage {
-    var jpeg: Data? { jpegData(compressionQuality: 1) }  // QUALITY min = 0 / max = 1
+    var jpeg: Data? { jpegData(compressionQuality: 0.8) }  // QUALITY min = 0 / max = 1
     var png: Data? { pngData() }
 }

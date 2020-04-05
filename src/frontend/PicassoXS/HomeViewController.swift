@@ -10,12 +10,16 @@ import UIKit
 import AVFoundation
 
 
+
 struct GlobalVariables {
     static var curInput: UIImage?
     static var curFilter: UIImage?
     static var curResult: UIImage?
     static var FilteredHistory: [MadeImages] = []
     static var Filters: [Filter] = []
+    static var Grey1 = UIColor(hex: 0xebebeb)
+    static var Grey2 = UIColor(hex: 0xf7f7f6)
+    static var White = UIColor(hex: 0xffffff)
 }
 
 
@@ -23,41 +27,68 @@ struct GlobalVariables {
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate,UITableViewDelegate, UITableViewDataSource{
     
     
+    
+    @IBOutlet weak var tableview: UITableView!
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return GlobalVariables.FilteredHistory.count
+        return 1
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return GlobalVariables.FilteredHistory.count
+       }
+    
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return CGFloat(5)
+    
+    }
+
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let curHistory = GlobalVariables.FilteredHistory[indexPath.row]
+        let curHistory = GlobalVariables.FilteredHistory[indexPath.section]
         let cell = tableView.dequeueReusableCell(withIdentifier: "HomeViewCell") as! HomeViewCell
         cell.setHomeView(Image: curHistory)
+        
+        //Cell Style
+        cell.backgroundColor = UIColor.white
+        cell.layer.borderColor = GlobalVariables.White.cgColor
+        cell.layer.borderWidth = 1
+        cell.layer.cornerRadius = 8
+        cell.clipsToBounds = true
+        cell.layer.cornerRadius = 50
+        cell.layer.shadowOffset = CGSize(width: 0,height: 0)
+        cell.layer.shadowOpacity = 0.23
+        cell.layer.shadowRadius = 4
+        cell.layer.shadowColor = UIColor.black.cgColor
+        
         
         return cell
     }
     
+    
 
+    
+    
     //Screen
-        override func viewDidLoad() {
+    override func viewDidLoad() {
             super.viewDidLoad()
-            self.loadFilterLibrary()
-            let im1 = MadeImages(UIImage(named:"I1")!, UIImage(named:"S6")!, UIImage(named: "R5")!)
-            let im2 = MadeImages(UIImage(named:"I4")!, UIImage(named:"S2")!, UIImage(named: "R4")!)
-            let im3 = MadeImages(UIImage(named:"I4")!, UIImage(named:"S2")!, UIImage(named: "R2")!)
-            let im4 = MadeImages(UIImage(named:"I10")!, UIImage(named:"S6")!, UIImage(named: "R6")!)
+    
+        self.loadFilterLibrary()
+        let im1 = MadeImages(UIImage(named:"I1")!, UIImage(named:"S6")!, UIImage(named: "R5")!)
+        let im2 = MadeImages(UIImage(named:"I4")!, UIImage(named:"S2")!, UIImage(named: "R4")!)
+        let im3 = MadeImages(UIImage(named:"I4")!, UIImage(named:"S2")!, UIImage(named: "R2")!)
+        let im4 = MadeImages(UIImage(named:"I10")!, UIImage(named:"S6")!, UIImage(named: "R6")!)
 
-            GlobalVariables.FilteredHistory.append(im1)
-            GlobalVariables.FilteredHistory.append(im2)
-            GlobalVariables.FilteredHistory.append(im3)
-            GlobalVariables.FilteredHistory.append(im4)
-            
+        GlobalVariables.FilteredHistory.append(im1)
+        GlobalVariables.FilteredHistory.append(im2)
+        GlobalVariables.FilteredHistory.append(im3)
+        GlobalVariables.FilteredHistory.append(im4)
+        
+    
+    
     }
-    
-    
-    
-    
-    
-    
-    
     
     
     //使用照相机按键
@@ -144,6 +175,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
     }
     
+}
+
+
+extension UIColor {
+    convenience init(hex: Int, alpha: CGFloat = 1.0) {
+        let r = CGFloat((hex >> 16) & 0xff) / 255
+        let g = CGFloat((hex >> 08) & 0xff) / 255
+        let b = CGFloat((hex >> 00) & 0xff) / 255
+        self.init(red: r, green: g, blue: b, alpha: alpha)
+    }
 }
 
 
