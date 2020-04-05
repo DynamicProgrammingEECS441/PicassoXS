@@ -13,6 +13,7 @@ __pycache__/
 *.egg-info*
 
 src/backend/general_model/models/
+src/backend/models/
 
 # Backend - Serving - Third Party Dependency Code & Dataset & Servable 
 src/backend/tfserver/data/
