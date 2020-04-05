@@ -84,14 +84,14 @@ CUDA_VISIBLE_DEVICES=0 python main.py \
 We also include a shell script `train.sh` for users to run the above command. To use the script, 
 
 1. Run `chmod +x train.sh`
-2. Edit the contents if needed
+2. Edit the contents if needed (for GPU avalibility)
 3. Run `./train.sh`
 
 
 
 ## *Inference*
 
-To use inference mode, you must already have your trained model ready in the `./models/` directory. You will have to specify:
+To use inference mode, you must already have your trained model ready in the `$(pwd)/models/` directory. You will have to specify:
 1. the name of your model
 2. input directories of the images that you want to do style transfer on
 3. The output directory to save the generated image

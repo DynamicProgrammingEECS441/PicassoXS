@@ -37,7 +37,7 @@ def upload_img():
     # Send Request
     # json_response = requests.post('http://localhost:${MACHINE_PORT_FOR_RESTfil}/v1/models/model:predict', \
     #                             data=data, headers=headers)
-    json_response = requests.post('http://localhost:0001/v1/models/model:predict', \
+    json_response = requests.post('http://104.198.231.48:8501/v1/models/van-gogh:predict', \
                                 data=data, headers=headers)
     print("received request from tf-server...")
     # Load response 

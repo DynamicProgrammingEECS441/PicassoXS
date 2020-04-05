@@ -25,7 +25,7 @@ parser.add_argument('--phase',
 parser.add_argument('--image_size',
                     dest='image_size',
                     type=int,
-                    default=256*3,
+                    default=762,
                     help='For training phase: will crop out images of this particular size.'
                          'For inference phase: each input image will have the smallest side of this size. '
                          'For inference recommended size is 1280.')
@@ -134,4 +134,5 @@ def main(_):
     print('FINISHED')
 
 if __name__ == '__main__':
+    print('tensorflow version', tf.__version__)
     tf.compat.v1.app.run()

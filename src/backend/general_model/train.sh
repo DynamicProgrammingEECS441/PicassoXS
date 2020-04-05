@@ -1,5 +1,6 @@
 CUDA_VISIBLE_DEVICES="" python main.py \
-                 --model_name=model_van-gogh_new \
+                 --model_name=model_debug \
                  --phase=train \
-                 --ptcd=/path/to/Places2/data_large \
-                 --ptad=./data/vincent-van-gogh_road-with-cypresses-1890
+                 --image_size=762 \
+                 --ptcd=$(pwd)/data/places \
+                 --ptad=$(pwd)/data/style

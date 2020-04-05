@@ -4,6 +4,8 @@
 >
 > For backend developer, check `instruction.md` for more information  
 
+## Corresponding Python File 
+`SendRequestGeneralModel_REST.py` 
 
 
 ## Process 
@@ -55,9 +57,12 @@ xiaosong99/servable   van-gogh            1653250eb149        6 minutes ago     
 
 ```
 
+4. send gRPC request to Server 
+
+See `SendRequestGeneralModel_gRPC.py` for latest version 
 
 
-4. Send RESTful request to Docker 
+5. Send RESTful request to Docker 
 
 
 ```python
@@ -104,4 +109,12 @@ output_img_pil.save('path/to/target/img/file')
 ```shell
 # Below line indicate docker successful execute out request
 2020-03-14 16:00:19.743166: W external/org_tensorflow/tensorflow/core/framework/cpu_allocator_impl.cc:81] Allocation of 91750400 exceeds 10% of system memory.
+```
+
+## Other Common Use Command 
+```shell
+
+# check model info 
+saved_model_cli show --dir "servable/arbitary_style/1/" --all
+
 ```
