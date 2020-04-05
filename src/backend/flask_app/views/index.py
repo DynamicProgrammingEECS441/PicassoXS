@@ -34,7 +34,8 @@ def img_resize(img):
         h_new = int(IMG_LONG_SIZE * (h * (1.0) ) / ( w  * (1.0) ) )
     img = cv2.resize(img, (w_new, h_new), interpolation=cv2.INTER_CUBIC)
     return img 
-    
+
+ 
 def post_process(img):
     '''
     Input:
@@ -139,6 +140,64 @@ def general_model_grpc():
     file_object.seek(0)
 
     return flask.send_file(file_object, mimetype='image/PNG')
+
+
+@flask_app.app.route('/arbitrary_style_grpc/', methods=['POST'])
+def arbitrary_style_grpc():
+    # 1. Load Image
+    filestr = flask.request.files.to_dict()['content_img'].read()
+    npimg = np.fromstring(filestr, np.uint8)
+    content_img = cv2.imdecode(npimg, cv2.IMREAD_UNCHANGED)
+
+    filestr = flask.request.files.to_dict()['style_img'].read()
+    npimg = np.fromstring(filestr, np.uint8)
+    style_img = cv2.imdecode(npimg, cv2.IMREAD_UNCHANGED)
+
+    # 2. Image Preprocess 
+    content_img = img_resize(content_img)
+    style_img = img_resize(style_img)
+    print("content_img size:", content_img.shape)
+    print("style_img size:", style_img.shape)
+    content_img_np = np.array(content_img).astype(np.float32)
+    content_img_np = np.expand_dims(content_img_np, axis=0)  # float32, (1, h, w, 3) representaiton 
+
+    style_img_np = np.array(style_img).astype(np.float32)
+    style_img_np = np.expand_dims(style_img_np, axis=0) # float32, (1, h, w, 3) representaiton 
+
+    # 3. Prepare & Send Request 
+    ip_port = "0.0.0.0:32768"  # TODO change this to your ip:port 
+    # if you run docker run -t -p 0000:8500 -p 0001:8501 xiaosong99/servable:latest-skeleton 
+    # then the port should be "0000"
+    # For more information, see `QuickStart_GeneralModel.md` 
+    channel = grpc.insecure_channel(ip_port)
+    stub = prediction_service_pb2_grpc.PredictionServiceStub(channel)
+    request = predict_pb2.PredictRequest()
+    request.model_spec.name = "arbitary_style" # TODO change this to the model you're using 
+    request.model_spec.signature_name = "predict_images" 
+    request.inputs["content_img"].CopyFrom(  
+            tf.make_tensor_proto(content_img_np, shape=list(content_img_np.shape)))  
+    request.inputs["style_img"].CopyFrom(  
+            tf.make_tensor_proto(style_img_np, shape=list(style_img_np.shape)))  
+    response = stub.Predict(request, 20.0)  # TODO change the request timeout, default is 10s
+    
+    # 4. Image Postprocess 
+    output_img = tf.make_ndarray(response.outputs['output_img']) # value range : [0-1], dtype float32, (1, H, W, 3)
+    # output_img = output_img * 255 
+    output_img = output_img.astype(np.uint8)  # value range : [0-255], dtype : uint8, (1, H, W, 3)
+    output_img = Image.fromarray(output_img[0])
+    output_img.save('test_gRPC_img2.jpg')
+
+    # create file-object in memory
+    file_object = io.BytesIO()
+
+    # write PNG in file-object
+    output_img.save(file_object, 'PNG')
+
+    # move to beginning of file so `send_file()` it will read from start    
+    file_object.seek(0)
+
+    return flask.send_file(file_object, mimetype='image/PNG')
+
 
 @flask_app.app.route('/', methods=['GET'])
 def index():
