@@ -51,20 +51,29 @@ docker exec -it serving_base /bin/bash
 (inside docker container) apt-get update
 (inside docker container) apt-get install vim
 (inside docker container) vim tf_serving_entrypoint.sh
-
 # change the `vim tf_serving_entrypoint.sh` file to this 
 ```
-
 ```shell
 #!/bin/bash
 tensorflow_model_server --port=8500 --rest_api_port=8501 --model_config_file=/models/models.config
 ``` 
-
 ```shell
+# 6. Check if the modify you just make is correct 
+(inside docker container) cd usr/bin/
+(inside docker container) sh tf_serving_entrypoint.sh 
+(inside docker container) ^C # control c to stop the service once you know the system work 
+
 # 6. Commit change 
 docker commit serving_base xiaosong99/servable:latest
 
 # 7. Run the new commit docker image to ensure everything works correct 
-docker run -t -p 8501:8501 -p 8500:8500 xiaosong99/servable:latest
+docker run -t -p 8500:8500 -p 8501:8501 xiaosong99/servable:latest
+```
+ For `SendRequestArbitaryStyleModel_gRPC.py` and `SendRequestGeneralModel_gRPC.py`, change line with `request.model_spec.name =` to the new model you just addes, change other required settings (e.g ip_port), run the python file to see if new docker work 
 
+ **NOTICE: DO NOT `docker push` YOUR DOCKER WITHOUT TESTING** 
+
+```shell
+# 8. Upload your new docker image 
+docker push xiaosong99/servable:latest
 ```
