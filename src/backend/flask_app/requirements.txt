@@ -8,7 +8,7 @@ certifi==2019.11.28
 chardet==3.0.4
 click==7.1.1
 Flask==1.1.1
--e git+https://github.com/DynamicProgrammingEECS441/PicassoXS.git@cf152dd1f6b6ae7e51665563f7e8b37f431f11fa#egg=flask_app&subdirectory=src/backend
+-e git+https://github.com/DynamicProgrammingEECS441/PicassoXS.git@0731ab7d8dd18d6cdd48d8175db8dd56daaa8a3e#egg=flask_app&subdirectory=src/backend
 gunicorn==20.0.4
 html5validator==0.3.1
 idna==2.8
@@ -20,7 +20,10 @@ lazy-object-proxy==1.4.3
 MarkupSafe==1.1.1
 mccabe==0.6.1
 more-itertools==8.2.0
+numpy==1.18.2
+opencv-python==4.2.0.34
 packaging==20.3
+Pillow==7.1.1
 pluggy==0.13.1
 py==1.8.1
 pycodestyle==2.5.0
