@@ -7,7 +7,6 @@
 # -r allow copy all file from directory 
 scp -r /path/to/local/files <name>@<ip>:/path/to/server/files
 scp -r $(pwd)/*.py  xiaosx@<ip>:~/train_model 
-scp $(pwd)/faces.tgz  xiaosx@141.212.115.159:/home/xiaosx/dataset
 
 # compress file for shipping
 tar -czvf LotsOfFiles.tgz LotsOfFiles
@@ -59,7 +58,6 @@ tf.test.is_gpu_available()
 ```shell
 # Link localhost port to server port 
 ssh -N -f -L localhost:8004:localhost:8004 xiaosx@<ip>
-ssh -N -f -L localhost:8004:localhost:8004 xiaosx@141.212.115.159
 
 # Start tensorboard on server 
 tensorboard --logdir="models/model_name/logs" --port=8000
@@ -93,5 +91,4 @@ watch -n 0.5 nvidia-smi
 ## Copy file back into local machine 
 ```shell
 scp -r xiaosx@<ip>:~/train_model/models/ .
-scp -r xiaosx@141.212.115.159:~/personal/models .
 ```
