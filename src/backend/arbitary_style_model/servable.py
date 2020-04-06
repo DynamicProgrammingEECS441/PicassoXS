@@ -1,6 +1,8 @@
-# Useage :
-#  tensorflow 1.x 
-#  put this file under referenc/arbitary/
+#
+#   Copyright © 2020. All rights reserved.
+#   python >= 3.6 
+#   tensorflow >= 1.2 
+#
 
 import os 
 import numpy as np 
