@@ -323,7 +323,7 @@ class Model(object):
         for step in tqdm(range(self.initial_step, self.options.total_steps+1),
                          initial=self.initial_step,
                          total=self.options.total_steps):
-            print('step {}'.format(step))
+            #print('step {}'.format(step))
             batch_art = art_dataset.get_batch(augmentor=augmentor, batch_size=self.batch_size)
             batch_content = content_dataset_places.get_batch(augmentor=augmentor, batch_size=self.batch_size)
             if discr_success >= win_rate:
