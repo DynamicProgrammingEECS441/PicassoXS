@@ -12,6 +12,7 @@ venv
 __pycache__/
 *.egg-info*
 
+src/backend/general_model/models/
 src/backend/models/
 
 # Backend - Serving - Third Party Dependency Code & Dataset & Servable 
@@ -21,3 +22,6 @@ src/backend/tfserver/servable/
 src/backend/tfserver/test/
 src/backend/gcloud/reference/
 src/backend/arbitary_style_model/reference
+
+src/frontend/PicassoXS/DerivedData/
+src/frontend/PicassoXS/PicassoXS.xcworkspace/
