@@ -2,6 +2,6 @@ runtime: python
 env: flex
 entrypoint: gunicorn -b :$PORT -w 2 flask_app:app
 runtime_config:
-    python_version: 3
+    python_version: 37
 env_variables:
     CLOUD_STORAGE_BUCKET: tensorflow-serving-9905
