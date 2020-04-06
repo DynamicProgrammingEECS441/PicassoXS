@@ -113,7 +113,7 @@ def general_model_grpc():
 
     # 3. Prepare & Send Request 
     # ip_port = "0.0.0.0:32770"  # TODO change this to your ip:port 
-    ip_port = "35.222.71.255:8500"
+    ip_port = "104.198.231.48:8500"
     channel = grpc.insecure_channel(ip_port)
     stub = prediction_service_pb2_grpc.PredictionServiceStub(channel)
     request = predict_pb2.PredictRequest()
@@ -121,7 +121,7 @@ def general_model_grpc():
     request.model_spec.signature_name = "predict_images" 
     request.inputs["input_img"].CopyFrom(  
         tf.make_tensor_proto(img, shape=list(img.shape))) 
-    response = stub.Predict(request, 10.0)  # TODO change the request timeout, default is 10s
+    response = stub.Predict(request, 100.0)  # TODO change the request timeout, default is 10s
 
     # 4. Image Postprocess 
     output_img = tf.make_ndarray(response.outputs['output_img'])  # numpy array (1, H, W, 3)
@@ -167,7 +167,7 @@ def arbitrary_style_grpc():
 
     # 3. Prepare & Send Request 
     # ip_port = "0.0.0.0:32768"  # TODO change this to your ip:port 
-    ip_port = "35.222.71.255:8500"
+    ip_port = "104.198.231.48:8500"
     # if you run docker run -t -p 0000:8500 -p 0001:8501 xiaosong99/servable:latest-skeleton 
     # then the port should be "0000"
     # For more information, see `QuickStart_GeneralModel.md` 
@@ -180,7 +180,7 @@ def arbitrary_style_grpc():
             tf.make_tensor_proto(content_img_np, shape=list(content_img_np.shape)))  
     request.inputs["style_img"].CopyFrom(  
             tf.make_tensor_proto(style_img_np, shape=list(style_img_np.shape)))  
-    response = stub.Predict(request, 20.0)  # TODO change the request timeout, default is 10s
+    response = stub.Predict(request, 200.0)  # TODO change the request timeout, default is 10s
     
     # 4. Image Postprocess 
     output_img = tf.make_ndarray(response.outputs['output_img']) # value range : [0-1], dtype float32, (1, H, W, 3)

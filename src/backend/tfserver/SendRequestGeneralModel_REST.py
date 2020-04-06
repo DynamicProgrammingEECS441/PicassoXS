@@ -4,16 +4,16 @@ import requests
 import numpy as np
 
 # Load Image
-img = Image.open('./test_input_img3.jpg')
+img = Image.open('./test_input_img1.jpg')
 print('input image original size', img.size)
 
 # Resize long side to 1024
 h, w = img.size
 
-if h > w : # h is the long side 
+if h > w : # h is the long side
     h_new = int(128.)
     w_new = int(128. * (w * (1.0) ) / ( h  * (1.0) ) )
-else:      # w is the long side 
+else:      # w is the long side
     w_new = int(128.)
     h_new = int(128. * (h * (1.0) ) / ( w  * (1.0) ) )
 
@@ -23,7 +23,7 @@ print('input image resized size', img.size)
 
 input_img = np.array(img)
 input_img = np.expand_dims(input_img, axis=0)            # (1, H, W, 3)
-input_img = input_img / 127.5 - 1 
+input_img = input_img / 127.5 - 1
 print('input image range {} - {}'.format(np.min(input_img), np.max(input_img)))
 
 # Prepare request
@@ -32,7 +32,7 @@ data = json.dumps({"signature_name": "predict_images",
 headers = {"content-type": "application/json"}
 
 # Send Request
-url = 'http://35.202.143.174:8501/v1/models/van-gogh:predict'
+url = 'http://104.198.231.48:8501/v1/models/van-gogh:predict'
 #url = 'http://localhost:8501/v1/models/van-gogh:predict'
 json_response = requests.post(url, \
                               data=data, headers=headers)

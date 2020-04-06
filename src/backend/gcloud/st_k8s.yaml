@@ -11,9 +11,10 @@ spec:
         spec:
             containers:
               - name: st-container
-                image: gcr.io/tensorflow-serving-9905/st:latest-skeleton
+                image: gcr.io/tensorflow-serving-9905/servable:latest
                 ports:
                  - containerPort: 8501
+                 - containerPort: 8500
 ---
 apiVersion: v1
 kind: Service
@@ -24,10 +25,11 @@ metadata:
 spec:
     ports:
       - port: 8501
+        name: grpc
         targetPort: 8501
+      - port: 8500
+        name: rest
+        targetPort: 8500
     selector:
         app: st-ske-service
     type: LoadBalancer
-
-
-    
