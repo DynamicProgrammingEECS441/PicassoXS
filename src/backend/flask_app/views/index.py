@@ -35,7 +35,7 @@ def img_resize(img):
     img = cv2.resize(img, (w_new, h_new), interpolation=cv2.INTER_CUBIC)
     return img 
 
- 
+
 def post_process(img):
     '''
     Input:
@@ -112,7 +112,8 @@ def general_model_grpc():
     img = np.expand_dims(np.array(img).astype(np.float32), axis=0)  # float32, (1, h, w, 3) representaiton 
 
     # 3. Prepare & Send Request 
-    ip_port = "0.0.0.0:32770"  # TODO change this to your ip:port 
+    # ip_port = "0.0.0.0:32770"  # TODO change this to your ip:port 
+    ip_port = "35.222.71.255:8500"
     channel = grpc.insecure_channel(ip_port)
     stub = prediction_service_pb2_grpc.PredictionServiceStub(channel)
     request = predict_pb2.PredictRequest()
@@ -165,7 +166,8 @@ def arbitrary_style_grpc():
     style_img_np = np.expand_dims(style_img_np, axis=0) # float32, (1, h, w, 3) representaiton 
 
     # 3. Prepare & Send Request 
-    ip_port = "0.0.0.0:32768"  # TODO change this to your ip:port 
+    # ip_port = "0.0.0.0:32768"  # TODO change this to your ip:port 
+    ip_port = "35.222.71.255:8500"
     # if you run docker run -t -p 0000:8500 -p 0001:8501 xiaosong99/servable:latest-skeleton 
     # then the port should be "0000"
     # For more information, see `QuickStart_GeneralModel.md` 
