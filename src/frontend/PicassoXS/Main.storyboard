@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SnA-oK-P5q">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SnA-oK-P5q">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,7 +10,7 @@
         <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PicassoXFinal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PicassoXS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,7 +24,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="HomeViewCell" rowHeight="331" id="NKc-wi-Bdn" customClass="HomeViewCell" customModule="PicassoXFinal" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="HomeViewCell" rowHeight="331" id="NKc-wi-Bdn" customClass="HomeViewCell" customModule="PicassoXS" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="55.5" width="374" height="331"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" tableViewCell="NKc-wi-Bdn" id="MAW-hS-hxQ">
@@ -126,7 +126,7 @@
         <!--Filter View Controller-->
         <scene sceneID="zvF-Xm-UfH">
             <objects>
-                <viewController id="lgH-hq-nmm" customClass="FilterViewController" customModule="PicassoXFinal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="lgH-hq-nmm" customClass="FilterViewController" customModule="PicassoXS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eNh-GN-2es">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -135,10 +135,10 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewCell" rowHeight="145" id="oaf-DZ-WBt" customClass="TableViewCell" customModule="PicassoXFinal" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewCell" rowHeight="145" id="oaf-DZ-WBt" customClass="TableViewCell" customModule="PicassoXS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="145"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oaf-DZ-WBt" id="LPP-cE-KFD" customClass="FilterCell" customModule="PicassoXFinal" customModuleProvider="target">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oaf-DZ-WBt" id="LPP-cE-KFD" customClass="FilterCell" customModule="PicassoXS" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="145"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -203,7 +203,7 @@
         <!--Detail View Controller-->
         <scene sceneID="TIY-JG-4Xg">
             <objects>
-                <viewController id="rbb-aQ-pEX" customClass="DetailViewController" customModule="PicassoXFinal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="rbb-aQ-pEX" customClass="DetailViewController" customModule="PicassoXS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="owc-qE-FIr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -275,7 +275,7 @@
         <!--Upload View Controller-->
         <scene sceneID="fGI-u3-xsU">
             <objects>
-                <viewController id="q4G-Nd-jq9" customClass="UploadViewController" customModule="PicassoXFinal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="q4G-Nd-jq9" customClass="UploadViewController" customModule="PicassoXS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Bu-U5-Fpc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -312,8 +312,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gfh-TQ-GMJ">
-                                <rect key="frame" x="61" y="483" width="292" height="292"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gfh-TQ-GMJ">
+                                <rect key="frame" x="127" y="483" width="160" height="160"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="OKE-nN-ezD"/>
                                     <constraint firstAttribute="height" constant="160" id="oHY-rY-EMP"/>
@@ -327,6 +327,7 @@
                             <constraint firstItem="atE-C1-qPj" firstAttribute="top" secondItem="72j-cw-ZVT" secondAttribute="bottom" constant="183" id="Ae0-47-YmY"/>
                             <constraint firstItem="atE-C1-qPj" firstAttribute="centerX" secondItem="5Bu-U5-Fpc" secondAttribute="centerX" id="Khk-gk-oN2"/>
                             <constraint firstItem="atE-C1-qPj" firstAttribute="leading" secondItem="gtK-3X-T1T" secondAttribute="leading" constant="131" id="R6z-zO-0ue"/>
+                            <constraint firstItem="gfh-TQ-GMJ" firstAttribute="top" secondItem="d9u-3E-FY3" secondAttribute="bottom" constant="92" id="Tmz-ez-Fgc"/>
                             <constraint firstItem="d9u-3E-FY3" firstAttribute="top" secondItem="72j-cw-ZVT" secondAttribute="bottom" constant="12" id="WzI-Hs-oN9"/>
                             <constraint firstItem="lKW-oL-REU" firstAttribute="top" secondItem="Wa3-GG-TzF" secondAttribute="bottom" constant="12" id="cIR-A4-ERj"/>
                             <constraint firstItem="72j-cw-ZVT" firstAttribute="top" secondItem="gtK-3X-T1T" secondAttribute="top" constant="110" id="hH5-6d-GmB"/>
@@ -334,6 +335,7 @@
                             <constraint firstItem="gtK-3X-T1T" firstAttribute="trailing" secondItem="Wa3-GG-TzF" secondAttribute="trailing" constant="30" id="kdR-Jr-ZUT"/>
                             <constraint firstItem="Wa3-GG-TzF" firstAttribute="top" secondItem="gtK-3X-T1T" secondAttribute="top" constant="110" id="u2D-jw-KGE"/>
                             <constraint firstItem="72j-cw-ZVT" firstAttribute="leading" secondItem="gtK-3X-T1T" secondAttribute="leading" constant="30" id="uHX-AN-KPg"/>
+                            <constraint firstItem="gfh-TQ-GMJ" firstAttribute="centerX" secondItem="atE-C1-qPj" secondAttribute="centerX" id="uaF-9D-hha"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gtK-3X-T1T"/>
                     </view>
@@ -351,7 +353,7 @@
         <!--Main Navigation Controller-->
         <scene sceneID="QKS-P6-gH0">
             <objects>
-                <navigationController storyboardIdentifier="MainNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="SnA-oK-P5q" customClass="MainNavigationController" customModule="PicassoXFinal" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MainNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="SnA-oK-P5q" customClass="MainNavigationController" customModule="PicassoXS" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RWg-BC-MCR">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -367,11 +369,11 @@
             <point key="canvasLocation" x="138" y="188"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Camera" width="70" height="77"/>
+        <image name="plus.app" catalog="system" width="64" height="56"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="hFB-je-7gS"/>
     </inferredMetricsTieBreakers>
-    <resources>
-        <image name="Camera" width="70" height="77"/>
-        <image name="plus.app" catalog="system" width="128" height="114"/>
-    </resources>
 </document>

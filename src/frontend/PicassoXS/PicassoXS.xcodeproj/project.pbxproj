@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		85E00FF4195E0AA8FE3F3762 /* libPods-PicassoXS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A61C938415B13267D8CCDA3B /* libPods-PicassoXS.a */; };
+		AD581556243ABF52007A1E61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD581554243ABF51007A1E61 /* LaunchScreen.storyboard */; };
+		AD581557243ABF52007A1E61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD581555243ABF51007A1E61 /* Main.storyboard */; };
 		AD58FAA42432DF8D007A1E61 /* MadeImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD58FA942432DF8D007A1E61 /* MadeImages.swift */; };
 		AD58FAA52432DF8D007A1E61 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD58FA952432DF8D007A1E61 /* DetailViewController.swift */; };
 		AD58FAA72432DF8D007A1E61 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD58FA972432DF8D007A1E61 /* TableViewCell.swift */; };
-		AD58FAAA2432DF8D007A1E61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD58FA9B2432DF8D007A1E61 /* Main.storyboard */; };
 		AD58FAAB2432DF8D007A1E61 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD58FA9D2432DF8D007A1E61 /* UploadViewController.swift */; };
 		AD58FAAC2432DF8D007A1E61 /* picasso.py in Resources */ = {isa = PBXBuildFile; fileRef = AD58FA9E2432DF8D007A1E61 /* picasso.py */; };
 		AD58FAAD2432DF8D007A1E61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD58FA9F2432DF8D007A1E61 /* AppDelegate.swift */; };
@@ -21,7 +22,6 @@
 		AD58FAB42432E94A007A1E61 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD58FAB32432E94A007A1E61 /* Default-568h@2x.png */; };
 		AD58FAB62432F25C007A1E61 /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD58FAB52432F25C007A1E61 /* HomeViewCell.swift */; };
 		AD58FAB82432F438007A1E61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD58FAB72432F438007A1E61 /* Assets.xcassets */; };
-		AD58FABC2433EE60007A1E61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD58FABA2433EE60007A1E61 /* LaunchScreen.storyboard */; };
 		AD58FABE2433EE9F007A1E61 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD58FABD2433EE9F007A1E61 /* HomeViewController.swift */; };
 		AD58FAC22437E644007A1E61 /* FiltersClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD58FAC12437E643007A1E61 /* FiltersClass.swift */; };
 /* End PBXBuildFile section */
@@ -30,10 +30,11 @@
 		7F6DD738A0641E902425AEA3 /* Pods-PicassoXS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PicassoXS.release.xcconfig"; path = "Target Support Files/Pods-PicassoXS/Pods-PicassoXS.release.xcconfig"; sourceTree = "<group>"; };
 		A5CB016B23F1136B00961876 /* PicassoXS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PicassoXS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A61C938415B13267D8CCDA3B /* libPods-PicassoXS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PicassoXS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD581554243ABF51007A1E61 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AD581555243ABF51007A1E61 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		AD58FA942432DF8D007A1E61 /* MadeImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MadeImages.swift; sourceTree = "<group>"; };
 		AD58FA952432DF8D007A1E61 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		AD58FA972432DF8D007A1E61 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
-		AD58FA9C2432DF8D007A1E61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AD58FA9D2432DF8D007A1E61 /* UploadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		AD58FA9E2432DF8D007A1E61 /* picasso.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = picasso.py; sourceTree = "<group>"; };
 		AD58FA9F2432DF8D007A1E61 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,7 +45,6 @@
 		AD58FAB32432E94A007A1E61 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		AD58FAB52432F25C007A1E61 /* HomeViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = SOURCE_ROOT; };
 		AD58FAB72432F438007A1E61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = SOURCE_ROOT; };
-		AD58FABB2433EE60007A1E61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD58FABD2433EE9F007A1E61 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		AD58FAC12437E643007A1E61 /* FiltersClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiltersClass.swift; sourceTree = SOURCE_ROOT; };
 		F192C822DF32A379AA0CD7FC /* Pods-PicassoXS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PicassoXS.debug.xcconfig"; path = "Target Support Files/Pods-PicassoXS/Pods-PicassoXS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -78,13 +78,13 @@
 				AD58FAB12432E6D0007A1E61 /* Podfile */,
 				AD58FA942432DF8D007A1E61 /* MadeImages.swift */,
 				AD58FAB52432F25C007A1E61 /* HomeViewCell.swift */,
+				AD581554243ABF51007A1E61 /* LaunchScreen.storyboard */,
+				AD581555243ABF51007A1E61 /* Main.storyboard */,
 				AD58FABD2433EE9F007A1E61 /* HomeViewController.swift */,
 				AD58FAC12437E643007A1E61 /* FiltersClass.swift */,
 				AD58FA952432DF8D007A1E61 /* DetailViewController.swift */,
 				AD58FA972432DF8D007A1E61 /* TableViewCell.swift */,
 				AD58FAB72432F438007A1E61 /* Assets.xcassets */,
-				AD58FA9B2432DF8D007A1E61 /* Main.storyboard */,
-				AD58FABA2433EE60007A1E61 /* LaunchScreen.storyboard */,
 				AD58FA9D2432DF8D007A1E61 /* UploadViewController.swift */,
 				AD58FA9E2432DF8D007A1E61 /* picasso.py */,
 				AD58FA9F2432DF8D007A1E61 /* AppDelegate.swift */,
@@ -174,9 +174,9 @@
 			files = (
 				AD58FAAC2432DF8D007A1E61 /* picasso.py in Resources */,
 				AD58FAB42432E94A007A1E61 /* Default-568h@2x.png in Resources */,
-				AD58FAAA2432DF8D007A1E61 /* Main.storyboard in Resources */,
 				AD58FAB22432E6D0007A1E61 /* Podfile in Resources */,
-				AD58FABC2433EE60007A1E61 /* LaunchScreen.storyboard in Resources */,
+				AD581557243ABF52007A1E61 /* Main.storyboard in Resources */,
+				AD581556243ABF52007A1E61 /* LaunchScreen.storyboard in Resources */,
 				AD58FAB82432F438007A1E61 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -227,25 +227,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		AD58FA9B2432DF8D007A1E61 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AD58FA9C2432DF8D007A1E61 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		AD58FABA2433EE60007A1E61 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AD58FABB2433EE60007A1E61 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		A5CB017D23F1136F00961876 /* Debug */ = {

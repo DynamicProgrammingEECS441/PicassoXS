@@ -39,8 +39,8 @@ class UploadViewController: UIViewController{
         let imgData = Image.jpegData(compressionQuality: 1)!
         AF.upload(multipartFormData: { multipartFormData in
             multipartFormData.append(imgData, withName: "document", fileName: "document.png", mimeType: "image/png")
-        }, to: "http://localhost:8000/general_model_grpc/")
-//        }, to: "https://tensorflow-serving-9905.appspot.com/upload_img/")
+//        }, to: "http://localhost:8000/general_model_grpc/")
+        }, to: "https://tensorflow-serving-9905.appspot.com/general_model_grpc/")
             .responseImage { response in
                 if case .success(let image) = response.result {
                     print("image downloaded: \(image)")
@@ -56,8 +56,8 @@ class UploadViewController: UIViewController{
         AF.upload(multipartFormData: { multipartFormData in
             multipartFormData.append(imgData, withName: "content_img", fileName: "content.png", mimeType: "image/png")
             multipartFormData.append(imgStyleData, withName: "style_img", fileName: "style.png", mimeType: "image/png")
-        }, to: "http://localhost:8000/arbitrary_style_grpc/")
-//        }, to: "https://tensorflow-serving-9905.appspot.com/upload_img/")
+//        }, to: "http://localhost:8000/arbitrary_style_grpc/")
+        }, to: "https://tensorflow-serving-9905.appspot.com/arbitrary_style_grpc/")
             .responseImage { response in
                 if case .success(let image) = response.result {
                     print("image downloaded: \(image)")
