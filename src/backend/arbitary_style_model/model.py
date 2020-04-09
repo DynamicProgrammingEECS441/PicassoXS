@@ -1,7 +1,8 @@
 #
 #   Copyright © 2020. All rights reserved.
-#   python >= 3.6 
-#   tensorflow >= 1.2 
+#   python == 3.6 
+#   tensorflow == 1.14
+#   scipy==1.1.0
 #
 
 import tensorflow as tf
@@ -166,13 +167,16 @@ class Encoder(object):
             return image + np.array([123.68, 116.779, 103.939])
 
 
-def conv2d(x, kernel, bias):
+def conv2d(x, kernel, bias, use_relu=True):
     # padding image with reflection mode
     x_padded = tf.pad(x, [[0, 0], [1, 1], [1, 1], [0, 0]], mode='REFLECT')
 
     # conv and add bias
     out = tf.nn.conv2d(x_padded, kernel, strides=[1, 1, 1, 1], padding='VALID')
     out = tf.nn.bias_add(out, bias)
+
+    if use_relu:
+        out = tf.nn.relu(out)
 
     return out
 

@@ -16,16 +16,28 @@ This repository contains all files needed to develop the backend.
 .
 ├── arbitary_style_model       # model for user upload own style 
 │   ├── servable.py
+│   ├── infer.py
+│   ├── main.py
+│   ├── model.py
+│   ├── servable.py
+│   ├── train.py
+│   ├── utils.py
 │   └── * others
 ├── flask_app                  # flask web app 
 │   ├── __init__.py
 │   ├── config.py
+│   ├── * others
 │   └── views
 │       ├── __init__.py
 │       └── index.py 
 ├── gcloud                     # instructions to start cloud server 
 │   ├── Instruction.md
 │   ├── st_k8s.yaml
+│   └── * others
+├── train                     # instructions on how to train model on server  
+│   ├── Instruction.md
+│   ├── tf1-gpu.yml
+│   ├── tf2-gpu.yml
 │   └── * others
 ├── general_model              # model for portrait mode model & general model 
 │   ├── README.md
@@ -41,16 +53,19 @@ This repository contains all files needed to develop the backend.
 │   └── train.sh
 └── tfserver                  # TensorFlow server : web app for serving model 
     ├── Instruction.md
-    ├── QuickStart.md
+    ├── PackDocker.md
     ├── QuickStart_ArbitaryStyle.md
-    ├── models.config
-    ├── quickstart.py
-    ├── quickstart_arbitarystyle.ipynb
+    ├── QuickStart_ArbitaryStyleModel.md
+    ├── QuickStart_GeneralModel.md
+    ├── QuickPackServable.ipynb
     ├── servable_demo.ipynb
+    ├── SendRequestArbitaryStyleModel_gRPC.py
+    ├── SendRequestGeneralModel_REST.py
+    ├── SendRequestGeneralModel_gRPC.py
+    ├── models.config
+    ├── *others 
     └──servable             # SERVABLE : packed model that can be used by TensorFlow Server
         └── * others 
-
-
 ```
 
 
@@ -143,17 +158,25 @@ Sanakoyeu, Artsiom et al. “A Style-Aware Content Loss for Real-Time HD Style T
 
 ## *Training*
 
+Put all content image inside one directory 
+
+Put all style image inside one directory 
+
 
 
 ### Usage Example:
 
-
+```shell
+python main.py 
+		-style_img_dir <path to style image> 
+		-content_img_dir <path to contet image>
+```
 
 
 
 ## *Inference*
 
-
+Put all the image you want to test inside one directory 
 
 
 
@@ -161,4 +184,18 @@ Sanakoyeu, Artsiom et al. “A Style-Aware Content Loss for Real-Time HD Style T
 
 
 
+```shell
+python main.py 
+		-style_img_dir <path to style image> 
+		-content_img_dir <path to contet image>
+		-checkpoint_encoder <path to encoder weight>
+		-checkpoitn_model <path to model weight>
+		-mode inference 
+		-output_dir <output directory>
+```
+
+
+
 ## *Reference*
+
+Xun Huang, Serge Belonggie, Arbitrary Style Transfer in Real-time with Adaptive Instance Normalization, ICCV 2017, https://arxiv.org/abs/1703.06868

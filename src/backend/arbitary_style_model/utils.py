@@ -1,7 +1,8 @@
 #
 #   Copyright © 2020. All rights reserved.
-#   python >= 3.6 
-#   tensorflow >= 1.2 
+#   python == 3.6 
+#   tensorflow == 1.14
+#   scipy==1.1.0
 #
 
 import numpy as np
@@ -23,7 +24,9 @@ def list_images(directory):
     return images
 
 
-def get_train_images(paths, resize_len=512, crop_height=256, crop_width=256):
+def get_train_images(paths, resize_len=512, crop_height=256, crop_width=256):    
+    #import pdb; pdb.set_trace()
+
     images = []
     for path in paths:
         image = imread(path, mode='RGB')
@@ -44,6 +47,8 @@ def get_train_images(paths, resize_len=512, crop_height=256, crop_width=256):
         image = image[start_h:(start_h + crop_height), start_w:(start_w + crop_width), :]
 
         images.append(image)
+    
+    #import pdb; pdb.set_trace()
 
     images = np.stack(images, axis=0)
 

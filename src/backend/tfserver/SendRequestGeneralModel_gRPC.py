@@ -10,7 +10,7 @@ from tensorflow_serving.apis import prediction_service_pb2_grpc
 def main():
     # 1. Load image
     # For code run on server, this should be image send from front end
-    img = Image.open('./test_input_img3.jpg')  # TODO change this to your imaeg read in
+    img = Image.open('./test_input_img1.jpg')  # TODO change this to your imaeg read in
 
     # 2. Image Preprocess
     # 2.1  Resize
@@ -24,7 +24,7 @@ def main():
             img (PIL.Image) : <PIL.Image> class objecy represent image
         '''
         h, w = img.size
-        IMG_LONG_SIZE = 700.
+        IMG_LONG_SIZE = 500.
 
         if h > w : # h is the long side
             h_new = int(IMG_LONG_SIZE)
@@ -38,7 +38,8 @@ def main():
     img = np.expand_dims(np.array(img).astype(np.float32), axis=0)  # float32, (1, h, w, 3) representaiton
 
     # 3. Prepare & Send Request
-    ip_port = "104.198.231.48:8500"  # TODO change this to your ip:port
+    #ip_port = "0.0.0.0:8500"  # TODO change this to your ip:port
+    ip_port = "35.232.203.191:8500"
     # if you run docker run -t -p 0000:8500 -p 0001:8501 xiaosong99/servable:latest-skeleton
     # then the port should be "0000"
     # For more information, see `QuickStart_GeneralModel.md`
@@ -47,7 +48,7 @@ def main():
     channel = grpc.insecure_channel(ip_port)
     stub = prediction_service_pb2_grpc.PredictionServiceStub(channel)
     request = predict_pb2.PredictRequest()
-    request.model_spec.name = "monet"  # TODO change this to the model you're using
+    request.model_spec.name = "van-gogh"  # TODO change this to the model you're using
     request.model_spec.signature_name = "predict_images"
     request.inputs["input_img"].CopyFrom(
         tf.make_tensor_proto(img, shape=list(img.shape)))
@@ -72,7 +73,7 @@ def main():
 
     # 5. Save Image / Send image back to frontend
     output_img_pil = Image.fromarray(output_img[0])
-    output_img_pil.save('test_output_3.jpg')
+    output_img_pil.save('test_output_{}.jpg'.format(request.model_spec.name))
     #plt.figure()
     #plt.imshow(output_img[0])
     #plt.axis('off')

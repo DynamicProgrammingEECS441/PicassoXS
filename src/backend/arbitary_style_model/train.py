@@ -1,7 +1,8 @@
 #
 #   Copyright © 2020. All rights reserved.
-#   python >= 3.6 
-#   tensorflow >= 1.2 
+#   python == 3.6 
+#   tensorflow == 1.14
+#   scipy==1.1.0
 #
 
 import numpy as np
@@ -16,6 +17,11 @@ def train(opt):
     '''
     content_img_list = utils.list_images(opt.content_img_dir)
     style_img_list = utils.list_images(opt.style_img_dir)
+
+    #import pdb; pdb.set_trace()
+
+    assert(content_img_list) # ensure not empty 
+    assert(style_img_list)
     
     with tf.Graph().as_default(), tf.Session() as sess:
         content_img = tf.placeholder(tf.float32, shape=(opt.batch_size, opt.img_size, opt.img_size, 3), name='content_img')
@@ -77,12 +83,14 @@ def train(opt):
                 np.random.shuffle(style_img_list)
 
                 for batch in range(n_batches):
+                    print('iteration {}'.format(step))
+
                     # retrive a batch of content and style images
                     content_batch_path = content_img_list[batch*opt.batch_size:(batch*opt.batch_size + opt.batch_size)]
                     style_batch_path   = style_img_list[batch*opt.batch_size:(batch*opt.batch_size + opt.batch_size)]
 
-                    content_batch = utils.get_train_images(content_batch_path, crop_height=opt.image.size, crop_width=opt.image.size)
-                    style_batch   = utils.get_train_images(style_batch_path,   crop_height=opt.image.size, crop_width=opt.image.size)
+                    content_batch = utils.get_train_images(content_batch_path, crop_height=opt.img_size, crop_width=opt.img_size)
+                    style_batch   = utils.get_train_images(style_batch_path,   crop_height=opt.img_size, crop_width=opt.img_size)
 
                     # run the training step
                     sess.run(train_op, feed_dict={
