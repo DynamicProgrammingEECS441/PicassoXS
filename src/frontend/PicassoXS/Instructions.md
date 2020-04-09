@@ -3,7 +3,20 @@
 ## Environment
 ### IPHONE X and newer
 We wouldn't recommend our users to run our app on older version, it will not work and the layout would be strange
+### Cocoapods
+You might need to install Cocoapods to enable module 'Alamofire'
+First, enter the following code in terminal:
 
+```shell
+sudo gem install cocoapods
+```
+
+Then go the direcrtion of PicassoXS/src/fronted/PicassoXS and enter the following code in terminal:
+
+```shell
+pod install
+```
+Then cocaspods should be installed and ready to be used
 ## IDE
 ### Xcode
 For MacOS User: Install Xcode on your mac
