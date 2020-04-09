@@ -24,7 +24,7 @@ def img_resize(img):
     '''
     h = img.shape[0]
     w = img.shape[1]
-    IMG_LONG_SIZE = 700.
+    IMG_LONG_SIZE = 1200.
 
     if h > w : # h is the long side 
         h_new = int(IMG_LONG_SIZE)
@@ -63,7 +63,8 @@ def general_model_grpc():
     # 3. Prepare & Send Request 
     # ip_port = "0.0.0.0:32770"  # TODO change this to your ip:port 
     ip_port = "35.232.203.191:8500"
-    channel = grpc.insecure_channel(ip_port)
+    channel_opt = [('grpc.max_send_message_length', 512 * 1024 * 1024), ('grpc.max_receive_message_length', 512 * 1024 * 1024)]
+    channel = grpc.insecure_channel(ip_port, options=channel_opt)
     stub = prediction_service_pb2_grpc.PredictionServiceStub(channel)
     request = predict_pb2.PredictRequest()
     request.model_spec.name = model_name  # TODO change this to the model you're using 
@@ -117,10 +118,12 @@ def arbitrary_style_grpc():
     # 3. Prepare & Send Request 
     # ip_port = "0.0.0.0:32768"  # TODO change this to your ip:port 
     ip_port = "35.232.203.191:8500"
+    channel_opt = [('grpc.max_send_message_length', 512 * 1024 * 1024), ('grpc.max_receive_message_length', 512 * 1024 * 1024)]
+    channel = grpc.insecure_channel(ip_port, options=channel_opt)
     # if you run docker run -t -p 0000:8500 -p 0001:8501 xiaosong99/servable:latest-skeleton 
     # then the port should be "0000"
-    # For more information, see `QuickStart_GeneralModel.md` 
-    channel = grpc.insecure_channel(ip_port)
+    # For more information, see `QuickStart_GeneralModel.md`
+    # channel = grpc.insecure_channel(ip_port)
     stub = prediction_service_pb2_grpc.PredictionServiceStub(channel)
     request = predict_pb2.PredictRequest()
     request.model_spec.name = "arbitary_style" # TODO change this to the model you're using 
