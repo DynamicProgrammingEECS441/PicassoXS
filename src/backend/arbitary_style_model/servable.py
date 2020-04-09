@@ -1,7 +1,8 @@
 #
 #   Copyright © 2020. All rights reserved.
-#   python >= 3.6 
-#   tensorflow >= 1.2 
+#   python == 3.6 
+#   tensorflow == 1.14
+#   scipy==1.1.0
 #
 
 import os 

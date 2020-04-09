@@ -1,7 +1,8 @@
 #
 #   Copyright © 2020. All rights reserved.
-#   python >= 3.6 
-#   tensorflow >= 1.2 
+#   python == 3.6 
+#   tensorflow == 1.14
+#   scipy==1.1.0
 #
 
 
@@ -41,6 +42,7 @@ def get_options():
     parser.add_argument('-img_size', default=256, type=int)
 
     opt = parser.parse_args()
+    print('opt', opt)
 
     return opt
 

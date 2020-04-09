@@ -14,7 +14,7 @@ docker run -d --name serving_base tensorflow/serving:latest
 pwd 
 >> src/backend/tfserver/
 docker cp $(pwd)/servable/${MODEL_NAME} serving_base:/models/ 
-docker cp $(pwd)/servable/arbitary_style serving_base:/models/ 
+docker cp $(pwd)/servable/* serving_base:/models/ 
 
 # 3. Get inside the "serving base" container
 docker exec -it serving_base /bin/bash 
@@ -77,7 +77,7 @@ docker exec -it serving_base /bin/bash
 # /models/van-gogh 
 
 # 5. Change starting setting 
-(inside docker container) cd usr/bin/
+(inside docker container) cd /usr/bin/
 (inside docker container) apt-get update
 (inside docker container) apt-get install vim
 (inside docker container) vim tf_serving_entrypoint.sh
@@ -89,7 +89,7 @@ tensorflow_model_server --port=8500 --rest_api_port=8501 --model_config_file=/mo
 ``` 
 ```shell
 # 6. Check if the modify you just make is correct 
-(inside docker container) cd usr/bin/
+(inside docker container) cd /usr/bin/
 (inside docker container) sh tf_serving_entrypoint.sh 
 (inside docker container) ^C # control c to stop the service once you know the system work 
 
