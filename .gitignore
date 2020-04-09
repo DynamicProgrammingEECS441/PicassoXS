@@ -22,8 +22,12 @@ src/backend/tfserver/servable/
 src/backend/tfserver/test/
 src/backend/gcloud/reference/
 src/backend/arbitary_style_model/reference
+src/backend/arbitary_style_model/models
 src/backend/train/models 
 src/backend/train/private.txt
+src/backend/tfserver/models/
+src/backend/arbitary_style_model/models/
+src/backend/tfserver/models/
 
 src/frontend/PicassoXS/DerivedData/
 src/frontend/PicassoXS/PicassoXS.xcworkspace/
