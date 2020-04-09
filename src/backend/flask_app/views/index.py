@@ -48,63 +48,12 @@ def post_process(img):
     img = img.astype(np.uint8)
     return img 
 
-@flask_app.app.route('/upload_img/', methods=['POST'])
-def upload_img():
-    filestr = flask.request.files.to_dict()['document'].read()
-    npimg = np.fromstring(filestr, np.uint8)
-    img = cv2.imdecode(npimg, cv2.IMREAD_UNCHANGED)
-    # Resize image
-    scale_percent = 20 # percent of original size
-    width = int(img.shape[1] * scale_percent / 100)
-    height = int(img.shape[0] * scale_percent / 100)
-    dim = (width, height)
-    img = cv2.resize(img, dim, interpolation=cv2.INTER_CUBIC)
-    print("image size:", img.shape)
-    cv2.imwrite("input.jpg", img)
-    
-    input_img = np.expand_dims(img, axis=0)            # (1, H, W, 3)
-
-    # Prepare request
-    data = json.dumps({"signature_name": "predict_images", 
-                    "instances": input_img.tolist()})
-    headers = {"content-type": "application/json"}
-    print("send request to tf-server...")
-    # Send Request
-    # json_response = requests.post('http://localhost:${MACHINE_PORT_FOR_RESTfil}/v1/models/model:predict', \
-    #                             data=data, headers=headers)
-    json_response = requests.post('http://104.198.231.48:8501/v1/models/van-gogh:predict', \
-                                data=data, headers=headers)
-    print("received request from tf-server...")
-    # Load response 
-    output_img = json.loads(json_response.text)['predictions']
-    output_img = np.asarray(output_img)                     # (1, H, W, 3)
-    output_img = output_img[0]                              # (H, W, 3)
-    # output_img = np.uint8(output_img)                       # (H, W, 3)
-
-    # denormalize the image
-    output_img = ((output_img + 1.) * 127.5).astype(np.uint8)
-    # print("output_img", output_img.max(), output_img.min())
-    # Save Image 
-    cv_img = cv2.cvtColor(output_img, cv2.COLOR_RGB2BGR)
-    cv2.imwrite("output.jpg", cv_img)
-
-    # convert numpy array to PIL Image
-    output_img = Image.fromarray(output_img)
-
-    # create file-object in memory
-    file_object = io.BytesIO()
-
-    # write PNG in file-object
-    output_img.save(file_object, 'PNG')
-
-    # move to beginning of file so `send_file()` it will read from start    
-    file_object.seek(0)
-
-    return flask.send_file(file_object, mimetype='image/PNG')
-
 @flask_app.app.route('/general_model_grpc/', methods=['POST'])
 def general_model_grpc():
-    filestr = flask.request.files.to_dict()['document'].read()
+    request_dict = flask.request.files.to_dict()
+    model_name = list(request_dict.keys())[0]
+    filestr = request_dict[model_name].read()
+    print(model_name)
     npimg = np.fromstring(filestr, np.uint8)
     img = cv2.imdecode(npimg, cv2.IMREAD_UNCHANGED)
 
@@ -113,11 +62,11 @@ def general_model_grpc():
 
     # 3. Prepare & Send Request 
     # ip_port = "0.0.0.0:32770"  # TODO change this to your ip:port 
-    ip_port = "104.198.231.48:8500"
+    ip_port = "35.232.203.191:8500"
     channel = grpc.insecure_channel(ip_port)
     stub = prediction_service_pb2_grpc.PredictionServiceStub(channel)
     request = predict_pb2.PredictRequest()
-    request.model_spec.name = "monet"  # TODO change this to the model you're using 
+    request.model_spec.name = model_name  # TODO change this to the model you're using 
     request.model_spec.signature_name = "predict_images" 
     request.inputs["input_img"].CopyFrom(  
         tf.make_tensor_proto(img, shape=list(img.shape))) 
@@ -167,7 +116,7 @@ def arbitrary_style_grpc():
 
     # 3. Prepare & Send Request 
     # ip_port = "0.0.0.0:32768"  # TODO change this to your ip:port 
-    ip_port = "104.198.231.48:8500"
+    ip_port = "35.232.203.191:8500"
     # if you run docker run -t -p 0000:8500 -p 0001:8501 xiaosong99/servable:latest-skeleton 
     # then the port should be "0000"
     # For more information, see `QuickStart_GeneralModel.md` 
