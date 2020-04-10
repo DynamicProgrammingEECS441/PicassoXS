@@ -19,24 +19,63 @@ PicassoXS is your professional photo editing app that transfer your own photo in
 │   └── PaintingSelection    # doc for painting selection 
 └── src                # CODE 
     ├── backend        # code for BACKEND 
-    │   ├── README.md
-    │   ├── img_augm.py
-    │   ├── inference.sh
-    │   ├── layers.py
-    │   ├── main.py
-    │   ├── module.py
-    │   ├── prepare_dataset.py
-    │   ├── train.py
-    │   ├── train.sh    
-    │   ├── arbitary_style_model    # code for model that support user uoload own style 
-    │   │   └── * others 
-    │   ├── tfserver    # code for using TF Server 
-    │   │   ├── Instruction.md
-    │   │   ├── QuickStart.md   
-    │   │   └── * others 
-    │   └── gcloud      # code for using google cloud to deploy 
-    │   │   ├── Instruction.md
-    │   │   └── * others 
+    │   ├── arbitrary_style_model       # model for user upload own style 
+    │   │   ├── servable.py
+    │   │   ├── infer.py
+    │   │   ├── main.py
+    │   │   ├── model.py
+    │   │   ├── servable.py
+    │   │   ├── train.py
+    │   │   ├── utils.py
+    │   │   └── * others
+    │   ├── flask_app                  # flask web app 
+    │   │   ├── __init__.py
+    │   │   ├── config.py
+    │   │   ├── * others
+    │   │   └── views
+    │   │       ├── __init__.py
+    │   │       └── index.py 
+    │   ├── gcloud                     # instructions to start cloud server 
+    │   │   ├── Instruction.md
+    │   │   ├── st_k8s.yaml
+    │   │   └── * others
+    │   ├── train                     # instructions on how to train model on server  
+    │   │   ├── Instruction.md
+    │   │   ├── tf1-gpu.yml
+    │   │   ├── tf2-gpu.yml
+    │   │   └── * others
+    │   ├── general_model              # model for portrait mode model & general model 
+    │   │   ├── README.md
+    │   │   ├── StyleTransferrer.proto
+    │   │   ├── img_augm.py
+    │   │   ├── inference.sh
+    │   │   ├── layers.py
+    │   │   ├── main.py
+    │   │   ├── module.py
+    │   │   ├── prepare_dataset.py
+    │   │   ├── setup.py
+    │   │   ├── train.py
+    │   │   └── train.sh
+    │   └── tfserver                  # TensorFlow server : web app for serving model 
+    │   │   ├── Instruction.md
+    │   │   ├── PackDocker.md
+    │   │   ├── QuickStart_ArbitaryStyle.md
+    │   │   ├── QuickStart_ArbitaryStyleModel.md
+    │   │   ├── QuickStart_GeneralModel.md
+    │   │   ├── QuickPackServable.ipynb
+    │   │   ├── servable_demo.ipynb
+    │   │   ├── SendRequestArbitaryStyleModel_gRPC.py
+    │   │   ├── SendRequestGeneralModel_REST.py
+    │   │   ├── SendRequestGeneralModel_gRPC.py
+    │   │   ├── models.config
+    │   │   ├── *others 
+    │   │   └──servable             # SERVABLE : packed model that can be used by TensorFlow Server
+    │   │       └── * others 
+    │   └── README.md
+    │   └── app.yaml
+    │   └── flask_run.sh
+    │   └── requirements.txt
+    │   └── setup.py
     └── frontend        # code for FRONTEND		
         └── PicassoXS
 ```
@@ -169,21 +208,7 @@ Installation
 
 [SQLAlchemy documentation](https://docs.sqlalchemy.org/en/13/)
 
-
-## 7. PyTorch
-Release: 1.4.0
-
-PyTorch is an open source machine learning library based on the Torch library, used for applications such as computer vision and natural language processing.
-
-Installation
-
-`$ pip install torch torchvision`
-
-[PyTorch installation](https://pytorch.org/get-started/locally/)
-
-[PyTorch documentation](https://pytorch.org/docs/stable/index.html)
-
-## 8. Tornado
+## 7. Tornado
 Release: 6.0.3
 
 Tornado is a Python web framework and asynchronous networking library
@@ -196,7 +221,7 @@ Installation
 
 [Tornado documentation](https://www.tornadoweb.org/en/stable/guide/intro.html)
 
-## 9. tqdm
+## 8. tqdm
 Release: 4.43.0
 
 A progress bar library with good support for nested loops
@@ -207,7 +232,7 @@ Installation
 
 [tqdm documentation](https://tqdm.github.io/)
 
-## 10. Pillow
+## 9. Pillow
 Release: 2.2.2
 
 Python Image Library. A free library for the Python programming language that adds support for opening, manipulating, and saving many different image file formats
@@ -218,7 +243,7 @@ Installation
 
 [Pillow documentation](https://pillow.readthedocs.io/en/stable/)
 
-## 11. SpiPy
+## 10. SpiPy
 Release: 1.4.1
 
 A python-based ecosystem of open-source software for mathematics, science, and engineering
@@ -229,7 +254,7 @@ Installation
 
 [SciPy documentation](https://www.scipy.org/docs.html)
 
-## 12. imageio
+## 11. imageio
 Release: 2.8.0
 
 Provides an easy interface to read and write a wide range of image data
@@ -240,7 +265,7 @@ Installation
 
 [imageio documentation](https://imageio.readthedocs.io/en/stable/)
 
-## 13. Tensorflow Addons
+## 12. Tensorflow Addons
 Release: 0.8.2
 
 TensorFlow Addons is a repository of contributions that conform to well- established API patterns, but implement new functionality not available in core TensorFlow
@@ -249,7 +274,7 @@ Installation
 
 `$ pip install tensorflow-addons`
 
-## 14. Pandas
+## 13. Pandas
 Release: 0.24.0
 
 Installation

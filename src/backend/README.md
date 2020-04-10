@@ -14,7 +14,7 @@ This repository contains all files needed to develop the backend.
 
 ```shell
 .
-├── arbitary_style_model       # model for user upload own style 
+├── arbitrary_style_model       # model for user upload own style 
 │   ├── servable.py
 │   ├── infer.py
 │   ├── main.py
@@ -52,20 +52,25 @@ This repository contains all files needed to develop the backend.
 │   ├── train.py
 │   └── train.sh
 └── tfserver                  # TensorFlow server : web app for serving model 
-    ├── Instruction.md
-    ├── PackDocker.md
-    ├── QuickStart_ArbitaryStyle.md
-    ├── QuickStart_ArbitaryStyleModel.md
-    ├── QuickStart_GeneralModel.md
-    ├── QuickPackServable.ipynb
-    ├── servable_demo.ipynb
-    ├── SendRequestArbitaryStyleModel_gRPC.py
-    ├── SendRequestGeneralModel_REST.py
-    ├── SendRequestGeneralModel_gRPC.py
-    ├── models.config
-    ├── *others 
-    └──servable             # SERVABLE : packed model that can be used by TensorFlow Server
-        └── * others 
+│   ├── Instruction.md
+│   ├── PackDocker.md
+│   ├── QuickStart_ArbitaryStyle.md
+│   ├── QuickStart_ArbitaryStyleModel.md
+│   ├── QuickStart_GeneralModel.md
+│   ├── QuickPackServable.ipynb
+│   ├── servable_demo.ipynb
+│   ├── SendRequestArbitaryStyleModel_gRPC.py
+│   ├── SendRequestGeneralModel_REST.py
+│   ├── SendRequestGeneralModel_gRPC.py
+│   ├── models.config
+│   ├── *others 
+│   └──servable             # SERVABLE : packed model that can be used by TensorFlow Server
+│       └── * others 
+└── README.md
+└── app.yaml
+└── flask_run.sh
+└── requirements.txt
+└── setup.py
 ```
 
 
