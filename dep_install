@@ -32,9 +32,6 @@ pip install opencv-python
 # install SQLAlchemy
 pip install SQLAlchemy
 
-# install PyTorch
-pip install torch torchvision
-
 # install Tornado
 pip install tornado
 
