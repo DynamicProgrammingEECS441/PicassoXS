@@ -56,7 +56,7 @@ class DepthImageFilters {
     2.  create a CGImage using the CIContext.
     3. You then create a UIImage and return it.
   */
-  func spotlightHighlight(image: CIImage, mask: CIImage, orientation: UIImageOrientation = .up) -> UIImage? {
+    func spotlightHighlight(image: CIImage, mask: CIImage, orientation: UIImage.Orientation = .up) -> UIImage? {
 
     // 1
     let output = image.applyingFilter("CIBlendWithMask", parameters: ["inputMaskImage": mask])
@@ -72,7 +72,7 @@ class DepthImageFilters {
 
   // set the background image to be a greyscale version of the original image
   // This filter will show full color at the focal point based on the slider position and fade to grey from there.
-  func colorHighlight(image: CIImage, mask: CIImage, orientation: UIImageOrientation = .up) -> UIImage? {
+    func colorHighlight(image: CIImage, mask: CIImage, orientation: UIImage.Orientation = .up) -> UIImage? {
 
     let greyscale = image.applyingFilter("CIPhotoEffectMono")
     let output = image.applyingFilter("CIBlendWithMask", parameters: ["inputBackgroundImage" : greyscale,
@@ -86,7 +86,7 @@ class DepthImageFilters {
   }
 
 
-  func blur(image: CIImage, mask: CIImage, orientation: UIImageOrientation = .up) -> UIImage? {
+    func blur(image: CIImage, mask: CIImage, orientation: UIImage.Orientation = .up) -> UIImage? {
 
   // 1
     let invertedMask = mask.applyingFilter("CIColorInvert")

@@ -13,7 +13,6 @@ import UIKit
 public class Filter{
     var FilterImage: UIImage
     //Tag to be implemented
-    var Tag: [String] = []
     var name: String
     var intro: String
     

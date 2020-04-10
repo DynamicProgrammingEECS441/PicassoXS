@@ -3,153 +3,155 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		85E00FF4195E0AA8FE3F3762 /* libPods-PicassoXS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A61C938415B13267D8CCDA3B /* libPods-PicassoXS.a */; };
-		AD581556243ABF52007A1E61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD581554243ABF51007A1E61 /* LaunchScreen.storyboard */; };
-		AD581557243ABF52007A1E61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD581555243ABF51007A1E61 /* Main.storyboard */; };
-		AD58FAA42432DF8D007A1E61 /* MadeImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD58FA942432DF8D007A1E61 /* MadeImages.swift */; };
-		AD58FAA52432DF8D007A1E61 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD58FA952432DF8D007A1E61 /* DetailViewController.swift */; };
-		AD58FAA72432DF8D007A1E61 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD58FA972432DF8D007A1E61 /* TableViewCell.swift */; };
-		AD58FAAB2432DF8D007A1E61 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD58FA9D2432DF8D007A1E61 /* UploadViewController.swift */; };
-		AD58FAAC2432DF8D007A1E61 /* picasso.py in Resources */ = {isa = PBXBuildFile; fileRef = AD58FA9E2432DF8D007A1E61 /* picasso.py */; };
-		AD58FAAD2432DF8D007A1E61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD58FA9F2432DF8D007A1E61 /* AppDelegate.swift */; };
-		AD58FAAF2432DF8D007A1E61 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD58FAA12432DF8D007A1E61 /* SceneDelegate.swift */; };
-		AD58FAB02432DF8D007A1E61 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD58FAA22432DF8D007A1E61 /* FilterViewController.swift */; };
-		AD58FAB22432E6D0007A1E61 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = AD58FAB12432E6D0007A1E61 /* Podfile */; };
-		AD58FAB42432E94A007A1E61 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD58FAB32432E94A007A1E61 /* Default-568h@2x.png */; };
-		AD58FAB62432F25C007A1E61 /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD58FAB52432F25C007A1E61 /* HomeViewCell.swift */; };
-		AD58FAB82432F438007A1E61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD58FAB72432F438007A1E61 /* Assets.xcassets */; };
-		AD58FABE2433EE9F007A1E61 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD58FABD2433EE9F007A1E61 /* HomeViewController.swift */; };
-		AD58FAC22437E644007A1E61 /* FiltersClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD58FAC12437E643007A1E61 /* FiltersClass.swift */; };
+		7100AF712438201C002C88DA /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 7100AF702438201C002C88DA /* AlamofireImage */; };
+		7158D4392429B38C0029062C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7158D4382429B38C0029062C /* AppDelegate.swift */; };
+		7158D43B2429B38C0029062C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7158D43A2429B38C0029062C /* SceneDelegate.swift */; };
+		7158D4422429B38D0029062C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7158D4412429B38D0029062C /* Assets.xcassets */; };
+		7158D44D2429B3B30029062C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7158D44C2429B3B30029062C /* DetailViewController.swift */; };
+		7158D44F2429B3BE0029062C /* FiltersClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7158D44E2429B3BE0029062C /* FiltersClass.swift */; };
+		7158D4552429B4180029062C /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7158D4542429B4180029062C /* FilterViewController.swift */; };
+		7158D4572429B41F0029062C /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7158D4562429B41F0029062C /* HomeViewCell.swift */; };
+		7158D4592429B4230029062C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7158D4582429B4230029062C /* HomeViewController.swift */; };
+		7158D45B2429B4280029062C /* MadeImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7158D45A2429B4280029062C /* MadeImages.swift */; };
+		7158D45F2429B4360029062C /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7158D45E2429B4360029062C /* UploadViewController.swift */; };
+		7158D4622429B4970029062C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7158D4602429B4970029062C /* Main.storyboard */; };
+		7158D4632429B4970029062C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7158D4612429B4970029062C /* LaunchScreen.storyboard */; };
+		7158D4662429B53B0029062C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7158D4652429B53B0029062C /* Alamofire */; };
+		716E08D3242A052500EDB0D4 /* picasso.py in Resources */ = {isa = PBXBuildFile; fileRef = 716E08D2242A052500EDB0D4 /* picasso.py */; };
+		71AA7913243FB18900D2E249 /* FilterViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AA7912243FB18900D2E249 /* FilterViewCell.swift */; };
+		71AA7915243FEBFE00D2E249 /* SettingsLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AA7914243FEBFE00D2E249 /* SettingsLauncher.swift */; };
+		71AA7917243FF57900D2E249 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AA7916243FF57900D2E249 /* SettingCell.swift */; };
+		71AF4335243EE6D700EFE3B4 /* SaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AF4334243EE6D700EFE3B4 /* SaveViewController.swift */; };
+		71AF4337243F812D00EFE3B4 /* DepthImageFilters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AF4336243F812D00EFE3B4 /* DepthImageFilters.swift */; };
+		71AF4339243F813600EFE3B4 /* DepthReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AF4338243F813600EFE3B4 /* DepthReader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7F6DD738A0641E902425AEA3 /* Pods-PicassoXS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PicassoXS.release.xcconfig"; path = "Target Support Files/Pods-PicassoXS/Pods-PicassoXS.release.xcconfig"; sourceTree = "<group>"; };
-		A5CB016B23F1136B00961876 /* PicassoXS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PicassoXS.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A61C938415B13267D8CCDA3B /* libPods-PicassoXS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PicassoXS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AD581554243ABF51007A1E61 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		AD581555243ABF51007A1E61 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		AD58FA942432DF8D007A1E61 /* MadeImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MadeImages.swift; sourceTree = "<group>"; };
-		AD58FA952432DF8D007A1E61 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		AD58FA972432DF8D007A1E61 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
-		AD58FA9D2432DF8D007A1E61 /* UploadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
-		AD58FA9E2432DF8D007A1E61 /* picasso.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = picasso.py; sourceTree = "<group>"; };
-		AD58FA9F2432DF8D007A1E61 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AD58FAA02432DF8D007A1E61 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AD58FAA12432DF8D007A1E61 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AD58FAA22432DF8D007A1E61 /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
-		AD58FAB12432E6D0007A1E61 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		AD58FAB32432E94A007A1E61 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		AD58FAB52432F25C007A1E61 /* HomeViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = SOURCE_ROOT; };
-		AD58FAB72432F438007A1E61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = SOURCE_ROOT; };
-		AD58FABD2433EE9F007A1E61 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		AD58FAC12437E643007A1E61 /* FiltersClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiltersClass.swift; sourceTree = SOURCE_ROOT; };
-		F192C822DF32A379AA0CD7FC /* Pods-PicassoXS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PicassoXS.debug.xcconfig"; path = "Target Support Files/Pods-PicassoXS/Pods-PicassoXS.debug.xcconfig"; sourceTree = "<group>"; };
+		7158D4352429B38C0029062C /* PicassoXFinal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PicassoXFinal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7158D4382429B38C0029062C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7158D43A2429B38C0029062C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		7158D4412429B38D0029062C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7158D4462429B38D0029062C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7158D44C2429B3B30029062C /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		7158D44E2429B3BE0029062C /* FiltersClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiltersClass.swift; sourceTree = "<group>"; };
+		7158D4542429B4180029062C /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		7158D4562429B41F0029062C /* HomeViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
+		7158D4582429B4230029062C /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		7158D45A2429B4280029062C /* MadeImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MadeImages.swift; sourceTree = "<group>"; };
+		7158D45E2429B4360029062C /* UploadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
+		7158D4602429B4970029062C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		7158D4612429B4970029062C /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		716E08D2242A052500EDB0D4 /* picasso.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = picasso.py; sourceTree = "<group>"; };
+		71AA7912243FB18900D2E249 /* FilterViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewCell.swift; sourceTree = "<group>"; };
+		71AA7914243FEBFE00D2E249 /* SettingsLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLauncher.swift; sourceTree = "<group>"; };
+		71AA7916243FF57900D2E249 /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
+		71AF4334243EE6D700EFE3B4 /* SaveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveViewController.swift; sourceTree = "<group>"; };
+		71AF4336243F812D00EFE3B4 /* DepthImageFilters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepthImageFilters.swift; sourceTree = "<group>"; };
+		71AF4338243F813600EFE3B4 /* DepthReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepthReader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A5CB016823F1136B00961876 /* Frameworks */ = {
+		7158D4322429B38C0029062C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85E00FF4195E0AA8FE3F3762 /* libPods-PicassoXS.a in Frameworks */,
+				7100AF712438201C002C88DA /* AlamofireImage in Frameworks */,
+				7158D4662429B53B0029062C /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		77CE9E52F0C8301A8908D344 /* Pods */ = {
+		7158D42C2429B38C0029062C = {
 			isa = PBXGroup;
 			children = (
-				F192C822DF32A379AA0CD7FC /* Pods-PicassoXS.debug.xcconfig */,
-				7F6DD738A0641E902425AEA3 /* Pods-PicassoXS.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		A5CB016223F1136B00961876 = {
-			isa = PBXGroup;
-			children = (
-				AD58FAB32432E94A007A1E61 /* Default-568h@2x.png */,
-				AD58FAB12432E6D0007A1E61 /* Podfile */,
-				AD58FA942432DF8D007A1E61 /* MadeImages.swift */,
-				AD58FAB52432F25C007A1E61 /* HomeViewCell.swift */,
-				AD581554243ABF51007A1E61 /* LaunchScreen.storyboard */,
-				AD581555243ABF51007A1E61 /* Main.storyboard */,
-				AD58FABD2433EE9F007A1E61 /* HomeViewController.swift */,
-				AD58FAC12437E643007A1E61 /* FiltersClass.swift */,
-				AD58FA952432DF8D007A1E61 /* DetailViewController.swift */,
-				AD58FA972432DF8D007A1E61 /* TableViewCell.swift */,
-				AD58FAB72432F438007A1E61 /* Assets.xcassets */,
-				AD58FA9D2432DF8D007A1E61 /* UploadViewController.swift */,
-				AD58FA9E2432DF8D007A1E61 /* picasso.py */,
-				AD58FA9F2432DF8D007A1E61 /* AppDelegate.swift */,
-				AD58FAA02432DF8D007A1E61 /* Info.plist */,
-				AD58FAA12432DF8D007A1E61 /* SceneDelegate.swift */,
-				AD58FAA22432DF8D007A1E61 /* FilterViewController.swift */,
-				A5CB016C23F1136B00961876 /* Products */,
-				77CE9E52F0C8301A8908D344 /* Pods */,
-				F92F02A5D30B79F4B40578CE /* Frameworks */,
+				71AA7914243FEBFE00D2E249 /* SettingsLauncher.swift */,
+				71AA7916243FF57900D2E249 /* SettingCell.swift */,
+				7158D4372429B38C0029062C /* PicassoXFinal */,
+				7158D4362429B38C0029062C /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		A5CB016C23F1136B00961876 /* Products */ = {
+		7158D4362429B38C0029062C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A5CB016B23F1136B00961876 /* PicassoXS.app */,
+				7158D4352429B38C0029062C /* PicassoXFinal.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F92F02A5D30B79F4B40578CE /* Frameworks */ = {
+		7158D4372429B38C0029062C /* PicassoXFinal */ = {
 			isa = PBXGroup;
 			children = (
-				A61C938415B13267D8CCDA3B /* libPods-PicassoXS.a */,
+				7158D4382429B38C0029062C /* AppDelegate.swift */,
+				7158D43A2429B38C0029062C /* SceneDelegate.swift */,
+				7158D44E2429B3BE0029062C /* FiltersClass.swift */,
+				7158D45A2429B4280029062C /* MadeImages.swift */,
+				7158D4562429B41F0029062C /* HomeViewCell.swift */,
+				7158D4542429B4180029062C /* FilterViewController.swift */,
+				7158D44C2429B3B30029062C /* DetailViewController.swift */,
+				71AA7912243FB18900D2E249 /* FilterViewCell.swift */,
+				7158D45E2429B4360029062C /* UploadViewController.swift */,
+				71AF4336243F812D00EFE3B4 /* DepthImageFilters.swift */,
+				71AF4338243F813600EFE3B4 /* DepthReader.swift */,
+				71AF4334243EE6D700EFE3B4 /* SaveViewController.swift */,
+				7158D4582429B4230029062C /* HomeViewController.swift */,
+				7158D4612429B4970029062C /* LaunchScreen.storyboard */,
+				7158D4602429B4970029062C /* Main.storyboard */,
+				7158D4412429B38D0029062C /* Assets.xcassets */,
+				7158D4462429B38D0029062C /* Info.plist */,
+				716E08D2242A052500EDB0D4 /* picasso.py */,
 			);
-			name = Frameworks;
+			path = PicassoXFinal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A5CB016A23F1136B00961876 /* PicassoXS */ = {
+		7158D4342429B38C0029062C /* PicassoXFinal */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A5CB017F23F1136F00961876 /* Build configuration list for PBXNativeTarget "PicassoXS" */;
+			buildConfigurationList = 7158D4492429B38D0029062C /* Build configuration list for PBXNativeTarget "PicassoXFinal" */;
 			buildPhases = (
-				C4D3FECC2A346AA8FC433874 /* [CP] Check Pods Manifest.lock */,
-				A5CB016723F1136B00961876 /* Sources */,
-				A5CB016823F1136B00961876 /* Frameworks */,
-				A5CB016923F1136B00961876 /* Resources */,
+				7158D4312429B38C0029062C /* Sources */,
+				7158D4322429B38C0029062C /* Frameworks */,
+				7158D4332429B38C0029062C /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				7100AF7324382032002C88DA /* PBXTargetDependency */,
+				7158D4682429B5470029062C /* PBXTargetDependency */,
 			);
-			name = PicassoXS;
-			productName = PicassoXS;
-			productReference = A5CB016B23F1136B00961876 /* PicassoXS.app */;
+			name = PicassoXFinal;
+			packageProductDependencies = (
+				7158D4652429B53B0029062C /* Alamofire */,
+				7100AF702438201C002C88DA /* AlamofireImage */,
+			);
+			productName = PicassoXFinal;
+			productReference = 7158D4352429B38C0029062C /* PicassoXFinal.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		A5CB016323F1136B00961876 /* Project object */ = {
+		7158D42D2429B38C0029062C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1130;
-				ORGANIZATIONNAME = DynammicProgramming;
+				ORGANIZATIONNAME = "Senhao Wang";
 				TargetAttributes = {
-					A5CB016A23F1136B00961876 = {
+					7158D4342429B38C0029062C = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
 				};
 			};
-			buildConfigurationList = A5CB016623F1136B00961876 /* Build configuration list for PBXProject "PicassoXS" */;
+			buildConfigurationList = 7158D4302429B38C0029062C /* Build configuration list for PBXProject "PicassoXFinal 2" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -157,79 +159,72 @@
 				en,
 				Base,
 			);
-			mainGroup = A5CB016223F1136B00961876;
-			productRefGroup = A5CB016C23F1136B00961876 /* Products */;
+			mainGroup = 7158D42C2429B38C0029062C;
+			packageReferences = (
+				7158D4642429B53B0029062C /* XCRemoteSwiftPackageReference "Alamofire" */,
+				7100AF6F2438201C002C88DA /* XCRemoteSwiftPackageReference "AlamofireImage" */,
+			);
+			productRefGroup = 7158D4362429B38C0029062C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A5CB016A23F1136B00961876 /* PicassoXS */,
+				7158D4342429B38C0029062C /* PicassoXFinal */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		A5CB016923F1136B00961876 /* Resources */ = {
+		7158D4332429B38C0029062C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD58FAAC2432DF8D007A1E61 /* picasso.py in Resources */,
-				AD58FAB42432E94A007A1E61 /* Default-568h@2x.png in Resources */,
-				AD58FAB22432E6D0007A1E61 /* Podfile in Resources */,
-				AD581557243ABF52007A1E61 /* Main.storyboard in Resources */,
-				AD581556243ABF52007A1E61 /* LaunchScreen.storyboard in Resources */,
-				AD58FAB82432F438007A1E61 /* Assets.xcassets in Resources */,
+				7158D4632429B4970029062C /* LaunchScreen.storyboard in Resources */,
+				7158D4422429B38D0029062C /* Assets.xcassets in Resources */,
+				7158D4622429B4970029062C /* Main.storyboard in Resources */,
+				716E08D3242A052500EDB0D4 /* picasso.py in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		C4D3FECC2A346AA8FC433874 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PicassoXS-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		A5CB016723F1136B00961876 /* Sources */ = {
+		7158D4312429B38C0029062C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD58FAAB2432DF8D007A1E61 /* UploadViewController.swift in Sources */,
-				AD58FAA52432DF8D007A1E61 /* DetailViewController.swift in Sources */,
-				AD58FAB02432DF8D007A1E61 /* FilterViewController.swift in Sources */,
-				AD58FAA42432DF8D007A1E61 /* MadeImages.swift in Sources */,
-				AD58FAC22437E644007A1E61 /* FiltersClass.swift in Sources */,
-				AD58FABE2433EE9F007A1E61 /* HomeViewController.swift in Sources */,
-				AD58FAAF2432DF8D007A1E61 /* SceneDelegate.swift in Sources */,
-				AD58FAB62432F25C007A1E61 /* HomeViewCell.swift in Sources */,
-				AD58FAA72432DF8D007A1E61 /* TableViewCell.swift in Sources */,
-				AD58FAAD2432DF8D007A1E61 /* AppDelegate.swift in Sources */,
+				7158D4552429B4180029062C /* FilterViewController.swift in Sources */,
+				71AF4339243F813600EFE3B4 /* DepthReader.swift in Sources */,
+				7158D45F2429B4360029062C /* UploadViewController.swift in Sources */,
+				7158D45B2429B4280029062C /* MadeImages.swift in Sources */,
+				71AF4335243EE6D700EFE3B4 /* SaveViewController.swift in Sources */,
+				7158D4572429B41F0029062C /* HomeViewCell.swift in Sources */,
+				7158D4592429B4230029062C /* HomeViewController.swift in Sources */,
+				71AF4337243F812D00EFE3B4 /* DepthImageFilters.swift in Sources */,
+				71AA7917243FF57900D2E249 /* SettingCell.swift in Sources */,
+				7158D4392429B38C0029062C /* AppDelegate.swift in Sources */,
+				7158D43B2429B38C0029062C /* SceneDelegate.swift in Sources */,
+				71AA7915243FEBFE00D2E249 /* SettingsLauncher.swift in Sources */,
+				7158D44D2429B3B30029062C /* DetailViewController.swift in Sources */,
+				7158D44F2429B3BE0029062C /* FiltersClass.swift in Sources */,
+				71AA7913243FB18900D2E249 /* FilterViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		7100AF7324382032002C88DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 7100AF7224382032002C88DA /* AlamofireImage */;
+		};
+		7158D4682429B5470029062C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 7158D4672429B5470029062C /* Alamofire */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
-		A5CB017D23F1136F00961876 /* Debug */ = {
+		7158D4472429B38D0029062C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -286,10 +281,11 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = "";
 			};
 			name = Debug;
 		};
-		A5CB017E23F1136F00961876 /* Release */ = {
+		7158D4482429B38D0029062C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -339,68 +335,111 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		A5CB018023F1136F00961876 /* Debug */ = {
+		7158D44A2429B38D0029062C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F192C822DF32A379AA0CD7FC /* Pods-PicassoXS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Info.plist;
+				DEVELOPMENT_TEAM = SQ8LY9SQ9B;
+				INFOPLIST_FILE = PicassoXFinal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.DynammicProgramming.PicassoXS;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.umich.eecs441.PicassoXFinal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		A5CB018123F1136F00961876 /* Release */ = {
+		7158D44B2429B38D0029062C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7F6DD738A0641E902425AEA3 /* Pods-PicassoXS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Info.plist;
+				DEVELOPMENT_TEAM = SQ8LY9SQ9B;
+				INFOPLIST_FILE = PicassoXFinal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.DynammicProgramming.PicassoXS;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.umich.eecs441.PicassoXFinal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A5CB016623F1136B00961876 /* Build configuration list for PBXProject "PicassoXS" */ = {
+		7158D4302429B38C0029062C /* Build configuration list for PBXProject "PicassoXFinal 2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A5CB017D23F1136F00961876 /* Debug */,
-				A5CB017E23F1136F00961876 /* Release */,
+				7158D4472429B38D0029062C /* Debug */,
+				7158D4482429B38D0029062C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A5CB017F23F1136F00961876 /* Build configuration list for PBXNativeTarget "PicassoXS" */ = {
+		7158D4492429B38D0029062C /* Build configuration list for PBXNativeTarget "PicassoXFinal" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A5CB018023F1136F00961876 /* Debug */,
-				A5CB018123F1136F00961876 /* Release */,
+				7158D44A2429B38D0029062C /* Debug */,
+				7158D44B2429B38D0029062C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7100AF6F2438201C002C88DA /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.3;
+			};
+		};
+		7158D4642429B53B0029062C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7100AF702438201C002C88DA /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7100AF6F2438201C002C88DA /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
+		};
+		7100AF7224382032002C88DA /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7100AF6F2438201C002C88DA /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
+		};
+		7158D4652429B53B0029062C /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7158D4642429B53B0029062C /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		7158D4672429B5470029062C /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7158D4642429B53B0029062C /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = A5CB016323F1136B00961876 /* Project object */;
+	rootObject = 7158D42D2429B38C0029062C /* Project object */;
 }

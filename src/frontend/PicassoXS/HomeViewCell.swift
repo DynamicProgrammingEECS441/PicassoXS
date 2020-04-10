@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 
-class HomeViewCell: TableViewCell{
+class HomeViewCell: UITableViewCell{
     
     @IBOutlet weak var ViewContainer: UIView!
     @IBOutlet weak var ResultIm: UIImageView!
