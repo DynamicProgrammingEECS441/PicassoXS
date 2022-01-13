@@ -4,7 +4,7 @@ opencv-python>=4.2.0
 SQLAlchemy==1.3.13
 tornado
 tqdm
-Pillow==2.2.2
+Pillow==9.0.0
 spicy
 imageio
 tensorflow-addons
