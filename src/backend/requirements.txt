@@ -40,7 +40,7 @@ Markdown==3.2.1
 MarkupSafe==1.1.1
 mccabe==0.6.1
 more-itertools==8.2.0
-numpy==1.18.2
+numpy==1.21.0
 oauthlib==3.1.0
 opencv-python==4.2.0.34
 opencv-python-headless==4.2.0.34
