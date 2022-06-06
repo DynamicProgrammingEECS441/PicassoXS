@@ -47,7 +47,7 @@ opencv-python-headless==4.2.0.34
 opt-einsum==3.2.0
 packaging==20.3
 pandas==1.0.1
-Pillow==7.1.1
+Pillow==9.0.1
 pluggy==0.13.1
 protobuf==3.11.3
 py==1.10.0
