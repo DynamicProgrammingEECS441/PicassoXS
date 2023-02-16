@@ -85,6 +85,6 @@ typeguard==2.7.1
 urllib3==1.26.5
 virtualenv==20.0.16
 wcwidth==0.1.9
-Werkzeug==1.0.1
+Werkzeug==2.2.3
 wrapt==1.11.2
 zipp==3.1.0
